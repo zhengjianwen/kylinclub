@@ -25,7 +25,7 @@ SECRET_KEY = 'd$r6*wh^f9z#99=r4x16ay*gl2%t(%k1@1c7q-)kcx74v9kog_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'repository',
+    'kingadmin',
     'kylinclub',
     'web'
 ]
@@ -57,7 +58,9 @@ ROOT_URLCONF = 'kylinclub.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'kingadmin', 'templates'),
+                 os.path.join(BASE_DIR, 'web', 'templates'),
+                 os.path.join(BASE_DIR, 'templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
@@ -111,6 +114,8 @@ LANGUAGE_CODE = 'zh-hans'
 
 TIME_ZONE = 'Asia/Shanghai'
 
+DEFAULT_CHARSET = 'utf-8'
+
 USE_I18N = True
 
 USE_L10N = True
@@ -123,4 +128,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'status'),)
+MEDIA_ROOT = os.path.join(BASE_DIR, 'status','upload')
+
+MEDIA_URL = '/upload/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'kingadmin', 'status'),
+    os.path.join(BASE_DIR,'status'),
+)

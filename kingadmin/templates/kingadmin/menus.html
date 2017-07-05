@@ -1,0 +1,118 @@
+{% extends 'kingadmin/base.html' %}
+{% block title %}菜单管理{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+<div class="row">
+      <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>菜单管理 <small></small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="clearfix"></div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>菜单管理 <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+
+                    <div style="margin-bottom: 10px" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="dt-buttons btn-group">
+                        <div style="margin-bottom: 10px">
+                            <button type="button" id="edit_status" value="0" class="btn btn-primary">进入编辑模式</button>
+                            <button type="button" id="save_data" class="btn btn-success">保存数据</button>
+                        </div>
+                        <div  class="dataTables_filter">
+
+                        </div>
+                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
+                        <thead>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">导航名称</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">导航地址</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">权重排序</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">状态</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
+                        </tr>
+                      </thead>
+
+                      <tbody id="menu_data">
+                      {% for menu in menu_list %}
+                          <tr role="row" class="odd">
+                              <td>{{ menu.id }}</td>
+                              <td edit="1">{{ menu.name }}</td>
+                              <td edit="1">{{ menu.url }}</td>
+                              <td edit="1">{{ menu.weight }}</td>
+                              <td edit="1">
+                                {% if menu.status %}
+                                  显示
+                                  {% else %}
+                                  隐藏
+                                {% endif %}
+                              </td>
+                              <td>
+                                  <button type="button" class="btn btn-danger">删除</button>
+                              </td>
+                            </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+                        <div class="dataTables_paginate paging_simple_numbers">
+                            <button type="button" class="btn btn-success" style="margin-right: 40px">添加菜单</button>
+                        </div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+    <script>
+        $('#edit_status').click(function (that) {
+            var status = $(this).attr('value');
+            if (status == 0){
+                $(this).attr('value','1');
+                $(this).text('退出编辑模式')
+            }else {
+                $(this).attr('value','0');
+                $(this).text('进入编辑模式')
+            }
+        })
+
+    </script>
+
+{% endblock %}
