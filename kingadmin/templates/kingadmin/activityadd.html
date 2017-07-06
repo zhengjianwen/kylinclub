@@ -1,5 +1,5 @@
 {% extends 'kingadmin/base.html' %}
-{% block title %}活动添加{% endblock %}
+{% block title %}活动管理{% endblock %}
 
 {% block css %}
 <link href="/static/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
@@ -44,32 +44,58 @@
                     <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
 
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">所属菜单<span class="required">*</span>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">新闻标题<span class="required">*</span>
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                            <select name="menu_id" class="select2_group form-control">
-                                {% for menu in menu_list %}
-                                    <option value="{{ menu.id }}">{{ menu }}</option>
-                                {% endfor %}
-                            </select>
+                          <input type="text" name="title" placeholder="活动标题不超过150字" class="form-control col-md-7 col-xs-12">
+                        </div>
+                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+                          <input name="author" placeholder="默认为admin" class="date-picker form-control col-md-7 col-xs-12"  type="text">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          <input type="text" name="summary" placeholder="内容摘要不能超过200字" class="form-control col-md-7 col-xs-12">
+                        </div>
+                         <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">访问量
+                            <span class="required"></span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
+                          <input class="date-picker form-control col-md-7 col-xs-12" name="up" placeholder="默认访问为0"  type="text">
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动名称<span class="required">*</span>
-                        </label>
+                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">展示图</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          <input type="text" name="name" placeholder="活动名称" class="form-control col-md-7 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="middle-name">
                         </div>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-6">状态<span class="required">*</span>
+                         </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
 
+                            <div class="">
+                            <label>
+                              <input type="checkbox" class="js-switch" checked="True" data-switchery="true" style="display: none;">
+                            </label>
+                          </div>
+                        </div>
                       </div>
 
-
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动介绍 <span class="required">*</span>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动内容 <span class="required">*</span>
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          <textarea name="content" class="form-control col-md-7 col-xs-12" placeholder="请填写文章内容"></textarea>
+                          <textarea class="form-control col-md-7 col-xs-12" placeholder="请填写活动内容"></textarea>
+                        </div>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">创建时间 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+                            <input class="control-label form-control col-md-7 col-xs-12" name="creat_at"  type="date">
                         </div>
                       </div>
 
@@ -77,8 +103,8 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-						  <button class="btn btn-primary" type="reset">重置</button>
                           <button class="btn btn-primary" type="button">提交</button>
+						  <button class="btn btn-primary" type="reset">重置</button>
                         </div>
                       </div>
 

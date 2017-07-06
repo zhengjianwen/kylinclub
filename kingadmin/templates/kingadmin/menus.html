@@ -47,8 +47,7 @@
                     <div style="margin-bottom: 10px" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                         <div class="dt-buttons btn-group">
                         <div style="margin-bottom: 10px">
-                            <button type="button" id="edit_status" value="0" class="btn btn-primary">进入编辑模式</button>
-                            <button type="button" id="save_data" class="btn btn-success">保存数据</button>
+                            <button type="button" class="btn btn-success" style="margin-right: 40px">添加菜单</button>
                         </div>
                         <div  class="dataTables_filter">
 
@@ -69,27 +68,26 @@
                       {% for menu in menu_list %}
                           <tr role="row" class="odd">
                               <td>{{ menu.id }}</td>
-                              <td edit="1">{{ menu.name }}</td>
-                              <td edit="1">{{ menu.url }}</td>
-                              <td edit="1">{{ menu.weight }}</td>
-                              <td edit="1">
+                              <td>{{ menu.name }}</td>
+                              <td>{{ menu.url }}</td>
+                              <td>{{ menu.weight }}</td>
+                              <td>
                                 {% if menu.status %}
-                                  显示
+                                  <a href="/kingadmin/menus/status/{{ menu.id }}?status=1" type="button" class="btn btn-success">显示</a>
                                   {% else %}
-                                  隐藏
+                                  <a href="/kingadmin/menus/status/{{ menu.id }}?status=0" type="button" class="btn btn-warning">隐藏</a>
                                 {% endif %}
                               </td>
                               <td>
-                                  <button type="button" class="btn btn-danger">删除</button>
+                                  <a href="/kingadmin/menus/edit/{{ menu.id }}" type="button" class="btn btn-primary">编辑</a>
+                                  <a href="/kingadmin/menus/delete/{{ menu.id }}" type="button" class="btn btn-danger">删除</a>
                               </td>
                             </tr>
                       {% endfor %}
 
                       </tbody>
                     </table>
-                        <div class="dataTables_paginate paging_simple_numbers">
-                            <button type="button" class="btn btn-success" style="margin-right: 40px">添加菜单</button>
-                        </div></div>
+
                   </div>
                 </div>
               </div>
@@ -100,19 +98,5 @@
 {% endblock %}
 
 {% block js %}
-
-    <script>
-        $('#edit_status').click(function (that) {
-            var status = $(this).attr('value');
-            if (status == 0){
-                $(this).attr('value','1');
-                $(this).text('退出编辑模式')
-            }else {
-                $(this).attr('value','0');
-                $(this).text('进入编辑模式')
-            }
-        })
-
-    </script>
 
 {% endblock %}

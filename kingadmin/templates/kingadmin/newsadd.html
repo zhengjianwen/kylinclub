@@ -1,4 +1,5 @@
 {% extends 'kingadmin/base.html' %}
+{% load staticfiles %}
 {% block title %}新闻中心{% endblock %}
 
 {% block css %}
@@ -41,65 +42,80 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" data-parsley-validate="" class="form-horizontal form-label-left" novalidate="">
-
+                    <form id="demo-form2" enctype="multipart/form-data" class="form-horizontal form-label-left" method="POST">
+                        {% csrf_token %}
                       <div class="form-group">
                         <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">新闻标题<span class="required">*</span>
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          <input type="text" name="title" placeholder="文章标题" class="form-control col-md-7 col-xs-12">
+                          {{ obj.title }}
+                            <p>{{ obj.errors.title.0 }}</p>
                         </div>
                          <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
                         </label>
                         <div class="col-md-2 col-sm-2 col-xs-6">
-                          <input name="author" class="date-picker form-control col-md-7 col-xs-12"  type="text">
+                          {{ obj.author }}
+                            <p>{{ obj.errors.author.0 }}</p>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          <input type="text" name="summary" placeholder="文章标题" class="form-control col-md-7 col-xs-12">
+                          {{ obj.summary }}
+                            <p>{{ obj.errors.summary.0 }}</p>
                         </div>
                          <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">访问量
                             <span class="required"></span>
                         </label>
                         <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
-                          <input class="date-picker form-control col-md-7 col-xs-12" name="up" placeholder="可以自定义数字"  type="text">
+                          {{ obj.up }}
+                            <p>{{ obj.errors.up.0 }}</p>
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">首页展示图</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          <input id="middle-name" class="form-control col-md-7 col-xs-12" type="file" name="middle-name">
+                          {{ obj.img }}
+                            <p>{{ obj.errors.img.0 }}</p>
                         </div>
-                        <label class="control-label col-md-1 col-sm-1 col-xs-6">状态<span class="required">*</span>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-6">创建时间<span class="required">*</span>
                          </label>
                         <div class="col-md-2 col-sm-2 col-xs-6">
 
                             <div class="">
                             <label>
-                              <input type="checkbox" class="js-switch" checked="True" data-switchery="true" style="display: none;">
+                              {{ obj.creat_at }}
+                                <p>{{ obj.errors.creat_at.0 }}</p>
                             </label>
                           </div>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          <textarea class="form-control col-md-7 col-xs-12" placeholder="请填写文章内容"></textarea>
-                        </div>
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                              {{ obj.content }}{{ obj.errors.content.0 }}
+                            </div>
+                            <label class="control-label col-md-1 col-sm-1 col-xs-6">状态<span class="required">*</span>
+                             </label>
+                            <div class="col-md-2 col-sm-2 col-xs-6">
+
+                                <div class="">
+                                <label>
+                                  {{ obj.status }}
+                                </label>
+                              </div>
+                            </div>
+
                       </div>
 
-
-                      <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <button class="btn btn-primary" type="button">提交</button>
-						  <button class="btn btn-primary" type="reset">重置</button>
+                          <input class="btn btn-primary" type="reset">
+                          <input id="tijiao" class="btn btn-primary" type="submit" value="提交">
                         </div>
                       </div>
 
@@ -114,6 +130,54 @@
 {% endblock %}
 
 {% block js %}
+<script src="/static/plugins/kindeditor/kindeditor-all-min.js"></script>
+<script>
+        var kind;
+        $(function () {
+           kindinit0();
+           addcss();
+        });
+        function kindinit0() {
+            kind = KindEditor.create('#mycontent', {
+                    width: '100%',       // 文本框宽度(可以百分比或像素)
+                    height: '450px',     // 文本框高度(只能像素)
+                    minWidth: 600,       // 最小宽度（数字）
+                    minHeight: 250,      // 最小高度（数字）
+                    items:[ 'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code',
+                        'cut', 'copy', 'paste','plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+        'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image',
+        'flash', 'media', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+        'anchor', 'link', 'unlink', '|', 'abo   ut'],
+                    uploadJson: '/kingadmin/uplode_pic.html',
+                    extraFileUploadParams: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                    resizeType:0,
+                    allowPreviewEmoticons: true,
+                    autoSetDataMode:true,
+                    allowImageUpload: true,
+                    allowFileUpload:false
+
+                    });}
+        function addcss() {
+            $('#id_status').attr('class','form-control')
+        }
+
+        $('#tijiao').click(function () {
+            var data = kind.text();
+            var ret = $('textarea[name=content]').val();
+            if (ret){
+                return true
+            }else {
+                $('textarea[name=content]').val(data.substring(0,50));
+                return true
+                }
+        })
+
+    </script>
 
 <!-- bootstrap-progressbar -->
 <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
@@ -123,7 +187,7 @@
 <script src="/static/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
 
 <!-- Switchery -->
-<script src="/static/vendors/switchery/dist/switchery.min.js"></script>
+{#<script src="/static/vendors/switchery/dist/switchery.min.js"></script>#}
 
 <!-- Parsley -->
 <script src="/static/vendors/parsleyjs/dist/parsley.min.js"></script>
@@ -135,8 +199,6 @@
 <script src="/static/vendors/starrr/dist/starrr.js"></script>
 <!-- Custom Theme Scripts -->
 <script src="/static/build/js/custom.min.js"></script>
-
-
 {% endblock %}
 
 {% block footer %}{% endblock %}

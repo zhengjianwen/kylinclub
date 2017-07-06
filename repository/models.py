@@ -197,12 +197,13 @@ class Activity(models.Model):
 # 新闻管理
 class News(models.Model):
     title = models.CharField('标题', max_length=128)
-    img = models.ImageField('首页展示图',upload_to='news', null=True, blank=True)
-    contenet = models.TextField('内容', null=True)
+    img = models.ImageField('首页展示图', upload_to='news', null=True, blank=True)
+    content = models.TextField('内容', null=True)
     summary = models.CharField('摘要', max_length=255)
     author = models.CharField('作者', max_length=64, null=True, default='admin')
     up = models.IntegerField('点击量', null=True, default=0)
-    creat_at = models.DateTimeField('创建时间', auto_now_add=True)
+    creat_at = models.CharField('创建时间', max_length=32)
+    status = models.BooleanField('状态', default=0)
 
     class Meta:
         verbose_name_plural = '5-新闻管理'

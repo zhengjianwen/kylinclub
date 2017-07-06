@@ -22,7 +22,7 @@ class Activitytype(View):
 class Activityadd(View):
 
     def get(self,request):
-        menu_list = Menu.objects.all()
+        activity_list = ActivityClass.objects.all()
         return render(request, 'kingadmin/activityadd.html',locals())
 
 

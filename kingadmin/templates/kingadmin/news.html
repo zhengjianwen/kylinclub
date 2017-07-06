@@ -65,6 +65,7 @@
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">图片</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">摘要</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">访问量</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">状态</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
                         </tr>
                       </thead>
@@ -77,9 +78,22 @@
                               </td>
                               <td tabindex="0" class="sorting_1">{{ new.id }}</td>
                               <td><a href="/news/{{ new.id }}.html">{{ new.title }}</a></td>
-                              <td ><img src="/static/upload/{{ new.img }}" style="max-height: 80px;max-width: 200px"></td>
+                              <td >{% if '/' in new.img %}
+                                  <img src="/static/upload/{{ new.img }}" style="max-height: 80px;max-width: 200px">
+                                  {% else %}
+                                  <img src="/static/upload/news/{{ new.img }}" style="max-height: 80px;max-width: 200px">
+                                  {{ new.img.4 }}
+                                  {% endif %}
+                              </td>
                               <td>{{ new.summary }}</td>
                               <td>{{ new.up }}</td>
+                              <td>
+                                  {% if not new.status %}
+                                    <a type="button" class="btn btn btn-success showme" href="/kingadmin/news/status/{{ new.id }}?status=1">显示</a>
+                                  {% else %}
+                                    <a type="button" class="btn btn btn-warning showme" href="/kingadmin/news/status/{{ new.id }}?status=0">隐藏</a>
+                                  {% endif %}
+                              </td>
                               <td>
                                   <a type="button" class="btn btn btn-primary" href="/kingadmin/news/edit/{{ new.id }}">编辑</a>
                                   <a type="button" class="btn btn-danger" href="/kingadmin/news/delete/{{ new.id }}">删除</a>
@@ -89,17 +103,13 @@
 
                       </tbody>
                     </table>
-                        <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">...</div>
-                        <div class="dataTables_paginate paging_simple_numbers" id="datatable-buttons_paginate">
-                            <ul class="pagination">
-                                <li class="paginate_button previous disabled" id="datatable-buttons_previous">
-                                    <a href="#" aria-controls="datatable-buttons" data-dt-idx="0" tabindex="0">首页</a>
-                                </li>
-                                <li class="paginate_button "><a href="#" aria-controls="datatable-buttons" data-dt-idx="5" tabindex="0">5</a>
-                                </li><li class="paginate_button "><a href="#" aria-controls="datatable-buttons" data-dt-idx="6" tabindex="0">6</a>
-                            </li><li class="paginate_button next" id="datatable-buttons_next">
-                                <a href="#" aria-controls="datatable-buttons" data-dt-idx="7" tabindex="0">下一页</a></li></ul>
-                        </div></div>
+                        <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">
+
+                            <ul class="pagination pagination-sm">
+                            {{ page_obj.page_str|safe }}
+                            </ul>
+                        </div>
+                  </div>
                   </div>
                 </div>
               </div>
@@ -111,6 +121,25 @@
 
 {% block js %}
     <script src="/static/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script>
+        $('.showme').click(function () {
+            var cid = $(this).attr('data');
+            var status = $(this).attr('status');
+            $.ajax({
+                url:'/kingadmin/news/status/'+ data,
+                type:'GET',
+                dataType:'JSON',
+                data:{'status':status},
+                success:function(arg){
+                    if (status == 1){
+                        $(this).val('显示')
+                    }else {
+                        $(this).val('隐藏')
+                    }
 
+                },
+                        })
+                    })
+    </script>
 
 {% endblock %}
