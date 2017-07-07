@@ -1,5 +1,5 @@
 {% extends 'kingadmin/base.html' %}
-{% block title %}新闻中心{% endblock %}
+{% block title %}活动列表{% endblock %}
 
 {% block head %}{% endblock %}
 
@@ -8,7 +8,7 @@
       <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>新闻中心 <small>共计105条数据</small></h3>
+                <h3>活动列表 <small>共计{{ activity_list.count }}条数据</small></h3>
               </div>
 
               <div class="title_right">

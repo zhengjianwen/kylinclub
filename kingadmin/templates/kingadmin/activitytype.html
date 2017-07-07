@@ -8,7 +8,7 @@
       <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>活动管理 <small>共计{{ huodong_list.count }}条数据</small></h3>
+                <h3>活动管理 <small>共计 {{ huodong_list.count }} 条数据</small></h3>
               </div>
 
               <div class="title_right">
@@ -45,54 +45,44 @@
                     <p class="text-muted font-13 m-b-30">
 
                     <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                        <div class="dt-buttons btn-group">
-                            <a type="button" class="btn btn-success" href="/kingadmin/news/add/">添加类型</a>
+                        <div class="dt-buttons btn-group" style="margin-bottom: 10px">
+                            <a type="button" class="btn btn-success" href="/kingadmin/activitytype/add/">添加类型</a>
                         </div>
                         <div  class="dataTables_filter">
 
                         </div>
-                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
-                      <thead>
-                        <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">选择</th>
-                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">所属菜单</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">活动名称</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">活动介绍</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
-                        </tr>
-                      </thead>
-
-                      <tbody>
-                      {% for hd in huodong_list %}
-                          <tr role="row" class="odd">
-                              <td>
-                                  <input type="checkbox" class="icheckbox_flat-green" value="{{ hd.id }}">
-                              </td>
-                              <td tabindex="0" class="sorting_1">{{ hd.id }}</td>
-                              <td><a href="/activity/{{ hd.id }}.html">{{ hd.menu }}</a></td>
-                              <td >{{ hd.name }}</td>
-                              <td>{{ hd.content }}</td>
-                              <td>
-                                  <a type="button" class="btn btn btn-primary" href="/kingadmin/news/edit/{{ new.id }}">编辑</a>
-                                  <a type="button" class="btn btn-danger" href="/kingadmin/news/delete/{{ new.id }}">删除</a>
-                              </td>
-                            </tr>
-                      {% endfor %}
-
+                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline text-center" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
+                            <thead>
+                                <tr role="row" class="text-center">
+                                    <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">选择</th>
+                                    <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">活动类型</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">菜单别名</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">所属菜单</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">活动介绍</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for hd in huodong_list %}
+                                      <tr role="row" class="odd">
+                                          <td>
+                                              <input type="checkbox" class="icheckbox_flat-green" value="{{ hd.id }}">
+                                          </td>
+                                          <td tabindex="0" class="sorting_1">{{ hd.id }}</td>
+                                          <td>{{ hd.name }}</td>
+                                          <td>{{ hd.alias }}</td>
+                                          <td><a href="/activity/{{ hd.id }}.html">{{ hd.menu }}</a></td>
+                                          <td>{{ hd.content|truncatewords:"3"|safe }}</td>
+                                          <td>
+                                              <a type="button" class="btn btn btn-primary" href="/kingadmin/activitytype/edit/{{ hd.id }}">编辑</a>
+                                              <button type="button" class="btn btn btn-danger deletedata" data-toggle="modal" data-target="#myModal" data="{{ hd.id }}">删除</button>
+                                          </td>
+                                        </tr>
+                                  {% endfor %}
                       </tbody>
-                    </table>
-                        <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">...</div>
-                        <div class="dataTables_paginate paging_simple_numbers" id="datatable-buttons_paginate">
-                            <ul class="pagination">
-                                <li class="paginate_button previous disabled" id="datatable-buttons_previous">
-                                    <a href="#" aria-controls="datatable-buttons" data-dt-idx="0" tabindex="0">首页</a>
-                                </li>
-                                <li class="paginate_button "><a href="#" aria-controls="datatable-buttons" data-dt-idx="5" tabindex="0">5</a>
-                                </li><li class="paginate_button "><a href="#" aria-controls="datatable-buttons" data-dt-idx="6" tabindex="0">6</a>
-                            </li><li class="paginate_button next" id="datatable-buttons_next">
-                                <a href="#" aria-controls="datatable-buttons" data-dt-idx="7" tabindex="0">下一页</a></li></ul>
-                        </div></div>
+                   </table>
+
                   </div>
                 </div>
               </div>
@@ -100,10 +90,38 @@
           </div>
 </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">删除警告</h4>
+      </div>
+      <div class="modal-body">
+        <p>你确认要删除本条信息吗？后悔还来得及！</p>
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-danger deletea">确认删除</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 {% endblock %}
 
 {% block js %}
     <script src="/static/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-
+    <script>
+        $('.deletedata').click(function () {
+            var data = $(this).attr('data');
+            $('#myModal').attr('data',data)
+            var name = $(this).parent().prevAll().eq(3).text();
+            $('.modal-body').html("<p>你确认要删除 [ " + name + " ] 信息吗？后悔还来得及！</p>")
+        })
+    </script>
 
 {% endblock %}

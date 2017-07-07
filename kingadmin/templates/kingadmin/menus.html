@@ -72,7 +72,7 @@
                               <td>{{ menu.url }}</td>
                               <td>{{ menu.weight }}</td>
                               <td>
-                                {% if menu.status %}
+                                {% if not menu.status %}
                                   <a href="/kingadmin/menus/status/{{ menu.id }}?status=1" type="button" class="btn btn-success">显示</a>
                                   {% else %}
                                   <a href="/kingadmin/menus/status/{{ menu.id }}?status=0" type="button" class="btn btn-warning">隐藏</a>

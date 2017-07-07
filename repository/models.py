@@ -164,9 +164,10 @@ class Menu(models.Model):
     def __str__(self):
         return '%s' % self.name
 
-
+# 活动类型
 class ActivityClass(models.Model):
     menu = models.ForeignKey('Menu', verbose_name='所属菜单')
+    alias = models.CharField('URL别名',max_length=32,unique=True)
     name = models.CharField('活动名称', max_length=64)
     content = models.TextField('活动介绍', null=True, default='正在整理中')
 
