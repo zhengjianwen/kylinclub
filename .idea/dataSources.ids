@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="db" uuid="e2f51859-835c-464f-a992-8786aafff1f8">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="db [2]" uuid="dce25151-66e7-458a-afdd-c47416a3db89">
     <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
     <schema name="" catalog=""/>
@@ -118,16 +121,18 @@
       <column name="author" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="up" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="create_at" sqlType="DATE" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="aclass_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="BOOL" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="activityclass_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <primary-key columns="id"/>
-      <foreign-key name="#FAKE_repository_activity_1" columns="aclass_id" ref-table="repository_activityclass" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
-      <index name="repository_activity_a7ae99aa" unique="true" columns="aclass_id"/>
+      <foreign-key name="#FAKE_repository_activity_1" columns="activityclass_id" ref-table="repository_activityclass" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
+      <index name="repository_activity_35d22037" unique="true" columns="activityclass_id"/>
     </table>
     <table name="repository_activityclass" schema="" catalog="" type="TABLE">
       <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
       <column name="name" sqlType="VARCHAR(64)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <column name="content" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="menu_id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
+      <column name="alias" sqlType="VARCHAR(32)" precision="0" scale="-1" nullable="false" jdbcType="12"/>
       <primary-key columns="id"/>
       <foreign-key name="#FAKE_repository_activityclass_1" columns="menu_id" ref-table="repository_menu" ref-schema="" ref-catalog="" ref-columns="id" update-rule="3" delete-rule="3" deferrability="1"/>
       <index name="repository_activityclass_93e25458" unique="true" columns="menu_id"/>

@@ -8,7 +8,7 @@
       <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>活动列表 <small>共计{{ activity_list.count }}条数据</small></h3>
+                <h3>活动管理 <small></small></h3>
               </div>
 
               <div class="title_right">
@@ -34,7 +34,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>新闻列表 <small>共计105条</small></h2>
+                    <h2>活动列表 <small>共计{{ activity_list.count }}条数据</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li>
                       </li>
@@ -46,50 +46,52 @@
 
                     <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
                         <div class="dt-buttons btn-group" style="margin-bottom: 15px;">
-                            <a type="button" class="btn btn-success" href="/kingadmin/news/add/">添加新闻</a>
+                            <a type="button" class="btn btn-success" href="/kingadmin/activity/add/">添加活动</a>
                         </div>
 
                         <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
                       <thead>
                         <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">选择</th>
                             <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">标题</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">图片</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">摘要</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">访问量</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">活动类别</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">简介</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">作者</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">点击量</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">创建时间</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">状态</th>
                             <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
                         </tr>
                       </thead>
 
                       <tbody>
-                      {% for new in news_list %}
+                      {% for row in activity_list %}
                           <tr role="row" class="odd">
-                              <td>
-                                  <input type="checkbox" class="icheckbox_flat-green" value="{{ new.id }}">
-                              </td>
-                              <td tabindex="0" class="sorting_1">{{ new.id }}</td>
-                              <td><a href="/news/{{ new.id }}.html">{{ new.title }}</a></td>
+                              <td>{{ row.id }}</td>
+                              <td>{{ row.title }}</td>
                               <td >{% if '/' in new.img %}
-                                  <img src="/static/upload/{{ new.img }}" style="max-height: 80px;max-width: 200px">
+                                  <img src="/static/upload/{{ row.img }}" style="max-height: 80px;max-width: 200px">
                                   {% else %}
-                                  <img src="/static/upload/news/{{ new.img }}" style="max-height: 80px;max-width: 200px">
-                                  {{ new.img.4 }}
+                                  <img src="/static/upload/{{ row.img }}" style="max-height: 80px;max-width: 200px">
+                                  {{ row.img.4 }}
                                   {% endif %}
                               </td>
-                              <td>{{ new.summary }}</td>
-                              <td>{{ new.up }}</td>
+                              <td>{{ row.activityclass }}</td>
+                              <td>{{ row.summary }}</td>
+                              <td>{{ row.author }}</td>
+                              <td>{{ row.up }}</td>
+                              <td>{{ row.create_at }}</td>
                               <td>
-                                  {% if not new.status %}
-                                    <a type="button" class="btn btn btn-success showme" href="/kingadmin/news/status/{{ new.id }}?status=1">显示</a>
+                                  {% if not row.status %}
+                                    <a type="button" class="btn btn btn-success showme" href="/kingadmin/news/status/{{ row.id }}?status=1">显示</a>
                                   {% else %}
-                                    <a type="button" class="btn btn btn-warning showme" href="/kingadmin/news/status/{{ new.id }}?status=0">隐藏</a>
+                                    <a type="button" class="btn btn btn-warning showme" href="/kingadmin/news/status/{{ row.id }}?status=0">隐藏</a>
                                   {% endif %}
                               </td>
                               <td>
-                                  <a type="button" class="btn btn btn-primary" href="/kingadmin/news/edit/{{ new.id }}">编辑</a>
-                                  <a type="button" class="btn btn-danger" href="/kingadmin/news/delete/{{ new.id }}">删除</a>
+                                  <a type="button" class="btn btn btn-primary" href="/kingadmin/activity/edit/{{ row.id }}">编辑</a>
+                                  <a type="button" class="btn btn-danger" href="/kingadmin/activity/delete/{{ row.id }}">删除</a>
                               </td>
                             </tr>
                       {% endfor %}

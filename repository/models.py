@@ -164,6 +164,7 @@ class Menu(models.Model):
     def __str__(self):
         return '%s' % self.name
 
+
 # 活动类型
 class ActivityClass(models.Model):
     menu = models.ForeignKey('Menu', verbose_name='所属菜单')
@@ -179,17 +180,18 @@ class ActivityClass(models.Model):
 
 
 class Activity(models.Model):
-    aclass = models.ForeignKey('ActivityClass', verbose_name='活动类别')
+    activityclass = models.ForeignKey('ActivityClass', verbose_name='活动类别')
     img = models.ImageField('图片', upload_to='activity')
     title = models.CharField('标题', max_length=128)
     summary = models.CharField('简介', max_length=255)
-    content = models.TextField('内容')
-    author = models.CharField('作者', max_length=64)
-    up = models.IntegerField('点击量')
+    content = models.TextField('内容', default='正在添加中')
+    author = models.CharField('作者', max_length=64, default='admin')
+    up = models.IntegerField('点击量',default=0, null=True)
+    status = models.BooleanField('状态', default=0)
     create_at = models.DateField('创建时间', auto_now=True)
 
     class Meta:
-        verbose_name_plural = '7-活动管理'
+        verbose_name_plural = '7-活动内容管理'
 
     def __str__(self):
         return '%s-%s' % (self.aclass, self.title)

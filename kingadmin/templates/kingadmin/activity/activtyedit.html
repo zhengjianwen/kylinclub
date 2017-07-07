@@ -1,0 +1,211 @@
+{% extends 'kingadmin/base.html' %}
+{% load staticfiles %}
+{% block title %}活动管理{% endblock %}
+
+{% block css %}
+<link href="/static/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+<style>
+    .form-group p{color: red}
+</style>
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+<div class="row">
+      <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>活动管理 <small></small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>{{ self.title }} <small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li></li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                  <br>
+
+                  <form id="demo-form2" enctype="multipart/form-data" class="form-horizontal form-label-left" method="POST">
+                        {% csrf_token %}
+                     <div class="form-group">
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.activityclass }}
+                            <p>{{ obj.errors.activityclass.0 }}</p>
+                        </div>
+
+                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+                          {{ obj.author }}
+                            <p>{{ obj.errors.author.0 }}</p>
+                        </div>
+                     </div>
+                     <div class="form-group" >
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.title }}
+                            <p>{{ obj.errors.title.0 }}</p>
+                        </div>
+                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+                          {{ obj.up }}
+                            <p>{{ obj.errors.up.0 }}</p>
+                        </div>
+                      </div>
+                     <div class="form-group">
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.summary }}
+                            <p>{{ obj.errors.summary.0 }}</p>
+                        </div>
+                         <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">访问量
+                            <span class="required"></span>
+                        </label>
+                        <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
+                          {{ obj.create_at }}
+                            <p>{{ obj.errors.create_at.0 }}</p>
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">首页展示图</label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.img }}
+                            <p>{{ obj.errors.img.0 }}</p>
+                        </div>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-6">创建时间<span class="required">*</span></label>
+                        <div class="col-md-2 col-sm-2 col-xs-6">
+
+                            <div class="">
+                            <label>
+                              {{ obj.status }}
+                                <p>{{ obj.errors.status.0 }}</p>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="form-group">
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                              {{ obj.content }}
+                                <p>{{ obj.errors.content.0 }}</p>
+                            </div>
+                             <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动说明 <span class="required">*</span>
+                                </label>本页面为活动类型下的详细活动，及每次活动的内容。
+                     </div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <input class="btn btn-primary" type="reset">
+                          <input id="tijiao" class="btn btn-primary" type="submit" value="提交">
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script src="/static/plugins/kindeditor/kindeditor-all-min.js"></script>
+<script>
+        var kind;
+        $(function () {
+           kindinit0();
+           addcss();
+        });
+        function kindinit0() {
+            kind = KindEditor.create('#mycontent', {
+                    width: '100%',       // 文本框宽度(可以百分比或像素)
+                    height: '450px',     // 文本框高度(只能像素)
+                    minWidth: 600,       // 最小宽度（数字）
+                    minHeight: 250,      // 最小高度（数字）
+                    items:[ 'source', '|', 'undo', 'redo', '|', 'preview', 'print', 'template', 'code',
+                        'cut', 'copy', 'paste','plainpaste', 'wordpaste', '|', 'justifyleft', 'justifycenter', 'justifyright',
+'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+        'superscript', 'clearhtml', 'quickformat', 'selectall', '|', 'fullscreen', '/',
+        'formatblock', 'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold',
+        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat', '|', 'image',
+        'flash', 'media', 'table', 'hr', 'emoticons', 'baidumap', 'pagebreak',
+        'anchor', 'link', 'unlink', '|', 'abo   ut'],
+                    uploadJson: '/kingadmin/uplode_pic.html',
+                    extraFileUploadParams: {
+                    'csrfmiddlewaretoken': '{{ csrf_token }}'
+                        },
+                    resizeType:0,
+                    allowPreviewEmoticons: true,
+                    autoSetDataMode:true,
+                    allowImageUpload: true,
+                    allowFileUpload:false
+
+                    });}
+        function addcss() {
+            $('#id_status').attr('class','form-control')
+        }
+
+        $('#tijiao').click(function () {
+            var data = kind.text();
+            var ret = $('textarea[name=content]').val();
+            if (ret){
+                return true
+            }else {
+                $('textarea[name=content]').val(data.substring(0,50));
+                return true
+                }
+        })
+
+    </script>
+
+<!-- bootstrap-progressbar -->
+<script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="/static/vendors/moment/min/moment.min.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="/static/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+
+<!-- Switchery -->
+{#<script src="/static/vendors/switchery/dist/switchery.min.js"></script>#}
+
+<!-- Parsley -->
+<script src="/static/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="/static/vendors/autosize/dist/autosize.min.js"></script>
+<!-- jQuery autocomplete -->
+<script src="/static/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+<!-- starrr -->
+<script src="/static/vendors/starrr/dist/starrr.js"></script>
+<!-- Custom Theme Scripts -->
+<script src="/static/build/js/custom.min.js"></script>
+{% endblock %}
+
+{% block footer %}{% endblock %}

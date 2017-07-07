@@ -16,12 +16,14 @@ urlpatterns = [
 
     url(r'menus/status/(?P<cid>\d+)', menu.MenuView.as_view()),
     url(r'menus/edit/(?P<cid>\d+)', menu.MenuEdit.as_view()),
+    url(r'menus/add', menu.MenuAdd.as_view()),
     url(r'menus', menu.MenuView.as_view()),
     url(r'activitytype/add', menu.Activitytypeadd.as_view()),
     url(r'activitytype/edit/(?P<cid>\d+)', menu.Activitytypeedit.as_view()),
-    url(r'^activitytype/', menu.Activitytype.as_view()),
+    url(r'activitytype/', menu.Activitytype.as_view()),
     url(r'activity.html', menu.ActivityView.as_view()),
-    url(r'^activity/add', menu.Activityadd.as_view()),
+    url(r'activity/add', menu.Activityadd.as_view()),
+    url(r'activity/edit/(?P<cid>\d+)', menu.Activityedit.as_view()),
 
     url(r'uplode_pic.html', upload.upload_kindeditor_img),
     url(r'', index.Index.as_view()),

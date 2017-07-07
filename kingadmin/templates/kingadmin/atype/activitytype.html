@@ -73,7 +73,7 @@
                                           <td>{{ hd.name }}</td>
                                           <td>{{ hd.alias }}</td>
                                           <td><a href="/activity/{{ hd.id }}.html">{{ hd.menu }}</a></td>
-                                          <td>{{ hd.content|truncatewords:"3"|safe }}</td>
+                                          <td style="tab-size: 12px;">{{ hd.content|truncatewords:"3"|safe }}</td>
                                           <td>
                                               <a type="button" class="btn btn btn-primary" href="/kingadmin/activitytype/edit/{{ hd.id }}">编辑</a>
                                               <button type="button" class="btn btn btn-danger deletedata" data-toggle="modal" data-target="#myModal" data="{{ hd.id }}">删除</button>
