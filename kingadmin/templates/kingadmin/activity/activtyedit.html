@@ -6,6 +6,8 @@
 <link href="/static/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
 <style>
     .form-group p{color: red}
+    .radio ul{list-style: none}
+
 </style>
 {% endblock %}
 
@@ -44,90 +46,87 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                  <br>
+                      <br>
+                      <form id="demo-form2" enctype="multipart/form-data" class="form-horizontal form-label-left" method="POST">
+                            {% csrf_token %}
+                             <div class="form-group">
+                                <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
+                                </label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  {{ obj.activityclass_id }}
+                                    <p>{{ obj.errors.activityclass_id.0 }}</p>
+                                </div>
 
-                  <form id="demo-form2" enctype="multipart/form-data" class="form-horizontal form-label-left" method="POST">
-                        {% csrf_token %}
-                     <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.activityclass }}
-                            <p>{{ obj.errors.activityclass.0 }}</p>
-                        </div>
+                                 <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                  {{ obj.author }}
+                                    <p>{{ obj.errors.author.0 }}</p>
+                                </div>
+                             </div>
+                             <div class="form-group" >
+                                <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
+                                </label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  {{ obj.title }}
+                                    <p>{{ obj.errors.title.0 }}</p>
+                                </div>
+                                 <label class="control-label col-md-1 col-sm-1 col-xs-6">访问量<span class="required">*</span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                  {{ obj.up }}
+                                    <p>{{ obj.errors.up.0 }}</p>
+                                </div>
+                              </div>
+                             <div class="form-group">
+                                <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
+                                </label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  {{ obj.summary }}
+                                    <p>{{ obj.errors.summary.0 }}</p>
+                                </div>
+                                 <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">创建时间
+                                    <span class="required"></span>
+                                </label>
+                                <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
+                                  {{ obj.create_at }}
+                                    <p>{{ obj.errors.create_at.0 }}</p>
+                                </div>
+                             </div>
+                             <div class="form-group">
+                                <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">首页展示图</label>
+                                <div class="col-md-8 col-sm-8 col-xs-12">
+                                  {{ obj.img }}
+                                    <p>{{ obj.errors.img.0 }}</p>
+                                </div>
+                                <label class="control-label col-md-1 col-sm-1 col-xs-6">状态<span class="required">*</span></label>
+                                <div class="col-md-2 col-sm-2 col-xs-6">
+                                    <div class="radio">
+                                      {{ obj.status }}
+                                        <p>{{ obj.errors.status.0 }}</p>
 
-                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
-                        </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6">
-                          {{ obj.author }}
-                            <p>{{ obj.errors.author.0 }}</p>
-                        </div>
-                     </div>
-                     <div class="form-group" >
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">活动标题<span class="required">*</span>
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.title }}
-                            <p>{{ obj.errors.title.0 }}</p>
-                        </div>
-                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
-                        </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6">
-                          {{ obj.up }}
-                            <p>{{ obj.errors.up.0 }}</p>
-                        </div>
-                      </div>
-                     <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
-                        </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.summary }}
-                            <p>{{ obj.errors.summary.0 }}</p>
-                        </div>
-                         <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">访问量
-                            <span class="required"></span>
-                        </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
-                          {{ obj.create_at }}
-                            <p>{{ obj.errors.create_at.0 }}</p>
-                        </div>
-                     </div>
-                     <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">首页展示图</label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.img }}
-                            <p>{{ obj.errors.img.0 }}</p>
-                        </div>
-                        <label class="control-label col-md-1 col-sm-1 col-xs-6">创建时间<span class="required">*</span></label>
-                        <div class="col-md-2 col-sm-2 col-xs-6">
+                                  </div>
+                                </div>
+                              </div>
+                             <div class="form-group">
+                                    <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-8 col-sm-8 col-xs-12">
+                                      {{ obj.content }}
+                                        <p>{{ obj.errors.content.0 }}</p>
+                                    </div>
+                                     <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动说明 <span class="required">*</span>
+                                        </label>本页面为活动类型下的详细活动，及每次活动的内容。
+                             </div>
+                             <div class="form-group">
+                                <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                  <input class="btn btn-primary" type="reset">
+                                  <input id="tijiao" class="btn btn-primary" type="submit" value="提交">
+                                </div>
+                              </div>
 
-                            <div class="">
-                            <label>
-                              {{ obj.status }}
-                                <p>{{ obj.errors.status.0 }}</p>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                     <div class="form-group">
-                            <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
-                            </label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                              {{ obj.content }}
-                                <p>{{ obj.errors.content.0 }}</p>
-                            </div>
-                             <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动说明 <span class="required">*</span>
-                                </label>本页面为活动类型下的详细活动，及每次活动的内容。
-                     </div>
-                      <div class="form-group">
-                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                          <input class="btn btn-primary" type="reset">
-                          <input id="tijiao" class="btn btn-primary" type="submit" value="提交">
-                        </div>
-                      </div>
-
-                    </form>
-                  </div>
+                  </form>
+                </div>
                 </div>
               </div>
             </div>

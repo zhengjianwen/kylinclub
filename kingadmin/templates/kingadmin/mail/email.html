@@ -1,0 +1,144 @@
+{% extends 'kingadmin/base.html' %}
+{% load staticfiles %}
+{% block title %}邮件管理{% endblock %}
+
+{% block css %}
+    <link href="/static/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <style>
+        #error{list-style: none;}
+    </style>
+{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+<div class="row">
+      <div class="">
+            <div class="page-title">
+                <div class="title_left">
+                <h3>邮件设置<small></small></h3>
+              </div>
+
+                <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+                <div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>发送邮件设置<small></small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br>
+                    <form id="myform" class="form-horizontal form-label-left" >
+                        {% csrf_token %}
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">邮件类型<span class="required">*</span>
+                        </label>
+                        <div class=" col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.mail_type }}
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">发送地址<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.addr }}
+                            <p>{{ obj.errors.addr.0 }}</p>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">邮件账户<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.user }}
+                            <p>{{ obj.errors.user.0 }}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">邮件密码</label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.password }}
+                            <p>{{ obj.errors.password.0 }}</p>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">邮件端口 <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                              {{ obj.port }}{{ obj.errors.port.0 }}
+                            </div>
+                      </div>
+                      <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">是否是加密链接 <span class="required">*</span>
+                            </label>
+                            <div class="col-md-8 col-sm-8 col-xs-12">
+                              {{ obj.is_ssh }}{{ obj.errors.is_ssh.0 }}
+                            </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <input class="btn btn-primary" type="reset">
+                          <button id="tijiao" class="btn btn-primary" type="button" value="提交">提交</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+            </div>
+
+                <div id="error" class="col-md-4 col-sm-4 col-xs-4">
+                    <span>此处默认为错误信息！</span>
+                    <div id="errormsg">
+
+                    </div>
+                </div>
+            </div>
+          </div>
+
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script>
+        $('#tijiao').click(function () {
+            $.ajax({
+                url:'/kingadmin/mailset',
+                data:$('#myform').serialize(),
+                type:'POST',
+                dataType:'JSON',
+                success:function(arg){
+
+                    if (arg.status == '1'){
+                        $('#errormsg').html(arg.data)
+                    }else {
+                        $('#errormsg').html(arg.msg)
+                        alert(arg.msg);
+                    }
+                },
+            })
+        })
+
+    </script>
+{% endblock %}
+
+{% block footer %}{% endblock %}

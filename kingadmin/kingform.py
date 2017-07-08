@@ -32,9 +32,15 @@ class NewForm(Form):
         attrs={'placeholder': "可以自定义数字", 'class': "form-control col-md-7 col-xs-12"}
     ))
     creat_at = fields.DateField(widget=widgets.DateTimeInput(
-        attrs={'class': "form-control col-md-7 col-xs-12", 'type': 'date'}
+        attrs={'class': "form-control", 'type': 'date'}
     ))
     status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
+
+    def clean_author(self):
+        val = self.cleaned_data['author']
+        if val == '':
+            val = 'admin'
+        return val
 
     class Meta:
         model = News
@@ -90,7 +96,7 @@ class ActivityClassForm(Form):
 
 
 class ActivityForm(Form):
-    activityclass = fields.CharField(widget=widgets.Select(
+    activityclass_id = fields.CharField(widget=widgets.Select(
         attrs={'class': "form-control col-md-7 col-xs-12"}
     ))
     img = fields.ImageField(required=False,
@@ -122,21 +128,78 @@ class ActivityForm(Form):
     create_at = fields.DateField(widget=widgets.DateTimeInput(
         attrs={'class': "form-control col-md-7 col-xs-12", 'type': 'date'}))
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self ,*args, **kwargs):
         super(ActivityForm, self).__init__(*args, **kwargs)
-        self.fields['activityclass'].widget.choices = ActivityClass.objects.all().values_list('id', 'name')
+        self.fields['activityclass_id'].widget.choices = ActivityClass.objects.all().values_list('id', 'name')
+
     def clean_up(self):
         val = self.cleaned_data['up']
         if not val:
             val = 1
         return val
 
-
-    def clean(self):
-        summary = self.cleaned_data.get('summary')
-        if not summary:
-            self.cleaned_data['summary'] = self.cleaned_data['content'][:100]
-        return self.cleaned_data
+    # def clean(self):
+    #     summary = self.cleaned_data.get('summary')
+    #     if not summary:
+    #         self.cleaned_data['summary'] = self.cleaned_data['content'][:100]
+    #     return self.cleaned_data
 
     class Meta:
         model = Activity
+
+
+class MailForm(Form):
+    mail_type = fields.ChoiceField(choices=((0, 'SMTP'), (1, 'IMAP')),
+                                   widget=widgets.Select(
+                                    attrs={'class':'form-control'}
+    ))
+    user = fields.EmailField(max_length=128,
+                             min_length=6,
+                             widget=widgets.TextInput(
+                                 attrs={'placeholder': "请填写发送邮件地址:如 abc@163.com", 'class': "form-control col-md-7 col-xs-12"}
+                             ))
+    password = fields.CharField(max_length=128,
+                             min_length=1,
+                             widget=widgets.PasswordInput(
+                                 attrs={'placeholder': "请输入邮箱密码,提交新必须写密码。",
+                                        'class': "form-control col-md-7 col-xs-12"}
+                             ))
+    addr = fields.CharField(max_length=128,
+                             min_length=1,
+                             widget=widgets.TextInput(
+                                 attrs={'placeholder': "请输入提交的smtp或imap地址。",
+                                        'class': "form-control col-md-7 col-xs-12"}
+                             ))
+    port = fields.IntegerField(max_value=65535,min_value=1,required=False,
+                             widget=widgets.TextInput(
+                                 attrs={'placeholder': "请填写端口，无加密端口为：25，加密端口为：465",
+                                        'class': "form-control col-md-7 col-xs-12"}
+                             ))
+    is_ssh = fields.BooleanField(required=False)
+
+    def clean_is_shh(self):
+        val = self.cleaned_data['is_ssh']
+        if not val:
+            val = 1
+        return val
+
+    def clean_port(self):
+        val = self.cleaned_data['port']
+        if not val:
+            val = 25
+        return val
+
+
+class EmailTmplatForm(Form):
+    effect = fields.ChoiceField(choices=EmailTemplate.effect_choices)
+    status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
+    name = fields.CharField(max_length=128,
+                             min_length=1,
+                             widget=widgets.TextInput(
+                                 attrs={'placeholder': "请填写模板名称", 'class': "form-control col-md-7 col-xs-12"}
+                             ))
+
+    content = fields.CharField(widget=widgets.Textarea(
+                                attrs={'class': 'form-control',
+                                       'rows': '10',
+                                       'id': 'mycontent'}))

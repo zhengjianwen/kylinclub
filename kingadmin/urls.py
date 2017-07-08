@@ -1,6 +1,6 @@
 
 from django.conf.urls import url,include
-from kingadmin.views import authuser, index, news, menu
+from kingadmin.views import authuser, index, news, menu,message
 from kingadmin.views import upload
 
 
@@ -24,6 +24,12 @@ urlpatterns = [
     url(r'activity.html', menu.ActivityView.as_view()),
     url(r'activity/add', menu.Activityadd.as_view()),
     url(r'activity/edit/(?P<cid>\d+)', menu.Activityedit.as_view()),
+    url(r'mailset', message.EmailView.as_view()),
+    url(r'maillog', message.maillog),
+    url(r'mailmb/add', message.EmailTmplatAdd.as_view()),
+    url(r'mailmb/edit/(?P<cid>\d+)', message.EmailTmplatEdit.as_view()),
+    url(r'mailmb/status/(?P<cid>\d+)', message.emailtmplatstatus),
+    url(r'mailmb', message.EmailTmplatView.as_view()),
 
     url(r'uplode_pic.html', upload.upload_kindeditor_img),
     url(r'', index.Index.as_view()),

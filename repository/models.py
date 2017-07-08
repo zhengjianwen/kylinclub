@@ -113,6 +113,7 @@ class Carousel(models.Model):
 class Email(models.Model):
     mail_type_choices = ((0, 'SMTP'), (1, 'IMAP'))
     mail_type = models.SmallIntegerField('类型', choices=mail_type_choices, default=0)
+    addr = models.CharField('地址',max_length=128)
     user = models.EmailField('邮件账户')
     password = models.CharField('邮件密码', max_length=64)
     port = models.IntegerField('端口', default=25)
@@ -126,7 +127,10 @@ class Email(models.Model):
 
 
 class EmailTemplate(models.Model):
+    effect_choices = ((1,'用户注册'),(2,'找回密码'),(3,'企业会员'),(4,'其他模板'))
+    effect = models.IntegerField('作用',choices=effect_choices)
     name = models.CharField('名称', max_length=32, unique=True)
+    status = models.BooleanField('状态', default=0)
     content = models.TextField('内容')
 
     class Meta:
@@ -181,7 +185,7 @@ class ActivityClass(models.Model):
 
 class Activity(models.Model):
     activityclass = models.ForeignKey('ActivityClass', verbose_name='活动类别')
-    img = models.ImageField('图片', upload_to='activity')
+    img = models.ImageField('图片', upload_to='activity',null=True)
     title = models.CharField('标题', max_length=128)
     summary = models.CharField('简介', max_length=255)
     content = models.TextField('内容', default='正在添加中')

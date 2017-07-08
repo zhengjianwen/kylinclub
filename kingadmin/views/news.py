@@ -28,7 +28,7 @@ class Newsadd(BaseView):
         if obj.is_valid():
             new_obj = News.objects.create(**obj.cleaned_data)
             if obj.cleaned_data.get('img'):
-                self.save_img(obj.cleaned_data.get('img'), new_obj.id)
+                self.save_img(obj.cleaned_data.get('img'), 'news')
             return redirect('/kingadmin/news/')
         return render(request, 'kingadmin/news/newsadd.html', locals())
 

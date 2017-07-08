@@ -1,12 +1,9 @@
 {% extends 'kingadmin/base.html' %}
 {% load staticfiles %}
-{% block title %}新闻中心{% endblock %}
+{% block title %}邮件模板{% endblock %}
 
 {% block css %}
 <link href="/static/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <style>
-        .form-group p{color: red}
-    </style>
 {% endblock %}
 
 {% block head %}{% endblock %}
@@ -16,7 +13,7 @@
       <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>新闻中心 <small></small></h3>
+                <h3>邮件模板 <small></small></h3>
               </div>
 
               <div class="title_right">
@@ -34,10 +31,10 @@
             <div class="clearfix"></div>
 
             <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>添加新闻 <small></small></h2>
+                    <h2>{{ self.title }} <small>{{ a_obj.name }}</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li></li>
                     </ul>
@@ -45,72 +42,41 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" enctype="multipart/form-data" class="form-horizontal form-label-left" method="POST">
+                    <form id="demo-form2" class="form-horizontal form-label-left" method="POST">
                         {% csrf_token %}
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">新闻标题<span class="required">*</span>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">模板功能<span class="required">*</span>
                         </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.title }}
-                            <p>{{ obj.errors.title.0 }}</p>
-                        </div>
-                         <label class="control-label col-md-1 col-sm-1 col-xs-6">作者<span class="required">*</span>
-                        </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6">
-                          {{ obj.author }}
-                            <p>{{ obj.errors.author.0 }}</p>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                          {{ obj.effect }}
+                            <p style="color: red">{{ obj.errors.effect.0 }}</p>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">内容摘要<span class="required">*</span>
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">模板状态<span class="required">*</span>
                         </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.summary }}
-                            <p>{{ obj.errors.summary.0 }}</p>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                          {{ obj.status }}
+                            <p style="color: red">{{ obj.errors.status.0 }}</p>
                         </div>
-                         <label class="control-label col-md-1 col-sm-1 col-xs-6" style="margin-top: 7px">访问量
-                            <span class="required"></span>
-                        </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6" style="margin-top: 7px">
-                          {{ obj.up }}
-                            <p>{{ obj.errors.up.0 }}</p>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">模板名称</label>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                          {{ obj.name }}
+                            <p style="color: red">{{ obj.errors.name.0 }}</p>
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">首页展示图</label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.img }}
-                            <p>{{ obj.errors.img.0 }}</p>
-                        </div>
-                        <label class="control-label col-md-1 col-sm-1 col-xs-6">创建时间<span class="required">*</span>
-                         </label>
-                        <div class="col-md-2 col-sm-2 col-xs-6">
-
-                            <div class="">
-
-                              {{ obj.creat_at }}
-                              <p>{{ obj.errors.creat_at.0 }}</p>
-
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="form-group">
-                            <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">新闻内容 <span class="required">*</span>
+                            <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">模板样式 <span class="required">*</span>
                             </label>
-                            <div class="col-md-8 col-sm-8 col-xs-12">
-                              {{ obj.content }}{{ obj.errors.content.0 }}
+                            <div class="col-md-10 col-sm-10 col-xs-12">
+                              {{ obj.content }}
+                                <p style="color: red">{{ obj.errors.content.0 }}</p>
                             </div>
-                            <label class="control-label col-md-1 col-sm-1 col-xs-6">状态<span class="required">*</span>
-                             </label>
-                            <div class="col-md-2 col-sm-2 col-xs-6">
-
-                                <div class="radio">
-                                  {{ obj.status }}
-                              </div>
-                            </div>
-
                       </div>
 
                       <div class="form-group">
@@ -124,6 +90,27 @@
                   </div>
                 </div>
               </div>
+                <div id="error" class="col-md-4 col-sm-4 col-xs-4">
+                    <span style="font-size: 20px;color: #00a0e9">填写调用规范！</span>
+                    <div id="errormsg">
+                        <ul style="list-style: decimal-leading-zero;font-size: 16px;">
+                            <li>{name} - 代表用户姓名</li>
+                            <li>{username} - 代表用户账户</li>
+                            <li>{oldpwd} - 代表用户密码</li>
+                            <li>{email} - 邮箱地址</li>
+                            <li>{phone} - 手机号</li>
+                            <li>{company} - 公司名称</li>
+                            <li>{department} - 部门名称</li>
+                            <li>{position} - 职位名称</li>
+                            <li>{status} - 用户状态</li>
+                            <li>{creat_at} - 用户注册时间</li>
+                            <li>{last_at} - 最后登录时间</li>
+                            <li>{url} - 访问链接</li>
+
+
+                        </ul>
+                    </div>
+                </div>
             </div>
           </div>
 </div>
@@ -165,6 +152,7 @@
                     });}
         function addcss() {
             $('#id_status').attr('class','form-control')
+            $('#id_effect').attr('class','form-control')
         }
 
         $('#tijiao').click(function () {
@@ -180,25 +168,13 @@
 
     </script>
 
-<!-- bootstrap-progressbar -->
 <script src="/static/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-<!-- bootstrap-daterangepicker -->
 <script src="/static/vendors/moment/min/moment.min.js"></script>
-<!-- bootstrap-wysiwyg -->
 <script src="/static/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-
-<!-- Switchery -->
-{#<script src="/static/vendors/switchery/dist/switchery.min.js"></script>#}
-
-<!-- Parsley -->
 <script src="/static/vendors/parsleyjs/dist/parsley.min.js"></script>
-<!-- Autosize -->
 <script src="/static/vendors/autosize/dist/autosize.min.js"></script>
-<!-- jQuery autocomplete -->
 <script src="/static/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-<!-- starrr -->
 <script src="/static/vendors/starrr/dist/starrr.js"></script>
-<!-- Custom Theme Scripts -->
 <script src="/static/build/js/custom.min.js"></script>
 {% endblock %}
 

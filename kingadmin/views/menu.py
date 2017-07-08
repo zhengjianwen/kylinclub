@@ -92,6 +92,7 @@ class Activitytypeedit(BaseView):
 
 class Activityadd(BaseView):
     title = '添加活动'
+
     def get(self, request):
         obj = ActivityForm()
         return render(request, 'kingadmin/activity/activtyedit.html', locals())
@@ -99,14 +100,16 @@ class Activityadd(BaseView):
     def post(self,request):
         obj = ActivityForm(request.POST, request.FILES)
         if obj.is_valid():
-            cid = obj.cleaned_data.get('activityclass')
-            obj.cleaned_data['activityclass'] = ActivityClass.objects.filter(id=cid).first()
+            # cid = obj.cleaned_data.get('activityclass')
+            # obj.cleaned_data['activityclass'] = ActivityClass.objects.filter(id=cid).first()
             Activity.objects.create(**obj.cleaned_data)
-            if obj.cleaned_data.get('img'):
+            if obj.cleaned_data.get('img',False):
                 self.save_img(obj.cleaned_data['img'], 'activity')
+            else:
+                del obj.cleaned_data['img']
             return redirect('/kingadmin/activity.html')
         print('===>添加活动错误', obj.errors)
-        return render(request, 'kingadmin/activtyedit.html', locals())
+        return render(request, 'kingadmin/activity/activtyedit.html', locals())
 
 
 class Activityedit(BaseView):
@@ -126,17 +129,19 @@ class Activityedit(BaseView):
             'create_at':data.create_at,
         }
         obj = ActivityForm(initial=in_form)
-        return render(request, '/kingadmin/activtyedit.html', locals())
+        return render(request, 'kingadmin/activity/activtyedit.html', locals())
 
     def post(self, request, cid):
         obj = ActivityForm(request.POST, request.FILES)
         if obj.is_valid():
-            cobj = Activity.objects.filter(id=cid).update(**obj.cleaned_data)
-            if obj.cleaned_data.get('img'):
+            if obj.cleaned_data.get('img',False):
                 self.save_img(obj.cleaned_data['img'], 'activity')
-            return redirect('/kingadmin/activitylist.html')
+            else:
+                del obj.cleaned_data['img']
+            Activity.objects.filter(id=cid).update(**obj.cleaned_data)
+            return redirect('/kingadmin/activity.html')
         print('===>编辑活动错误',obj.errors)
-        return render(request, '/kingadmin/activtyedit.html', locals())
+        return render(request, 'kingadmin/activity/activtyedit.html', locals())
 
 
 class ActivityView(BaseView):

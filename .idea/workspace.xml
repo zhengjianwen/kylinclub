@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/repository/models.py" line="139" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/repository/models.py" line="143" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc8f5fce-dcc7-4f2d-b1cb-269f82098d59" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0001_initial.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0002_auto_20170705_1714.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0003_news_status.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0004_auto_20170706_1318.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0005_auto_20170706_1429.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/repository/migrations/0006_activityclass_alias.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kingadmin/views/message.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/kingform.py" afterPath="$PROJECT_DIR$/kingadmin/kingform.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/urls.py" afterPath="$PROJECT_DIR$/kingadmin/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/menu.py" afterPath="$PROJECT_DIR$/kingadmin/views/menu.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/news.py" afterPath="$PROJECT_DIR$/kingadmin/views/news.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/models.py" afterPath="$PROJECT_DIR$/repository/models.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitylist.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitypeedit.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitypeedit.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitytype.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/menuadd.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menuadd.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menus.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/news.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/news/news.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/newsadd.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html" />
     </list>
     <ignored path="kylinclub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,47 +47,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="menu.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kingadmin/views/menu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
-              <folding>
-                <element signature="e#45#90#0" expanded="true" />
-                <element signature="e#286#458#0" expanded="false" />
-                <element signature="e#490#898#0" expanded="false" />
-                <element signature="e#542#631#0" expanded="false" />
-                <element signature="e#931#1621#0" expanded="false" />
-                <element signature="e#988#1323#0" expanded="false" />
-                <element signature="e#1367#1621#0" expanded="false" />
-                <element signature="e#1658#1810#0" expanded="false" />
-                <element signature="e#1850#2306#0" expanded="false" />
-                <element signature="e#2347#3070#0" expanded="false" />
-                <element signature="e#4011#4336#0" expanded="false" />
-                <element signature="e#4967#5118#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activtyedit.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="e#3308#4161#0#HTML" expanded="false" />
-                <element signature="e#4183#5026#0#HTML" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
+            <state relative-caret-position="148">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#68#348#0" expanded="false" />
                 <element signature="e#385#1160#0" expanded="false" />
@@ -111,14 +61,15 @@
                 <element signature="e#1943#2194#0" expanded="false" />
                 <element signature="e#2237#2392#0" expanded="false" />
                 <element signature="e#2429#2898#0" expanded="false" />
-                <element signature="e#2936#3373#0" expanded="false" />
-                <element signature="e#3415#3621#0" expanded="false" />
-                <element signature="e#3658#4062#0" expanded="false" />
-                <element signature="e#4099#4448#0" expanded="false" />
-                <element signature="e#4494#4841#0" expanded="false" />
-                <element signature="e#5567#6170#0" expanded="false" />
-                <element signature="e#6216#6828#0" expanded="false" />
-                <element signature="e#6869#7316#0" expanded="false" />
+                <element signature="e#2936#3422#0" expanded="false" />
+                <element signature="e#3464#3849#0" expanded="false" />
+                <element signature="e#3886#4290#0" expanded="false" />
+                <element signature="e#4327#4676#0" expanded="false" />
+                <element signature="e#4722#5069#0" expanded="false" />
+                <element signature="e#5106#5768#0" expanded="false" />
+                <element signature="e#5805#6408#0" expanded="false" />
+                <element signature="e#6454#7066#0" expanded="false" />
+                <element signature="e#7107#7554#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -127,14 +78,60 @@
       <file leaf-file-name="kingform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/kingform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="80" column="11" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="11" />
+            <state relative-caret-position="634">
+              <caret line="201" column="11" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="11" />
               <folding>
                 <element signature="e#45#76#0" expanded="true" />
-                <element signature="e#282#1840#0" expanded="false" />
-                <element signature="e#1869#2979#0" expanded="false" />
-                <element signature="e#4121#6567#0" expanded="false" />
+                <element signature="e#282#1959#0" expanded="false" />
+                <element signature="e#1988#3098#0" expanded="false" />
+                <element signature="e#3136#4207#0" expanded="false" />
+                <element signature="e#6354#6442#0" expanded="false" />
+                <element signature="e#6731#8543#0" expanded="false" />
+                <element signature="e#8452#8543#0" expanded="false" />
+                <element signature="e#8452#8543#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sendmail.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utils/sendmail.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+              <folding>
+                <element signature="e#45#59#0" expanded="true" />
+                <element signature="e#188#807#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="message.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kingadmin/views/message.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="985">
+              <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+              <folding>
+                <element signature="e#45#103#0" expanded="true" />
+                <element signature="e#330#1749#0" expanded="false" />
+                <element signature="e#445#773#0" expanded="false" />
+                <element signature="e#924#1749#0" expanded="false" />
+                <element signature="e#1789#1947#0" expanded="false" />
+                <element signature="e#1986#2420#0" expanded="false" />
+                <element signature="e#2591#2752#0" expanded="false" />
+                <element signature="e#3390#3659#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="email.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/email.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="58" column="142" selection-start-line="58" selection-start-column="142" selection-end-line="58" selection-end-column="142" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -142,8 +139,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+            <state relative-caret-position="607">
+              <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
               <folding>
                 <element signature="e#1#41#0" expanded="true" />
               </folding>
@@ -194,20 +191,29 @@
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/news.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitytype.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/baseview.py" />
-        <option value="$PROJECT_DIR$/kingadmin/views/news.py" />
-        <option value="$PROJECT_DIR$/repository/models.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitylist.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activtyedit.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus.html" />
-        <option value="$PROJECT_DIR$/kingadmin/kingform.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/menuadd.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitypeedit.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menus.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html" />
+        <option value="$PROJECT_DIR$/kingadmin/views/news.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html" />
-        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
         <option value="$PROJECT_DIR$/kingadmin/views/menu.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html" />
+        <option value="$PROJECT_DIR$/kingadmin/views/message .py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/emaillog.html" />
+        <option value="$PROJECT_DIR$/repository/models.py" />
+        <option value="$PROJECT_DIR$/kingadmin/kingform.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/email.html" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/mailedit.html" />
+        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
+        <option value="$PROJECT_DIR$/kingadmin/views/message.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/email.html" />
+        <option value="$PROJECT_DIR$/utils/sendmail.py" />
       </list>
     </option>
   </component>
@@ -276,25 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repository" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -309,54 +297,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="kingadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kingadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kingadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webserver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kingadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kingadmin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,7 +310,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/code/kylinclub/webserver/README.md" />
-    <property name="settings.editor.selected.configurable" value="Images" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -384,10 +324,11 @@
       <recent name="E:\code\kylinclub\webserver\kingadmin\status\kingadmin" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\moban" />
+      <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\mail" />
+      <recent name="E:\code\kylinclub\webserver\kingadmin\views" />
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin" />
       <recent name="E:\code\kylinclub\webserver\kingadmin" />
-      <recent name="E:\code\kylinclub\webserver\web" />
-      <recent name="E:\code\kylinclub\webserver\status" />
     </key>
   </component>
   <component name="RunManager" selected="Django server.kylinclub">
@@ -677,9 +618,9 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2900433" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26406926" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15476191" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13528138" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -731,21 +672,14 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="django-line">
           <url>file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html</url>
-          <line>54</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="9" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/kingadmin/login.html" />
-    <entry file="file://$PROJECT_DIR$/status/content/layer/skin/layer.css" />
-    <entry file="file://$PROJECT_DIR$/status/content/reset.css" />
-    <entry file="file://$PROJECT_DIR$/status/content/laypage/laypage.js" />
-    <entry file="file://$PROJECT_DIR$/status/content/layer/skin/default/icon.png" />
-    <entry file="file://$PROJECT_DIR$/status/content/layer/skin/default/icon-ext.png" />
     <entry file="file://$PROJECT_DIR$/templates/web/base.html" />
     <entry file="file://$PROJECT_DIR$/web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -935,19 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views/news.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="318">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding>
-            <element signature="e#45#90#0" expanded="true" />
-            <element signature="e#263#609#0" expanded="false" />
-            <element signature="e#1233#2368#0" expanded="false" />
-            <element signature="e#2404#2480#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e2f51859-835c-464f-a992-8786aafff1f8/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -969,38 +890,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2421">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menuadd.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
           <caret line="47" column="56" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-          <folding>
-            <element signature="n#if#0;n#!!top" expanded="false" />
-            <element signature="n#block#3;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,31 +914,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="190" column="36" selection-start-line="190" selection-start-column="36" selection-end-line="190" selection-end-column="36" />
-          <folding>
-            <element signature="e#68#348#0" expanded="false" />
-            <element signature="e#385#1160#0" expanded="false" />
-            <element signature="e#1193#1344#0" expanded="false" />
-            <element signature="e#1382#1628#0" expanded="false" />
-            <element signature="e#1665#1905#0" expanded="false" />
-            <element signature="e#1943#2194#0" expanded="false" />
-            <element signature="e#2237#2392#0" expanded="false" />
-            <element signature="e#2429#2898#0" expanded="false" />
-            <element signature="e#2936#3373#0" expanded="false" />
-            <element signature="e#3415#3621#0" expanded="false" />
-            <element signature="e#3658#4062#0" expanded="false" />
-            <element signature="e#4099#4448#0" expanded="false" />
-            <element signature="e#4494#4841#0" expanded="false" />
-            <element signature="e#5567#6170#0" expanded="false" />
-            <element signature="e#6216#6828#0" expanded="false" />
-            <element signature="e#6869#7316#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="344">
@@ -1053,19 +922,6 @@
             <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#th#2;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#th#3;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#2;n#div#2;n#div#0;n#div#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/kingform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="4" selection-end-line="80" selection-end-column="11" />
-          <folding>
-            <element signature="e#45#76#0" expanded="true" />
-            <element signature="e#282#1840#0" expanded="false" />
-            <element signature="e#1869#2979#0" expanded="false" />
-            <element signature="e#4121#6567#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,31 +944,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/news.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-380">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="32" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="57" column="0" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="-981">
+          <caret line="51" column="29" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="29" />
           <folding>
-            <element signature="e#3308#4161#0#HTML" expanded="false" />
-            <element signature="e#4183#5026#0#HTML" expanded="false" />
+            <element signature="e#4123#4146#0#HTML" expanded="true" />
+            <element signature="e#4332#4355#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+        <state relative-caret-position="1780">
+          <caret line="76" column="125" selection-start-line="76" selection-start-column="125" selection-end-line="76" selection-end-column="125" />
           <folding>
-            <element signature="e#1#41#0" expanded="true" />
+            <element signature="n#block#3;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/views/menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="108" column="56" selection-start-line="108" selection-start-column="56" selection-end-line="108" selection-end-column="56" />
+        <state relative-caret-position="77">
+          <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
           <folding>
             <element signature="e#45#90#0" expanded="true" />
             <element signature="e#286#458#0" expanded="false" />
@@ -1124,8 +996,149 @@
             <element signature="e#1658#1810#0" expanded="false" />
             <element signature="e#1850#2306#0" expanded="false" />
             <element signature="e#2347#3070#0" expanded="false" />
-            <element signature="e#4011#4336#0" expanded="false" />
-            <element signature="e#4967#5118#0" expanded="false" />
+            <element signature="e#2405#2751#0" expanded="false" />
+            <element signature="e#3158#3258#0" expanded="false" />
+            <element signature="e#3296#3934#0" expanded="false" />
+            <element signature="e#4093#4418#0" expanded="false" />
+            <element signature="e#5122#5273#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/news.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="58" />
+          <folding>
+            <element signature="e#45#90#0" expanded="true" />
+            <element signature="e#641#1195#0" expanded="false" />
+            <element signature="e#833#1195#0" expanded="false" />
+            <element signature="e#1229#2364#0" expanded="false" />
+            <element signature="e#2400#2476#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/emaillog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="995">
+          <caret line="71" column="61" selection-start-line="71" selection-start-column="61" selection-end-line="71" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="107" column="16" selection-start-line="107" selection-start-column="16" selection-end-line="112" selection-end-column="22" />
+          <folding>
+            <element signature="e#1166#4592#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/mailedit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1155">
+          <caret line="117" column="16" selection-start-line="117" selection-start-column="16" selection-end-line="117" selection-end-column="16" />
+          <folding>
+            <element signature="e#1997#2015#0#HTML" expanded="true" />
+            <element signature="e#2462#2480#0#HTML" expanded="true" />
+            <element signature="e#2872#2890#0#HTML" expanded="true" />
+            <element signature="e#3941#4931#0#HTML" expanded="false" />
+            <element signature="e#4019#4057#0#HTML" expanded="true" />
+            <element signature="e#4141#4198#0#HTML" expanded="true" />
+            <element signature="e#5080#7151#0#HTML" expanded="false" />
+            <element signature="e#5217#6651#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#68#348#0" expanded="false" />
+            <element signature="e#385#1160#0" expanded="false" />
+            <element signature="e#1193#1344#0" expanded="false" />
+            <element signature="e#1382#1628#0" expanded="false" />
+            <element signature="e#1665#1905#0" expanded="false" />
+            <element signature="e#1943#2194#0" expanded="false" />
+            <element signature="e#2237#2392#0" expanded="false" />
+            <element signature="e#2429#2898#0" expanded="false" />
+            <element signature="e#2936#3422#0" expanded="false" />
+            <element signature="e#3464#3849#0" expanded="false" />
+            <element signature="e#3886#4290#0" expanded="false" />
+            <element signature="e#4327#4676#0" expanded="false" />
+            <element signature="e#4722#5069#0" expanded="false" />
+            <element signature="e#5106#5768#0" expanded="false" />
+            <element signature="e#5805#6408#0" expanded="false" />
+            <element signature="e#6454#7066#0" expanded="false" />
+            <element signature="e#7107#7554#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/kingform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="634">
+          <caret line="201" column="11" selection-start-line="201" selection-start-column="4" selection-end-line="201" selection-end-column="11" />
+          <folding>
+            <element signature="e#45#76#0" expanded="true" />
+            <element signature="e#282#1959#0" expanded="false" />
+            <element signature="e#1988#3098#0" expanded="false" />
+            <element signature="e#3136#4207#0" expanded="false" />
+            <element signature="e#6354#6442#0" expanded="false" />
+            <element signature="e#6731#8543#0" expanded="false" />
+            <element signature="e#8452#8543#0" expanded="false" />
+            <element signature="e#8452#8543#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="607">
+          <caret line="30" column="64" selection-start-line="30" selection-start-column="64" selection-end-line="30" selection-end-column="64" />
+          <folding>
+            <element signature="e#1#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="985">
+          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
+          <folding>
+            <element signature="e#45#103#0" expanded="true" />
+            <element signature="e#330#1749#0" expanded="false" />
+            <element signature="e#445#773#0" expanded="false" />
+            <element signature="e#924#1749#0" expanded="false" />
+            <element signature="e#1789#1947#0" expanded="false" />
+            <element signature="e#1986#2420#0" expanded="false" />
+            <element signature="e#2591#2752#0" expanded="false" />
+            <element signature="e#3390#3659#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="58" column="142" selection-start-line="58" selection-start-column="142" selection-end-line="58" selection-end-column="142" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils/sendmail.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="52" column="3" selection-start-line="52" selection-start-column="3" selection-end-line="52" selection-end-column="3" />
+          <folding>
+            <element signature="e#45#59#0" expanded="true" />
+            <element signature="e#188#807#0" expanded="false" />
           </folding>
         </state>
       </provider>
