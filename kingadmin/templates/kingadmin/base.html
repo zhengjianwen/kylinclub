@@ -3,30 +3,17 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>{% block title %}{% endblock %} 麒麟会后台管理</title>
-
-    <!-- Bootstrap -->
     <link href="/static/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link href="/static/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
     <link href="/static/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
     <link href="/static/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-
-    <!-- bootstrap-progressbar -->
     <link href="/static/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
     <link href="/static/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- bootstrap-daterangepicker -->
     <link href="/static/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-
-    <!-- Custom Theme Style -->
     <link href="/static/build/css/custom.min.css" rel="stylesheet">
     {% block css %}{% endblock %}
   </head>
@@ -51,7 +38,7 @@
               </div>
               <div class="profile_info">
                 <span>欢迎光临</span>
-                <h2>管理员[ {{ name }} ]回来</h2>
+                <h2>管理员[ 张三 ]回来</h2>
               </div>
             </div>
             <!-- 菜单头部信息 -->
@@ -91,15 +78,25 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i>消息管理<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/kingadmin/maillog/">邮件日志</a></li>
-                      <li><a href="/kingadmin/smslog/">短信日志</a></li>
-                      <li><a href="/kingadmin/mailmb/">邮件模板</a></li>
-                      <li><a href="/kingadmin/smsmb/">短信模板</a></li>
-                      <li><a href="/kingadmin/mailset/">邮件设置</a></li>
-                      <li><a href="/kingadmin/smsset/">短信设置</a></li>
+                        <li class="">
+                              <a>邮件设置<span class="fa fa-chevron-down"></span></a>
+                              <ul class="nav child_menu" style="display: none;">
+                                <li class="sub_menu"><a href="/kingadmin/maillog/">邮件日志</a>
+                                </li>
+                                <li><a href="/kingadmin/mailset/">邮件列表</a>
+                                </li>
+                                <li><a href="/kingadmin/mailmb/">邮件模板</a>
+                                </li>
+                              </ul>
+                        </li>
+                         <li class="">
+                              <a>短信设置<span class="fa fa-chevron-down"></span></a>
+                              <ul class="nav child_menu" style="display: none;">
+                                <li class="sub_menu"><a href="/kingadmin/smslog/">短信日志</a></li>
+                                <li><a href="/kingadmin/smsset/">接口配置</a></li>
 
-
-
+                              </ul>
+                        </li>
                     </ul>
                   </li>
                 </ul>
@@ -107,23 +104,24 @@
               <div class="menu_section">
                 <h3>系统管理</h3>
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i>用户管理<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-user"></i></i>会员管理<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">用户列表</a></li>
-                      <li><a href="projects.html">角色管理</a></li>
-                      <li><a href="projects.html">权限管理</a></li>
+                      <li><a href="/kingadmin/user">会员管理</a></li>
+                      <li><a href="/kingadmin/role">角色管理</a></li>
+                      <li><a href="/kingadmin/action">权限管理</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-windows"></i> 会员管理 <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bank"></i></i> 企业会员 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="page_403.html">个人会员</a></li>
-                      <li><a href="page_404.html">企业会员</a></li>
+                      <li><a href="/kingadmin/">企业信息表</a></li>
+                      <li><a href="page_404.html">企业联系单</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-sitemap"></i> 轮播图 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="#level1_1">会员列表</a>
-                        <li><a>跟踪记录<span class="fa fa-chevron-down"></span></a>
+                        <li><a href="/kingadmin/lunbo/add">添加轮播图</a>
+                        <li><a href="/kingadmin/lunbo">轮播图列表</a>
+
                     </ul>
                   </li>
                   <li>

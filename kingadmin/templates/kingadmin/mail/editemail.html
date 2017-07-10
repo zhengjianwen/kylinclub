@@ -37,7 +37,7 @@
                 <div class="col-md-8 col-sm-8 col-xs-8">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>发送邮件设置<small></small></h2>
+                    <h2>{{ title }}<small>{{ self.mail }}</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
 
                     </ul>
@@ -45,7 +45,7 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="myform" class="form-horizontal form-label-left" >
+                    <form id="myform" class="form-horizontal form-label-left" method="post">
                         {% csrf_token %}
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">邮件类型<span class="required">*</span>
@@ -72,7 +72,7 @@
                       </div>
 
                       <div class="form-group">
-                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">邮件密码</label>
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">邮件密码<span class="required">*</span></label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
                           {{ obj.password }}
                             <p>{{ obj.errors.password.0 }}</p>
@@ -96,7 +96,7 @@
                       <div class="form-group">
                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                           <input class="btn btn-primary" type="reset">
-                          <button id="tijiao" class="btn btn-primary" type="button" value="提交">提交</button>
+                          <input id="tijiao" class="btn btn-primary" type="submit" value="提交">
                         </div>
                       </div>
 
@@ -108,7 +108,7 @@
                 <div id="error" class="col-md-4 col-sm-4 col-xs-4">
                     <span>此处默认为错误信息！</span>
                     <div id="errormsg">
-
+                        {{ obj.errors }}
                     </div>
                 </div>
             </div>
@@ -118,27 +118,5 @@
 
 {% endblock %}
 
-{% block js %}
-<script>
-        $('#tijiao').click(function () {
-            $.ajax({
-                url:'/kingadmin/mailset',
-                data:$('#myform').serialize(),
-                type:'POST',
-                dataType:'JSON',
-                success:function(arg){
-
-                    if (arg.status == '1'){
-                        $('#errormsg').html(arg.data)
-                    }else {
-                        $('#errormsg').html(arg.msg)
-                        alert(arg.msg);
-                    }
-                },
-            })
-        })
-
-    </script>
-{% endblock %}
 
 {% block footer %}{% endblock %}

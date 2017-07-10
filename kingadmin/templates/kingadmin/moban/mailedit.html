@@ -61,7 +61,15 @@
                         </div>
 
                       </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">发送邮箱<span class="required">*</span>
+                        </label>
+                        <div class="col-md-10 col-sm-10 col-xs-12">
+                          {{ obj.sendmail_id }}
+                            <p style="color: red">{{ obj.errors.sendmail_id.0 }}</p>
+                        </div>
 
+                      </div>
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">模板名称</label>
                         <div class="col-md-10 col-sm-10 col-xs-12">
@@ -106,6 +114,8 @@
                             <li>{creat_at} - 用户注册时间</li>
                             <li>{last_at} - 最后登录时间</li>
                             <li>{url} - 访问链接</li>
+                            <li>{data} - 发送日期</li>
+                            <li>{time} - 发送时间</li>
 
 
                         </ul>

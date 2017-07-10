@@ -112,23 +112,23 @@ class ActivityForm(Form):
                                           'class': "form-control col-md-7 col-xs-12"}
                                ))
     content = fields.CharField(widget=widgets.Textarea(
-                                attrs={'class': 'form-control',
-                                       'placeholder': '请在此填写活动内容',
-                                       'rows': '10',
-                                       'id': 'mycontent'}))
+        attrs={'class': 'form-control',
+               'placeholder': '请在此填写活动内容',
+               'rows': '10',
+               'id': 'mycontent'}))
     author = fields.CharField(required=False, max_length=64,
                               widget=widgets.TextInput(
                                   attrs={'placeholder': "默认为admin", 'class': "form-control col-md-7 col-xs-12"}
                               ))
     up = fields.IntegerField(required=False,
                              widget=widgets.TextInput(
-                                attrs={'placeholder': "可以自定义数字",
-                                    'class': "form-control col-md-7 col-xs-12"}))
+                                 attrs={'placeholder': "可以自定义数字",
+                                        'class': "form-control col-md-7 col-xs-12"}))
     status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
     create_at = fields.DateField(widget=widgets.DateTimeInput(
         attrs={'class': "form-control col-md-7 col-xs-12", 'type': 'date'}))
 
-    def __init__(self ,*args, **kwargs):
+    def __init__(self, *args, **kwargs):
         super(ActivityForm, self).__init__(*args, **kwargs)
         self.fields['activityclass_id'].widget.choices = ActivityClass.objects.all().values_list('id', 'name')
 
@@ -138,12 +138,6 @@ class ActivityForm(Form):
             val = 1
         return val
 
-    # def clean(self):
-    #     summary = self.cleaned_data.get('summary')
-    #     if not summary:
-    #         self.cleaned_data['summary'] = self.cleaned_data['content'][:100]
-    #     return self.cleaned_data
-
     class Meta:
         model = Activity
 
@@ -151,30 +145,31 @@ class ActivityForm(Form):
 class MailForm(Form):
     mail_type = fields.ChoiceField(choices=((0, 'SMTP'), (1, 'IMAP')),
                                    widget=widgets.Select(
-                                    attrs={'class':'form-control'}
-    ))
+                                       attrs={'class': 'form-control'}
+                                   ))
     user = fields.EmailField(max_length=128,
                              min_length=6,
                              widget=widgets.TextInput(
-                                 attrs={'placeholder': "请填写发送邮件地址:如 abc@163.com", 'class': "form-control col-md-7 col-xs-12"}
+                                 attrs={'placeholder': "请填写发送邮件地址:如 abc@163.com",
+                                        'class': "form-control col-md-7 col-xs-12"}
                              ))
     password = fields.CharField(max_length=128,
-                             min_length=1,
-                             widget=widgets.PasswordInput(
-                                 attrs={'placeholder': "请输入邮箱密码,提交新必须写密码。",
-                                        'class': "form-control col-md-7 col-xs-12"}
-                             ))
+                                min_length=1,
+                                widget=widgets.PasswordInput(
+                                    attrs={'placeholder': "请输入邮箱密码,提交新必须写密码。",
+                                           'class': "form-control col-md-7 col-xs-12"}
+                                ))
     addr = fields.CharField(max_length=128,
-                             min_length=1,
-                             widget=widgets.TextInput(
-                                 attrs={'placeholder': "请输入提交的smtp或imap地址。",
-                                        'class': "form-control col-md-7 col-xs-12"}
-                             ))
-    port = fields.IntegerField(max_value=65535,min_value=1,required=False,
-                             widget=widgets.TextInput(
-                                 attrs={'placeholder': "请填写端口，无加密端口为：25，加密端口为：465",
-                                        'class': "form-control col-md-7 col-xs-12"}
-                             ))
+                            min_length=1,
+                            widget=widgets.TextInput(
+                                attrs={'placeholder': "请输入提交的smtp或imap地址。",
+                                       'class': "form-control col-md-7 col-xs-12"}
+                            ))
+    port = fields.IntegerField(max_value=65535, min_value=1, required=False,
+                               widget=widgets.TextInput(
+                                   attrs={'placeholder': "请填写端口，无加密端口为：25，加密端口为：465",
+                                          'class': "form-control col-md-7 col-xs-12"}
+                               ))
     is_ssh = fields.BooleanField(required=False)
 
     def clean_is_shh(self):
@@ -193,13 +188,46 @@ class MailForm(Form):
 class EmailTmplatForm(Form):
     effect = fields.ChoiceField(choices=EmailTemplate.effect_choices)
     status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
-    name = fields.CharField(max_length=128,
-                             min_length=1,
-                             widget=widgets.TextInput(
-                                 attrs={'placeholder': "请填写模板名称", 'class': "form-control col-md-7 col-xs-12"}
-                             ))
+    sendmail_id = fields.CharField(widget=widgets.Select(
+        attrs={'class': "form-control col-md-7 col-xs-12"}))
+    name = fields.CharField(max_length=128, min_length=1,
+                            widget=widgets.TextInput(
+                                attrs={'placeholder': "请填写模板名称", 'class': "form-control col-md-7 col-xs-12"}
+                            ))
 
     content = fields.CharField(widget=widgets.Textarea(
-                                attrs={'class': 'form-control',
-                                       'rows': '10',
-                                       'id': 'mycontent'}))
+        attrs={'class': 'form-control',
+               'rows': '10',
+               'id': 'mycontent'}))
+
+    def __init__(self, *args, **kwargs):
+        super(EmailTmplatForm, self).__init__(*args, **kwargs)
+        self.fields['sendmail_id'].widget.choices = Email.objects.all().values_list('id', 'user')
+
+
+class CarouselForm(Form):
+    weight = fields.IntegerField(widget=widgets.TextInput(
+                                     attrs={'placeholder': "显示排名，数字越大排名越前", 'class': "form-control col-md-7 col-xs-12"}
+                                 ))
+    status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
+    orgid_id = fields.CharField(widget=widgets.Select(
+        attrs={'class': "form-control col-md-7 col-xs-12"}))
+    title = fields.CharField(max_length=64, min_length=1, required=True,
+                             widget=widgets.TextInput(
+                                 attrs={'placeholder': "标题", 'class': "form-control col-md-7 col-xs-12"}
+                             ))
+    content = fields.CharField(widget=widgets.Textarea(
+        attrs={'class': 'form-control',
+               'rows': '10',
+               'id': 'mycontent'}))
+    url = fields.CharField(max_length=128, min_length=0, required=False,
+                           widget=widgets.TextInput(
+                               attrs={'placeholder': "填写链接地址",
+                                      'class': "form-control col-md-7 col-xs-12"}
+                           ))
+    img = fields.ImageField(required=True,
+                            widget=widgets.FileInput(attrs={'class': "form-control col-md-7 col-xs-12"}))
+
+    def __init__(self, *args, **kwargs):
+        super(CarouselForm, self).__init__(*args, **kwargs)
+        self.fields['orgid_id'].widget.choices = Rotation.objects.all().values_list('id', 'name')

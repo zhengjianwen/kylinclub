@@ -1,6 +1,5 @@
-
 from django.conf.urls import url,include
-from kingadmin.views import authuser, index, news, menu,message
+from kingadmin.views import authuser, index, news, menu, message,carousel
 from kingadmin.views import upload
 
 
@@ -18,13 +17,26 @@ urlpatterns = [
     url(r'menus/edit/(?P<cid>\d+)', menu.MenuEdit.as_view()),
     url(r'menus/add', menu.MenuAdd.as_view()),
     url(r'menus', menu.MenuView.as_view()),
+
     url(r'activitytype/add', menu.Activitytypeadd.as_view()),
     url(r'activitytype/edit/(?P<cid>\d+)', menu.Activitytypeedit.as_view()),
     url(r'activitytype/', menu.Activitytype.as_view()),
+
     url(r'activity.html', menu.ActivityView.as_view()),
     url(r'activity/add', menu.Activityadd.as_view()),
     url(r'activity/edit/(?P<cid>\d+)', menu.Activityedit.as_view()),
-    url(r'mailset', message.EmailView.as_view()),
+
+
+    # url(r'mailset/add', message.EmailAdd.as_view()),
+    # url(r'mailset/edit/(?P<cid>\d+)', message.EmailEdit.as_view()),
+    # url(r'mailset/delete/(?P<cid>\d+)', message.maildelete),
+    # url(r'mailset', message.EmailView.as_view()),
+
+    url(r'lunbo/add', message.EmailAdd.as_view()),
+    url(r'lunbo/edit/(?P<cid>\d+)', message.EmailEdit.as_view()),
+    url(r'lunbo/delete/(?P<cid>\d+)', message.maildelete),
+    url(r'lunbo', carousel.EmailView.as_view()),
+
     url(r'maillog', message.maillog),
     url(r'mailmb/add', message.EmailTmplatAdd.as_view()),
     url(r'mailmb/edit/(?P<cid>\d+)', message.EmailTmplatEdit.as_view()),

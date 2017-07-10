@@ -3,9 +3,9 @@ from django.db import models
 
 # 用户管理
 class User(models.Model):
-    username = models.CharField('账户',max_length=32,unique=True)
-    password = models.CharField('密码',max_length=64)
-    oldpwd = models.CharField('旧密码',max_length=64)
+    username = models.CharField('账户', max_length=32, unique=True)
+    password = models.CharField('密码', max_length=64)
+    oldpwd = models.CharField('旧密码', max_length=64)
 
     class Meta:
         verbose_name_plural = '1-1用户账户表'
@@ -17,8 +17,8 @@ class User(models.Model):
 class UserInfo(models.Model):
     status_choice = ((0, '未激活'), (1, '正常'), (2, '锁定'))
     user = models.OneToOneField('User', related_name='账户信息')
-    name = models.CharField('姓名', max_length=32)
-    email = models.EmailField('邮箱', unique=True,null=True)
+    name = models.CharField('姓名', max_length=32, null=True)
+    email = models.EmailField('邮箱', unique=True)
     phone = models.CharField('手机', max_length=11, unique=True)
     company = models.CharField('公司', max_length=128, null=True)
     department = models.CharField('部门', max_length=64, null=True)
@@ -79,12 +79,12 @@ class AdminMenu(models.Model):
     class Meta:
         verbose_name_plural = '2-1菜单表'
 
-    # 系统配置
+        # 系统配置
 
 
 # 轮播图
 class Rotation(models.Model):
-    name = models.CharField('名称',max_length=64)
+    name = models.CharField('名称', max_length=64)
 
     class Meta:
         verbose_name_plural = '8-轮播名称'
@@ -94,13 +94,13 @@ class Rotation(models.Model):
 
 
 class Carousel(models.Model):
-    weight = models.SmallIntegerField('权重',default=1)
+    weight = models.SmallIntegerField('权重', default=1)
     status = models.BooleanField('状态', default=0)
     orgid = models.ForeignKey('Rotation', verbose_name='所属')
     title = models.CharField('标题', max_length=64, null=True)
     content = models.TextField('文本', null=True)
     url = models.URLField('链接')
-    img = models.ImageField('图片',upload_to='banner')
+    img = models.ImageField('图片', upload_to='banner')
 
     class Meta:
         verbose_name_plural = '8-轮播图信息'
@@ -113,7 +113,7 @@ class Carousel(models.Model):
 class Email(models.Model):
     mail_type_choices = ((0, 'SMTP'), (1, 'IMAP'))
     mail_type = models.SmallIntegerField('类型', choices=mail_type_choices, default=0)
-    addr = models.CharField('地址',max_length=128)
+    addr = models.CharField('地址', max_length=128)
     user = models.EmailField('邮件账户')
     password = models.CharField('邮件密码', max_length=64)
     port = models.IntegerField('端口', default=25)
@@ -127,8 +127,9 @@ class Email(models.Model):
 
 
 class EmailTemplate(models.Model):
-    effect_choices = ((1,'用户注册'),(2,'找回密码'),(3,'企业会员'),(4,'其他模板'))
-    effect = models.IntegerField('作用',choices=effect_choices)
+    effect_choices = ((1, '用户注册'), (2, '找回密码'), (3, '企业会员'), (4, '其他模板'))
+    effect = models.IntegerField('作用', choices=effect_choices)
+    sendmail = models.ForeignKey('Email', verbose_name='发件箱')
     name = models.CharField('名称', max_length=32, unique=True)
     status = models.BooleanField('状态', default=0)
     content = models.TextField('内容')
@@ -160,7 +161,7 @@ class Menu(models.Model):
     weight = models.SmallIntegerField('权重', default=1)
     status = models.BooleanField('状态', default=0)
     name = models.CharField('导航名称', max_length=32, unique=True)
-    url = models.CharField('链接',max_length=128, null=True,blank=True)
+    url = models.CharField('链接', max_length=128, null=True, blank=True)
 
     class Meta:
         verbose_name_plural = '8-导航设置'
@@ -172,7 +173,7 @@ class Menu(models.Model):
 # 活动类型
 class ActivityClass(models.Model):
     menu = models.ForeignKey('Menu', verbose_name='所属菜单')
-    alias = models.CharField('URL别名',max_length=32,unique=True)
+    alias = models.CharField('URL别名', max_length=32, unique=True)
     name = models.CharField('活动名称', max_length=64)
     content = models.TextField('活动介绍', null=True, default='正在整理中')
 
@@ -185,12 +186,12 @@ class ActivityClass(models.Model):
 
 class Activity(models.Model):
     activityclass = models.ForeignKey('ActivityClass', verbose_name='活动类别')
-    img = models.ImageField('图片', upload_to='activity',null=True)
+    img = models.ImageField('图片', upload_to='activity', null=True)
     title = models.CharField('标题', max_length=128)
     summary = models.CharField('简介', max_length=255)
     content = models.TextField('内容', default='正在添加中')
     author = models.CharField('作者', max_length=64, default='admin')
-    up = models.IntegerField('点击量',default=0, null=True)
+    up = models.IntegerField('点击量', default=0, null=True)
     status = models.BooleanField('状态', default=0)
     create_at = models.DateField('创建时间', auto_now=True)
 
@@ -240,7 +241,7 @@ class CompanyMember(models.Model):
 class MemberFollow(models.Model):
     followay_choices = ((0, '电话'), (1, '邮箱'), (2, '线下沟通'))
     company = models.ForeignKey('CompanyMember', verbose_name='跟进企业')
-    followay = models.SmallIntegerField('跟进方式',choices=followay_choices, default=0)
+    followay = models.SmallIntegerField('跟进方式', choices=followay_choices, default=0)
     contenet = models.TextField('跟进内容')
     creat_at = models.DateTimeField('创建时间', auto_now_add=True)
 
@@ -249,8 +250,3 @@ class MemberFollow(models.Model):
 
     def __str__(self):
         return '%s-%s' % (self.company, self.company)
-
-
-
-
-
