@@ -34,7 +34,10 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>邮件列表 <small>共计105条</small></h2>
+                    <h2>轮播图列表 <small></small></h2>
+                      <div class="dt-buttons btn-group" style="margin-left: 30px;">
+                            <a type="button" class="btn btn-success" href="/kingadmin/lunbo/add/">添加图片</a>
+                        </div>
                     <ul class="nav navbar-right panel_toolbox">
                       <li>
                       </li>
@@ -43,57 +46,51 @@
                   </div>
                   <div class="x_content">
                     <p class="text-muted font-13 m-b-30">
-
-                    <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
-                        <div class="dt-buttons btn-group" style="margin-bottom: 15px;">
-                            <a type="button" class="btn btn-success" href="/kingadmin/mailset/add/">添加邮件</a>
-                        </div>
-
-                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
-                      <thead>
-                        <tr role="row">
-                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">类型</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">地址</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">端口</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">账户</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">密码</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">是否ssh</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
-                        </tr>
-                      </thead>
-
+                      <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        {% for menu in menu_list %}
+                            {% if menu.carousel_set.count > 0 %}
+                            <h4>{{ menu.name }}</h4>
+                            <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline"
+                               role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
+                              <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">编号</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">权重</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">标题</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">文本</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">链接</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">图片</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">是否显示</th>
+                                        <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
+                                    </tr>
+                              </thead>
                       <tbody>
-                      {% for row in mail_list %}
+                      {% for row in menu.carousel_set.all %}
                           <tr role="row" class="odd">
-                              <td>{{ row.id }}</td>
-                              <td >{{ row.get_mail_type_display }}</td>
-                              <td>{{ row.addr }}</td>
-                              <td>{{ row.port }}</td>
-                              <td>{{ row.user }}</td>
-                              <td>{{ row.password }}</td>
+                              <td>{{ forloop.counter }}</td>
+                              <td >{{ row.weight }}</td>
+                              <td>{{ row.title }}</td>
+                              <td>{{ row.content }}</td>
+                              <td>{{ row.url }}</td>
+                              <td><img src="/static/upload/{{ row.img }}" style="height: 50px;width: 150px"></td>
                               <td>
-                                  {% if not row.is_ssh %}
+                                  {% if not row.status %}
                                     <a type="button" class="btn btn btn-success showme">是</a>
                                   {% else %}
                                     <a type="button" class="btn btn btn-warning showme">否</a>
                                   {% endif %}
                               </td>
                               <td>
-                                  <a type="button" class="btn btn btn-primary" href="/kingadmin/mailset/edit/{{ row.id }}">编辑</a>
-                                  <a type="button" class="btn btn-danger" href="/kingadmin/mailset/delete/{{ row.id }}">删除</a>
+                                  <a type="button" class="btn btn btn-primary" href="/kingadmin/lunbo/edit/{{ row.id }}">编辑</a>
+                                  <a type="button" class="btn btn-danger" href="/kingadmin/lunbo/delete/{{ row.id }}">删除</a>
                               </td>
                             </tr>
                       {% endfor %}
 
                       </tbody>
                     </table>
-                        <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">
-
-                            <ul class="pagination pagination-sm">
-                            {{ page_obj.page_str|safe }}
-                            </ul>
-                        </div>
+                            {% endif %}
+                        {% endfor %}
                   </div>
                   </div>
                 </div>

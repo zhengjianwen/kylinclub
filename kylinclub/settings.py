@@ -136,3 +136,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'kingadmin', 'status'),
     os.path.join(BASE_DIR, 'status'),
 )
+EMAIL_HOST = 'smtp.exmail.qq.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'member@kylinclub.org'
+EMAIL_HOST_PASSWORD ='hiudK0uWnHsBWPdQ' # 'wuchao8510290'
+EMAIL_USE_SSL = True

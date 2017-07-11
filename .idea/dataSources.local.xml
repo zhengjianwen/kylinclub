@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="db" uuid="e2f51859-835c-464f-a992-8786aafff1f8" />
-    <data-source name="db [2]" uuid="dce25151-66e7-458a-afdd-c47416a3db89" />
+    <data-source name="db" uuid="cecb06f1-5a5e-4fdc-8018-ab970dbd1165">
+      <database-info product="SQLite" version="3.16.1" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <auth-required>false</auth-required>
+      <introspection-schemas>*:main</introspection-schemas>
+    </data-source>
   </component>
 </project>

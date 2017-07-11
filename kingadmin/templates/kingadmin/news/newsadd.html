@@ -106,9 +106,9 @@
                              </label>
                             <div class="col-md-2 col-sm-2 col-xs-6">
 
-                                <div class="radio">
+                                <div class="radio " id="mystatus" olddata="{{ new_obj.status }}">
                                   {{ obj.status }}
-                              </div>
+                                </div>
                             </div>
 
                       </div>
@@ -137,7 +137,21 @@
         $(function () {
            kindinit0();
            addcss();
+           selectstatus()
         });
+        function selectstatus() {
+            var olddata = $('#mystatus').attr('olddata');
+            console.log(olddata)
+            if (olddata == 'True'){
+                $('#mystatus').find('option').each(function () {
+                   var ret = $(this).val();
+                   console.log(ret)
+                    if (ret == 1){
+                        $(this).attr('selected',true)
+                    }
+                });
+            }
+        }
         function kindinit0() {
             kind = KindEditor.create('#mycontent', {
                     width: '100%',       // 文本框宽度(可以百分比或像素)
@@ -166,7 +180,6 @@
         function addcss() {
             $('#id_status').attr('class','form-control')
         }
-
         $('#tijiao').click(function () {
             var data = kind.text();
             var ret = $('textarea[name=content]').val();

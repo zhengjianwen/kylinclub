@@ -1,0 +1,241 @@
+{% extends 'kingadmin/base.html' %}
+{% block title %}企业会员管理{% endblock %}
+
+{% block head %}{% endblock %}
+
+{% block content %}
+<div class="row">
+      <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>企业会员管理 <small>共计{{ cm_list.count }}条数据</small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="clearfix"></div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>企业会员列表 <small>共计105条</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+
+                    <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="dt-buttons btn-group" style="margin-bottom: 15px;">
+                            <!--<a type="button" class="btn btn-success" href="">添加新闻</a>-->
+                            <div class="input-group">
+                            <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                            <div class="input-group-btn">
+                              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">在线搜索<span class="caret"></span>
+                              </button>
+                              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                <li><a href="#">名称搜索</a>
+                                </li>
+                                <li><a href="#">联系人搜索</a>
+                                </li>
+                                <li><a href="#">电话搜索</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="#">Separated link</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <!-- /btn-group -->
+                          </div>
+                        </div>
+
+                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline"
+                               role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
+                      <thead>
+                        <tr role="row">
+                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">
+                                选择
+                            </th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">
+                                企业名称
+                            </th>
+                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">
+                                职位
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">
+                                联系人
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">
+                                联系电话
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 120px;">
+                                联系邮件
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">
+                                当前状态
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">
+                                操作
+                            </th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                      {% for row in cm_list %}
+                          <tr role="row" class="odd text-center">
+                              <td>
+                                  <input type="checkbox" class="icheckbox_flat-green" value="{{ row.id }}">
+                              </td>
+                              <td tabindex="0" class="sorting_1">{{ row.company }}</td>
+                              <td tabindex="0" class="sorting_1">{{ row.position }}</td>
+                              <td>{{ row.name }}</td>
+                              <td >{{ row.phone }}</td>
+                              <td>{{ row.email }}</td>
+                              <td>{{ row.get_status_display }}</td>
+                              <td>{% if row.status == 0 %}
+                                    <button type="button" class="btn btn-primary shenghe" data-target="#myModal" data-toggle="modal" >马上审核</button>
+                                  {% else %}
+                                    <button type="button" class="btn btn-primary shenghe" data-target="#myModal" data-toggle="modal" >继续跟进</button>
+                                    {% endif %}
+                              </td>
+                            </tr>
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+                        <div class="dataTables_info" id="datatable-buttons_info" role="status" aria-live="polite">
+
+                            <ul class="pagination pagination-sm">
+                            {{ page_obj.page_str|safe }}
+                            </ul>
+                        </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+<div class="modal fade"  id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">企业联系沟通单</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">沟通公司:</label>
+            {{ m_obj.company_id }}
+          </div>
+          <div class="form-group" style="margin-top: 45px">
+            <label for="recipient-name" class="control-label">沟通方式:</label>
+            {{ m_obj.followay }}
+          </div>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">沟通结果:</label>
+            {{ obj.status }}
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">沟通内容:</label>
+            {{ m_obj.content }}
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+    <script src="/static/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script>
+        $('.showme').click(function () {
+            var cid = $(this).attr('data');
+            var status = $(this).attr('status');
+            $.ajax({
+                url:'/kingadmin/news/status/'+ data,
+                type:'GET',
+                dataType:'JSON',
+                data:{'status':status},
+                success:function(arg){
+                    if (status == 1){
+                        $(this).val('显示')
+                    }else {
+                        $(this).val('隐藏')
+                    }
+
+                },
+                        })
+                    });
+        $('.shenghe').click(function () {
+            var name = $(this).parent().siblings().eq(1).text();
+            var cid = $(this).parent().siblings().eq(0).find('input').val();
+            $('#mycompany').val(name);
+            $('#mycompany').attr('key',cid)
+        });
+        $('#save').click(function () {
+            var company = $('#mycompany').attr('key');
+            var followay = $('#id_followay').val();
+            var id_status = $('#id_status').val();
+            var content = $('#mycontent').val();
+            mystatus = null;
+            $.ajax({
+                url:'/kingadmin/follow',
+                dataType:'JSON',
+                type:'POST',
+                data:{'company_id':company,'followay':followay,'content':content},
+                success:function (arg) {
+                    if (arg.status == 1){
+                       mystatus = true
+                    }
+                }
+            });
+            console.log(mystatus)
+            $.ajax({
+                    url:'/kingadmin/huiyuan/status',
+                    data:{'cid':company,'status':id_status},
+                    type:'POST',
+                    dataType:'JSON',
+                    success:function (arg) {
+                        if (arg.status == 1){
+                            alert('更新成功')
+                            $('#myModal').modal('hide')
+                        }else {
+                            alert('更新失败')
+                        }
+                    }
+                })
+
+        })
+    </script>
+
+{% endblock %}
+
+{% block footer %}{% endblock %}

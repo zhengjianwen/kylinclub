@@ -26,12 +26,12 @@ class Newsadd(BaseView):
     def post(self, request, *args, **kwargs):
         obj = NewForm(request.POST, request.FILES)
         if obj.is_valid():
-            new_obj = News.objects.create(**obj.cleaned_data)
             if obj.cleaned_data.get('img'):
-                self.save_img(obj.cleaned_data.get('img'), 'news')
+                path = self.save_img(obj.cleaned_data.get('img'), 'news')
+                obj.cleaned_data['img'] = path
+            new_obj = News.objects.create(**obj.cleaned_data)
             return redirect('/kingadmin/news/')
         return render(request, 'kingadmin/news/newsadd.html', locals())
-
 
 
 class NewsEdit(BaseView):
@@ -55,12 +55,11 @@ class NewsEdit(BaseView):
         if obj.is_valid():
             if not obj.cleaned_data.get('img'):
                 del obj.cleaned_data['img']
+            else:
+                path = self.save_img(obj.cleaned_data['img'], 'news')
+                obj.cleaned_data['img'] = path
             new_obj = News.objects.filter(id=cid).update(**obj.cleaned_data)
-            if obj.cleaned_data.get('img'):
-                self.save_img(obj.cleaned_data['img'], 'news')
             return redirect('/kingadmin/news/')
-        print(obj.cleaned_data, 'cleaned_data')
-        print(obj.errors)
         return render(request, 'kingadmin/news/newsadd.html', locals())
 
 

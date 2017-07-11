@@ -41,6 +41,11 @@ class NewForm(Form):
         if val == '':
             val = 'admin'
         return val
+    def clean_up(self):
+        val = self.cleaned_data['up']
+        if not val:
+            val = 1
+        return val
 
     class Meta:
         model = News
@@ -187,7 +192,8 @@ class MailForm(Form):
 
 class EmailTmplatForm(Form):
     effect = fields.ChoiceField(choices=EmailTemplate.effect_choices)
-    status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
+    status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')),widget=widgets.Select(
+                                    attrs={'class': 'form-control',}))
     sendmail_id = fields.CharField(widget=widgets.Select(
         attrs={'class': "form-control col-md-7 col-xs-12"}))
     name = fields.CharField(max_length=128, min_length=1,
@@ -206,8 +212,9 @@ class EmailTmplatForm(Form):
 
 
 class CarouselForm(Form):
-    weight = fields.IntegerField(widget=widgets.TextInput(
-                                     attrs={'placeholder': "显示排名，数字越大排名越前", 'class': "form-control col-md-7 col-xs-12"}
+    weight = fields.IntegerField(required=False,widget=widgets.TextInput(
+                                     attrs={'placeholder': "显示排名，数字越大排名越前",
+                                            'class': "form-control col-md-7 col-xs-12"}
                                  ))
     status = fields.ChoiceField(choices=((0, '显示'), (1, '隐藏')))
     orgid_id = fields.CharField(widget=widgets.Select(
@@ -216,18 +223,75 @@ class CarouselForm(Form):
                              widget=widgets.TextInput(
                                  attrs={'placeholder': "标题", 'class': "form-control col-md-7 col-xs-12"}
                              ))
-    content = fields.CharField(widget=widgets.Textarea(
-        attrs={'class': 'form-control',
-               'rows': '10',
-               'id': 'mycontent'}))
+    content = fields.CharField(widget=widgets.TextInput(
+        attrs={'class': 'form-control col-md-7 col-xs-12','placeholder': "请填写简要文本"}))
     url = fields.CharField(max_length=128, min_length=0, required=False,
                            widget=widgets.TextInput(
                                attrs={'placeholder': "填写链接地址",
                                       'class': "form-control col-md-7 col-xs-12"}
                            ))
-    img = fields.ImageField(required=True,
+    img = fields.ImageField(required=False,
                             widget=widgets.FileInput(attrs={'class': "form-control col-md-7 col-xs-12"}))
 
     def __init__(self, *args, **kwargs):
         super(CarouselForm, self).__init__(*args, **kwargs)
-        self.fields['orgid_id'].widget.choices = Rotation.objects.all().values_list('id', 'name')
+        self.fields['orgid_id'].widget.choices = Menu.objects.all().values_list('id', 'name')
+
+    def clean_weight(self):
+        val = self.cleaned_data['weight']
+        if not val:
+            val = 1
+        return val
+
+    def clean_orgid_id(self):
+        val = self.cleaned_data['orgid_id']
+        if val and Menu.objects.filter(id=val).count() == 0:
+            raise ValidationError('选择不存在')
+        elif not val:
+            raise ValidationError('请选择')
+        return val
+
+
+class CompanyMemberForm(Form):
+    name = fields.CharField(max_length=32,
+                            widget=widgets.TextInput(
+                            attrs={'class': 'form-control col-md-7 col-xs-12',
+                                   'placeholder': "请输入联系姓名"}))
+    phone = fields.CharField(max_length=11,
+                            widget=widgets.TextInput(
+                            attrs={'class': 'form-control col-md-7 col-xs-12',
+                                   'placeholder': "请输入联系手机号"}))
+    company = fields.CharField(max_length=128,
+                            widget=widgets.TextInput(
+                            attrs={'class': 'form-control col-md-7 col-xs-12',
+                                   'placeholder': "请输入您公司名称"}))
+    position = fields.CharField(max_length=32,
+                            widget=widgets.TextInput(
+                            attrs={'class': 'form-control col-md-7 col-xs-12',
+                                   'placeholder': "请输入您职位名称"}))
+    email = fields.EmailField(max_length=32,
+                            widget=widgets.TextInput(
+                            attrs={'class': 'form-control col-md-7 col-xs-12',
+                                   'placeholder': "请输入您企业收件箱"}))
+    status = fields.ChoiceField(choices=CompanyMember.status_choices,widget=widgets.Select(
+                                    attrs={'class': 'form-control'}))
+
+
+class MemberFollowForm(Form):
+    company_id = fields.CharField(widget=widgets.TextInput(
+                                 attrs={'class': "form-control col-md-7 col-xs-12",
+                                        'disabled':True,'id':'mycompany'}
+                             ))
+    followay = fields.ChoiceField(choices=MemberFollow.followay_choices,
+                                  widget=widgets.Select(
+                                    attrs={'class': 'form-control',
+              }))
+    content = fields.CharField(widget=widgets.Textarea(
+        attrs={'class': 'form-control',
+               'placeholder': '请在此填写沟通内容作为留底！',
+               'rows': '10',
+               'id': 'mycontent'}))
+
+    def __init__(self, *args, **kwargs):
+        super(MemberFollowForm, self).__init__(*args, **kwargs)
+        self.fields['company_id'].widget.choices = CompanyMember.objects.all().values_list('id', 'company')

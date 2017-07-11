@@ -71,13 +71,7 @@
                               </td>
                               <td tabindex="0" class="sorting_1">{{ new.id }}</td>
                               <td><a href="/news/{{ new.id }}.html">{{ new.title }}</a></td>
-                              <td >{% if '/' in new.img %}
-                                  <img src="/static/upload/{{ new.img }}" style="max-height: 80px;max-width: 200px">
-                                  {% else %}
-                                  <img src="/static/upload/news/{{ new.img }}" style="max-height: 80px;max-width: 200px">
-                                  {{ new.img.4 }}
-                                  {% endif %}
-                              </td>
+                              <td ><img src="/static/upload/{{ new.img }}" style="max-height: 80px;max-width: 80px"></td>
                               <td>{{ new.summary }}</td>
                               <td>{{ new.up }}</td>
                               <td>

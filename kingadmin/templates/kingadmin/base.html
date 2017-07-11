@@ -37,8 +37,8 @@
                 <img src="/static/img/logo.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>欢迎光临</span>
-                <h2>管理员[ 张三 ]回来</h2>
+                <span>欢迎登录管理后台</span>
+                <h2>当前用户[ 张三 ]</h2>
               </div>
             </div>
             <!-- 菜单头部信息 -->
@@ -102,6 +102,24 @@
                 </ul>
               </div>
               <div class="menu_section">
+                <h3>会员中心</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i>企业会员<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li class="sub_menu"><a href="/kingadmin/company/?data=4">企业会员</a></li>
+                        <li><a href="/kingadmin/company/?data=0">新加入企业</a></li>
+                        <li><a href="/kingadmin/company/?data=1">待继续沟通企业</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-edit"></i> 个人会员 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="/kingadmin/news/add/">添加新闻</a></li>
+                      <li><a href="/kingadmin/news/">新闻列表</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="menu_section">
                 <h3>系统管理</h3>
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-user"></i></i>会员管理<span class="fa fa-chevron-down"></span></a>
@@ -113,8 +131,17 @@
                   </li>
                   <li><a><i class="fa fa-bank"></i></i> 企业会员 <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="/kingadmin/">企业信息表</a></li>
-                      <li><a href="page_404.html">企业联系单</a></li>
+                        <li class="sub_menu"><a href="/kingadmin/company/?data=4">企业会员</a></li>
+                        <li><a href="/kingadmin/company/?data=0">新加入企业</a></li>
+                        <li><a href="/kingadmin/company/?data=1">待继续沟通企业</a></li>
+                         <li class="">
+                              <a>短信设置<span class="fa fa-chevron-down"></span></a>
+                              <ul class="nav child_menu" style="display: none;">
+                                <li class="sub_menu"><a href="/kingadmin/smslog/">短信日志</a></li>
+                                <li><a href="/kingadmin/smsset/">接口配置</a></li>
+
+                              </ul>
+                        </li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-sitemap"></i> 轮播图 <span class="fa fa-chevron-down"></span></a>
@@ -124,9 +151,7 @@
 
                     </ul>
                   </li>
-                  <li>
-                      <a href="javascript:void(0)">
-                          <i class="fa fa-laptop"></i> 系统设置</a></li>
+                  <li><a href="/kingadmin/system"><i class="fa fa-laptop"></i> 系统设置</a></li>
                 </ul>
               </div>
 

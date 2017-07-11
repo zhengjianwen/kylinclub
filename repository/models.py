@@ -93,14 +93,15 @@ class Rotation(models.Model):
         return '%s' % self.name
 
 
+# 轮播图
 class Carousel(models.Model):
     weight = models.SmallIntegerField('权重', default=1)
     status = models.BooleanField('状态', default=0)
-    orgid = models.ForeignKey('Rotation', verbose_name='所属')
+    orgid = models.ForeignKey('Menu', verbose_name='所属')
     title = models.CharField('标题', max_length=64, null=True)
     content = models.TextField('文本', null=True)
     url = models.URLField('链接')
-    img = models.ImageField('图片', upload_to='banner')
+    img = models.ImageField('图片', upload_to='banner',null=True)
 
     class Meta:
         verbose_name_plural = '8-轮播图信息'
@@ -242,7 +243,7 @@ class MemberFollow(models.Model):
     followay_choices = ((0, '电话'), (1, '邮箱'), (2, '线下沟通'))
     company = models.ForeignKey('CompanyMember', verbose_name='跟进企业')
     followay = models.SmallIntegerField('跟进方式', choices=followay_choices, default=0)
-    contenet = models.TextField('跟进内容')
+    content = models.TextField('跟进内容')
     creat_at = models.DateTimeField('创建时间', auto_now_add=True)
 
     class Meta:
