@@ -112,7 +112,9 @@
                               <td>{{ row.email }}</td>
                               <td>{{ row.get_status_display }}</td>
                               <td>{% if row.status == 0 %}
-                                    <button type="button" class="btn btn-primary shenghe" data-target="#myModal" data-toggle="modal" >马上审核</button>
+                                    <button type="button" class="btn btn-info shenghe" data-target="#myModal" data-toggle="modal" >马上审核</button>
+                                  {% elif row.status == 4 %}
+                                  <a type="button" class="btn btn-success shenghe" data-toggle="modal" >开通企业账户</a>
                                   {% else %}
                                     <button type="button" class="btn btn-primary shenghe" data-target="#myModal" data-toggle="modal" >继续跟进</button>
                                     {% endif %}

@@ -1,6 +1,6 @@
 from django.conf.urls import url,include
 from kingadmin.views import authuser, index, news, menu, message,carousel,company
-from kingadmin.views import upload, sendmail
+from kingadmin.views import upload, sendmail, user
 
 
 urlpatterns = [
@@ -42,10 +42,18 @@ urlpatterns = [
     url(r'mailmb/status/(?P<cid>\d+)', message.emailtmplatstatus),
     url(r'mailmb', message.EmailTmplatView.as_view()),
 
-    url(r'company', company.CompanyMemberView.as_view()),
+    url(r'company/(?P<status>\d+)', company.CompanyMemberView.as_view()),
 
+    url(r'user/(?P<condition>\d+)', user.UserView.as_view()),
+    url(r'user/(?P<operate>[a-zA-Z]+)/(?P<cid>\d+)/(?P<condition>\d+)/', user.UserOperate.as_view()),
 
-    url(r'follow$', company.follow),
+    url(r'admin$', user.UserView.as_view()),
+    url(r'action$', user.UserView.as_view()),
+
+    url(r'role$', user.RoleView.as_view()),
+    url(r'role/edit/(?P<cid>\d+)', user.RoleEdit.as_view()),
+
+    url(r'follow$', company.Follow.as_view()),
     url(r'huiyuan/status$', company.companystatus),
 
     url(r'uplode_pic.html', upload.upload_kindeditor_img),
