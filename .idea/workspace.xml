@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="bc8f5fce-dcc7-4f2d-b1cb-269f82098d59" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/company/company.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/company/company.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/urls.py" afterPath="$PROJECT_DIR$/kingadmin/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/company.py" afterPath="$PROJECT_DIR$/kingadmin/views/company.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/user.py" afterPath="$PROJECT_DIR$/kingadmin/views/user.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/models.py" afterPath="$PROJECT_DIR$/repository/models.py" />
     </list>
     <ignored path="kylinclub.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,23 +75,22 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="15" />
+            <state relative-caret-position="377">
+              <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
               <folding>
                 <element signature="e#68#352#0" expanded="false" />
                 <element signature="e#389#1165#0" expanded="false" />
-                <element signature="e#1387#1633#0" expanded="false" />
-                <element signature="e#1670#1910#0" expanded="false" />
-                <element signature="e#1948#2203#0" expanded="false" />
-                <element signature="e#2246#2405#0" expanded="false" />
-                <element signature="e#2445#2922#0" expanded="false" />
-                <element signature="e#2960#3447#0" expanded="false" />
-                <element signature="e#3489#3944#0" expanded="false" />
-                <element signature="e#3981#4385#0" expanded="false" />
-                <element signature="e#4422#4773#0" expanded="false" />
-                <element signature="e#4819#5168#0" expanded="false" />
-                <element signature="e#5205#5869#0" expanded="false" />
-                <element signature="e#5906#6509#0" expanded="false" />
+                <element signature="e#1674#1914#0" expanded="false" />
+                <element signature="e#1952#2207#0" expanded="false" />
+                <element signature="e#2250#2409#0" expanded="false" />
+                <element signature="e#2449#2926#0" expanded="false" />
+                <element signature="e#2964#3451#0" expanded="false" />
+                <element signature="e#3493#3948#0" expanded="false" />
+                <element signature="e#3985#4389#0" expanded="false" />
+                <element signature="e#4426#4777#0" expanded="false" />
+                <element signature="e#4823#5172#0" expanded="false" />
+                <element signature="e#5209#5873#0" expanded="false" />
+                <element signature="e#5910#6513#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -100,7 +99,7 @@
       <file leaf-file-name="kingform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/kingform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
+            <state relative-caret-position="307">
               <caret line="288" column="11" lean-forward="false" selection-start-line="288" selection-start-column="4" selection-end-line="288" selection-end-column="11" />
               <folding>
                 <element signature="e#45#76#0" expanded="true" />
@@ -116,8 +115,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="278">
+              <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="26" />
               <folding>
                 <element signature="e#0#40#0" expanded="true" />
               </folding>
@@ -125,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kingadmin/views/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+            <state relative-caret-position="366">
+              <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="e#297#733#0" expanded="false" />
@@ -140,6 +139,8 @@
                 <element signature="e#1173#1177#0" expanded="false" />
                 <element signature="e#1212#1260#0" expanded="false" />
                 <element signature="e#1297#1345#0" expanded="false" />
+                <element signature="e#1704#2009#0" expanded="false" />
+                <element signature="e#2083#2618#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -148,27 +149,39 @@
       <file leaf-file-name="rolelist.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-519">
-              <caret line="105" column="64" lean-forward="false" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
+            <state relative-caret-position="351">
+              <caret line="141" column="85" lean-forward="true" selection-start-line="141" selection-start-column="85" selection-end-line="141" selection-end-column="85" />
               <folding>
                 <element signature="e#2045#2066#0#HTML" expanded="true" />
                 <element signature="e#2281#2319#0#HTML" expanded="true" />
                 <element signature="e#2447#2486#0#HTML" expanded="true" />
                 <element signature="e#2616#2655#0#HTML" expanded="true" />
-                <element signature="e#4383#4390#1#HTML" expanded="true" />
-                <element signature="e#5386#5935#0#HTML" expanded="false" />
-                <element signature="e#6312#7185#0#HTML" expanded="false" />
-                <element signature="e#6494#7174#0#HTML" expanded="false" />
+                <element signature="e#4404#4411#1#HTML" expanded="true" />
+                <element signature="e#4898#4920#0#HTML" expanded="true" />
+                <element signature="e#5184#5836#0#HTML" expanded="false" />
+                <element signature="e#5248#5272#0#HTML" expanded="true" />
+                <element signature="e#5551#5790#0#HTML" expanded="false" />
+                <element signature="e#5933#5955#0#HTML" expanded="true" />
+                <element signature="e#6696#7245#0#HTML" expanded="false" />
+                <element signature="e#7288#7579#0#HTML" expanded="false" />
+                <element signature="e#7622#8466#0#HTML" expanded="false" />
+                <element signature="e#7804#8455#0#HTML" expanded="false" />
+                <element signature="e#8509#9745#0#HTML" expanded="false" />
+                <element signature="e#8795#9732#0#HTML" expanded="false" />
+                <element signature="e#9789#9918#0#HTML" expanded="false" />
+                <element signature="e#9962#10091#0#HTML" expanded="false" />
+                <element signature="e#10458#10925#0#HTML" expanded="false" />
+                <element signature="e#10976#11587#0#HTML" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="company.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="company.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/views/company.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+            <state relative-caret-position="523">
+              <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding>
                 <element signature="e#0#59#0" expanded="true" />
                 <element signature="e#960#1307#0" expanded="false" />
@@ -193,10 +206,10 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+            <state relative-caret-position="88">
+              <caret line="132" column="23" lean-forward="false" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
               <folding>
-                <element signature="n#li#2;n#ul#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#1;n#ul#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -267,18 +280,18 @@
         <option value="$PROJECT_DIR$/web/tests.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/login.html" />
         <option value="$PROJECT_DIR$/web/templates/web/index.html" />
-        <option value="$PROJECT_DIR$/repository/models.py" />
         <option value="$PROJECT_DIR$/kingadmin/kingform.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/company/followlist.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/company/company.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/system.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/user.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html" />
-        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
-        <option value="$PROJECT_DIR$/kingadmin/views/user.py" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/company.py" />
+        <option value="$PROJECT_DIR$/repository/models.py" />
+        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
+        <option value="$PROJECT_DIR$/kingadmin/views/user.py" />
       </list>
     </option>
   </component>
@@ -820,14 +833,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1936" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2833698" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.122068234" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1881663" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21115974" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17943107" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.41028446" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -884,12 +898,11 @@
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="18" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e2f51859-835c-464f-a992-8786aafff1f8/console.sql" />
     <entry file="dbDummy://dbtable:/2351e0c/dce25151-66e7-458a-afdd-c47416a3db89/repository_activity" />
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menuadd.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -1285,27 +1298,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views/system.py">
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+          <folding>
+            <element signature="e#4204#4753#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.django_session">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html">
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="128" column="49" lean-forward="false" selection-start-line="128" selection-start-column="49" selection-end-line="128" selection-end-column="49" />
+        <state relative-caret-position="377">
+          <caret line="47" column="38" lean-forward="false" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
           <folding>
-            <element signature="n#li#2;n#ul#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#68#352#0" expanded="false" />
+            <element signature="e#389#1165#0" expanded="false" />
+            <element signature="e#1674#1914#0" expanded="false" />
+            <element signature="e#1952#2207#0" expanded="false" />
+            <element signature="e#2250#2409#0" expanded="false" />
+            <element signature="e#2449#2926#0" expanded="false" />
+            <element signature="e#2964#3451#0" expanded="false" />
+            <element signature="e#3493#3948#0" expanded="false" />
+            <element signature="e#3985#4389#0" expanded="false" />
+            <element signature="e#4426#4777#0" expanded="false" />
+            <element signature="e#4823#5172#0" expanded="false" />
+            <element signature="e#5209#5873#0" expanded="false" />
+            <element signature="e#5910#6513#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="47" column="26" lean-forward="false" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/kingform.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
+        <state relative-caret-position="307">
           <caret line="288" column="11" lean-forward="false" selection-start-line="288" selection-start-column="4" selection-end-line="288" selection-end-column="11" />
           <folding>
             <element signature="e#45#76#0" expanded="true" />
@@ -1317,53 +1367,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/company.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="46" column="15" lean-forward="false" selection-start-line="46" selection-start-column="6" selection-end-line="46" selection-end-column="15" />
+        <state relative-caret-position="523">
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
-            <element signature="e#68#352#0" expanded="false" />
-            <element signature="e#389#1165#0" expanded="false" />
-            <element signature="e#1387#1633#0" expanded="false" />
-            <element signature="e#1670#1910#0" expanded="false" />
-            <element signature="e#1948#2203#0" expanded="false" />
-            <element signature="e#2246#2405#0" expanded="false" />
-            <element signature="e#2445#2922#0" expanded="false" />
-            <element signature="e#2960#3447#0" expanded="false" />
-            <element signature="e#3489#3944#0" expanded="false" />
-            <element signature="e#3981#4385#0" expanded="false" />
-            <element signature="e#4422#4773#0" expanded="false" />
-            <element signature="e#4819#5168#0" expanded="false" />
-            <element signature="e#5205#5869#0" expanded="false" />
-            <element signature="e#5906#6509#0" expanded="false" />
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#960#1307#0" expanded="false" />
+            <element signature="e#1339#1929#0" expanded="false" />
+            <element signature="e#1370#1652#0" expanded="false" />
+            <element signature="e#1690#1929#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html">
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/system.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="132" column="23" lean-forward="false" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
           <folding>
-            <element signature="e#4204#4753#0#HTML" expanded="false" />
+            <element signature="n#li#1;n#ul#0;n#div#2;n#div#3;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="351">
+          <caret line="141" column="85" lean-forward="true" selection-start-line="141" selection-start-column="85" selection-end-line="141" selection-end-column="85" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#2045#2066#0#HTML" expanded="true" />
+            <element signature="e#2281#2319#0#HTML" expanded="true" />
+            <element signature="e#2447#2486#0#HTML" expanded="true" />
+            <element signature="e#2616#2655#0#HTML" expanded="true" />
+            <element signature="e#4404#4411#1#HTML" expanded="true" />
+            <element signature="e#4898#4920#0#HTML" expanded="true" />
+            <element signature="e#5184#5836#0#HTML" expanded="false" />
+            <element signature="e#5248#5272#0#HTML" expanded="true" />
+            <element signature="e#5551#5790#0#HTML" expanded="false" />
+            <element signature="e#5933#5955#0#HTML" expanded="true" />
+            <element signature="e#6696#7245#0#HTML" expanded="false" />
+            <element signature="e#7288#7579#0#HTML" expanded="false" />
+            <element signature="e#7622#8466#0#HTML" expanded="false" />
+            <element signature="e#7804#8455#0#HTML" expanded="false" />
+            <element signature="e#8509#9745#0#HTML" expanded="false" />
+            <element signature="e#8795#9732#0#HTML" expanded="false" />
+            <element signature="e#9789#9918#0#HTML" expanded="false" />
+            <element signature="e#9962#10091#0#HTML" expanded="false" />
+            <element signature="e#10458#10925#0#HTML" expanded="false" />
+            <element signature="e#10976#11587#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/views/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="68" column="0" lean-forward="true" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+        <state relative-caret-position="366">
+          <caret line="89" column="34" lean-forward="true" selection-start-line="89" selection-start-column="34" selection-end-line="89" selection-end-column="34" />
           <folding>
             <element signature="e#0#59#0" expanded="true" />
             <element signature="e#297#733#0" expanded="false" />
@@ -1374,37 +1442,8 @@
             <element signature="e#1173#1177#0" expanded="false" />
             <element signature="e#1212#1260#0" expanded="false" />
             <element signature="e#1297#1345#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-519">
-          <caret line="105" column="64" lean-forward="false" selection-start-line="105" selection-start-column="64" selection-end-line="105" selection-end-column="64" />
-          <folding>
-            <element signature="e#2045#2066#0#HTML" expanded="true" />
-            <element signature="e#2281#2319#0#HTML" expanded="true" />
-            <element signature="e#2447#2486#0#HTML" expanded="true" />
-            <element signature="e#2616#2655#0#HTML" expanded="true" />
-            <element signature="e#4383#4390#1#HTML" expanded="true" />
-            <element signature="e#5386#5935#0#HTML" expanded="false" />
-            <element signature="e#6312#7185#0#HTML" expanded="false" />
-            <element signature="e#6494#7174#0#HTML" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views/company.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#960#1307#0" expanded="false" />
-            <element signature="e#1339#1929#0" expanded="false" />
-            <element signature="e#1370#1652#0" expanded="false" />
-            <element signature="e#1690#1929#0" expanded="false" />
+            <element signature="e#1704#2009#0" expanded="false" />
+            <element signature="e#2083#2618#0" expanded="false" />
           </folding>
         </state>
       </provider>

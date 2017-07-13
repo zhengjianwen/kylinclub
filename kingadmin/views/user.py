@@ -67,8 +67,47 @@ class RoleEdit(BaseView):
         return HttpResponse(json.dumps(data))
 
 
+class Role2UserView(BaseView):
+
+    def get(self,request,cid):
+        sesion = session_key = request.session.session_key
+        data = {'status': True, 'roleuser': None, 'user': None}
+        qx_list = Role2User.objects.filter(role_id=cid).values_list('user__id', 'user__name')
+        exclude_list = map(lambda x: x[0], list(Role2User.objects.all().values_list('user__id')))
+        user_list = UserInfo.objects.all().exclude(user_id__in=exclude_list).values_list('id', 'name')
+        data['roleuser'] = list(qx_list)
+        data['user'] = list(user_list)
+        return HttpResponse(json.dumps(data))
+
+    def post(self, request, cid):
+        data = {'status': True, 'msg':None}
+        user_list = request.POST.getlist('user')
+        try:
+            obj = Role.objects.filter(id=cid).first()
+            uobj_list = UserInfo.objects.filter(id__in=user_list)
+            obj.role2user_set.set(*uobj_list)
+        except Exception as e:
+            data['status'] = False
+            data['msg'] = '%s' % e
+            print(e)
+        return HttpResponse(json.dumps(data))
+
+
+
 class ActionView(BaseView):
     def get(self,request):
         role_list = Role.objects.all()
-
         return render(request,'kingadmin/user/rolelist.html',locals())
+
+def getuserlist(request):
+    '''获取用户与角色关系'''
+    sesion = session_key = request.session.session_key
+    cid = request.GET.get('cid')
+    data = {'status':True,'roleuser':None,'user':None}
+    qx_list = Role2User.objects.filter(role_id=cid).values_list('user__id','user__name')
+    exclude_list = map(lambda x:x[0],list(Role2User.objects.all().values_list('user__id')))
+    user_list = UserInfo.objects.all().exclude(user_id__in=exclude_list).values_list('id','name')
+    data['roleuser'] = list(qx_list)
+    data['user'] = list(user_list)
+    return HttpResponse(json.dumps(data))
+

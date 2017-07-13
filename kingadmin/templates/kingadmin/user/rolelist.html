@@ -90,6 +90,7 @@
 </div>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    {% csrf_token %}
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -103,14 +104,43 @@
             <input type="text" class="form-control" id="role_id" cid=""  value="" disabled>
           </div>
           <div class="form-group">
-            <label for="message-text" class="control-label">人员选择:</label>
-            <textarea class="form-control" id="message-text"></textarea>
+
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <label for="message-text" style="display: block" class="control-label col-md-6 col-sm-6 col-xs-12">待选用户:</label>
+                  <select id="olduesr" class="select2_multiple form-control" multiple="multiple"  onclick="moveItem('olduesr','newuser')">
+
+                  </select>
+            </div>
+            <div class="col-md-2 col-sm-2 col-xs-1">
+                  <div style="margin-top: 22px">
+                      <p>
+                          <a href="javascript:void(false)" id="adduser">
+                          <i class="fa fa-angle-double-right"></i>
+                          全部添加
+                          </a>
+                      </p>
+                      <p>
+                          <a href="javascript:void(false)" id="deluser">
+                              <i class="fa fa-angle-double-left"></i>
+                              全部移除
+                          </a>
+                      </p>
+                  </div>
+              </div>
+            <div class="col-md-5 col-sm-5 col-xs-12">
+                <label for="message-text" style="display: block" class="control-label col-md-6 col-sm-6 col-xs-12">已选用户:</label>
+                  <select id="newuser" class="select2_multiple form-control" multiple="multiple" name="data"  onclick="moveItem('newuser','olduesr')">
+
+                  </select>
+
+            </div>
+            
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary " id="myrolesave">保存</button>
       </div>
     </div>
   </div>
@@ -159,7 +189,7 @@
                     dataType:'JSON',
                     success:function (arg) {
                         if (arg.status){
-                            alert('更新成功');
+             
                             that.parent().prev().text(name);
                             that.addClass('hide').prev().removeClass('hide');
                         }else {
@@ -174,11 +204,89 @@
         $('.myuser').click(function () {
             var name = $(this).parent().prev().text();
             var cid = $(this).parent().prev().prev().text();
+            var csrf = $('input[name="csrfmiddlewaretoken"]').val();
             $('#role_id').attr('cid',cid);
             $('#role_id').val(name);
+            $.ajax({
+                url:'/kingadmin/userlist/' + cid,
+                type:'GET',
+                dataType:'JSON',
+                success:function (arg) {
+                    if(arg.status){
+                        var roleuser = arg.roleuser;
+                        var user = arg.user;
+                        $('#newuser').html('');
+                        for (var i=0;i<roleuser.length;i++){
+                            var option = '<option value="'+ roleuser[i][0] +'">'+ roleuser[i][1]+'</option>';
+                            $('#newuser').append(option);
+                        }
+                        $('#olduesr').html('');
+                        for (var i=0;i<user.length;i++){
+                            var option = '<option value="'+ user[i][0] +'">'+ user[i][1]+'</option>';
+                            $('#olduesr').append(option);
+                        }
+
+
+                    }
+                }
+            });
 
         });
-    </script>
 
+        $('#adduser').click(function () {
+            var tmp = $('#olduesr').html();
+            $('#olduesr').html('');
+            $('#newuser').append(tmp)
+        });
+
+        $('#deluser').click(function () {
+            var tmp = $('#newuser').html();
+            $('#newuser').html('');
+            $('#olduesr').append(tmp)
+        });
+
+        $('#myrolesave').click(function () {
+             $('#newuser').find('option').each(function () {
+                   $(this).attr('selected',true)
+             });
+            var cid = $('#role_id').attr('cid');
+            var data= $('select[name="data"]').val();
+            var csrf = $('input[name="csrfmiddlewaretoken"]').val();
+            $.ajax({
+                url:'kingadmin/userlist/' + cid,
+                type:'POST',
+                dataType:'JSON',
+                data:{'user':data,'csrfmiddlewaretoken':csrf},
+                success:function (arg) {
+                    if(arg.status){
+                        alert('提交成功');
+                        $('#myModal').modal('hide')
+                        }else {
+                        alert('提交失败')
+                    }
+                }
+            });
+        });
+
+        function moveItem(from,to) {
+            /*var tmp = $(this).text();
+            console.log(tmp)
+            $(this).empty();
+            $('#newuser').append(tmp)*/
+             var toObj = document.getElementById(to);
+             var fromObj = document.getElementById(from);
+             var len = fromObj.options.length;
+             for (var i=0;i<len;i++)
+             {
+              var option = fromObj.options[i];
+              if (option.selected == true)
+              {
+               toObj.options.add(new Option(option.text,option.value));
+               fromObj.options.remove(i);
+              }
+             }
+        }
+
+    </script>
 
 {% endblock %}

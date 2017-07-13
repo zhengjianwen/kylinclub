@@ -45,7 +45,7 @@ class Role(models.Model):
 
 
 class Role2User(models.Model):
-    user = models.ForeignKey('User')
+    user = models.ForeignKey('UserInfo')
     role = models.ForeignKey('Role')
 
     class Meta:
