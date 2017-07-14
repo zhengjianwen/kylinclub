@@ -22,7 +22,7 @@ function curCSS( elem, name, computed ) {
 	}
 
 	// Support: IE9
-	// getPropertyValue is only needed for .css('filter') (#12537)
+	// getPropertyValue is only needed for .css.css('filter') (#12537)
 	if ( computed ) {
 
 		// A tribute to the "awesome hack by Dean Edwards"

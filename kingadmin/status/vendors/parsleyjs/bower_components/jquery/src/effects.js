@@ -34,7 +34,7 @@ var
 				maxIterations = 20;
 
 			if ( start && start[ 3 ] !== unit ) {
-				// Trust units reported by jQuery.css
+				// Trust units reported by jQuery.css.css
 				unit = unit || start[ 3 ];
 
 				// Make sure we update the tween properties later on

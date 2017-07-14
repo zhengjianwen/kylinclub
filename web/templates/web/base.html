@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.kylinclub.org/ -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页 - 麒麟会</title>
+    <link href="/static/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/static/web/css/css.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/web/css/layer.css" id="layui_layer_skinlayercss"></head>
+    <script src="/static/web/js/modernizr"></script>
+    <script src="/static/web/js/jquery.js"></script>
+    {% block css %}{% endblock %}
+<body>
+    <header>
+
+        <div class="row" id="sitenav">
+            <div class="wrapper">
+
+                <div class="site_logo">
+                    <a href="http://www.kylinclub.org/"><img src="/static/web/pic/kylin_logo2.png"></a>
+                </div>
+                <div class="head_right">
+                    <ul id="nav" class="nav fl">
+                        {% for menu in menu_list %}
+                            <li class="mainlevel">
+                            <a href="{{ menu.url }}">{{ menu.name }}</a>
+                            <ul>
+                                {% for foo in menu.activityclass_set.all %}
+                                    <li><a href="{{ foo.url }}">{{ foo.name }}</a></li>
+                                {% endfor %}
+                            </ul>
+
+                        </li>
+                        {% endfor %}
+
+                    <div id="login" class="fr">
+                            <span><a href="/account/login">登录</a></span><span> | </span><span>
+                        <a href="/account/register">注册</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% block body %}
+
+
+{% endblock %}
+
+    <script src="/static/web/js/jquery.validate.min.js"></script>
+    <script src="/static/web/js/jquery.validate.unobtrusive.min.js"></script>
+    <script src="/static/web/js/layer.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#nav li").hover(function () {
+                $(this).find("ul").slideDown(20);
+            }, function () {
+                $(this).find("ul").slideUp(20);
+            });
+            $("#login_uname").hover(function () {
+                $(this).find("ul").slideDown(20);
+            }, function () {
+                $(this).find("ul").slideUp(20);
+            });
+
+
+        });
+    </script>
+
+{% include 'web/footer.html' %}
+</body>
+</html>

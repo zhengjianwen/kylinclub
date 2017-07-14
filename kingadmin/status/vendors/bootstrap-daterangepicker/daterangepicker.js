@@ -17,7 +17,7 @@
         //isomorphic issue
         var jQuery = (typeof window != 'undefined') ? window.jQuery : undefined;
         if (!jQuery) {
-            jQuery = require('jquery');
+            jQuery = require('jquery.js');
             if (!jQuery.fn) jQuery.fn = {};
         }
         module.exports = factory(require('moment'), jQuery);

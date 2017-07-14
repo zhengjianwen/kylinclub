@@ -1,12 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form action="">
-    <input type="text" disabled>
-</form>
-</body>
-</html>
+{% extends 'web/base.html' %}
+{% block body %}
+
+<div id="body" class="row">
+<link href="/static/web/css/jquery.fs.tipper.css" rel="stylesheet">
+<div id="homebanner" class="banner_box">
+    <div class="bd">
+        <ul style="width: 1903px; position: relative; height: 561px;">
+                    <li style="background: url(/static/web/pic/034535794223.jpg) center top no-repeat;
+                     position: absolute; width: 1903px; left: 0px; top: 0px; display: list-item;">
+                        <a href="http://www.kylinclub.org/understand/introduction" target="_blank">
+                            <div class="m_width">
+
+                            </div>
+                        </a>
+                    </li>
+                    <li style="background: url(&quot;http://www.kylinclub.org/uploadfiles/Resource/jpg/2016/10/08/636115218680693359/111108069771.jpg&quot;) center top no-repeat; position: absolute; width: 1903px; left: 0px; top: 0px; display: none;">
+                        <a href="http://www.thegitc.com/" target="_blank">
+                            <div class="m_width">
+
+                            </div>
+                        </a>
+                    </li>
+        </ul>
+    </div>
+    <div class="banner_btn">
+        <div class="hd"><ul><li class="on">1</li><li class="">2</li></ul></div>
+    </div>
+</div>
+<div class="row home_active">
+    <div class="wrapper">
+        <p class="title_com">
+            <b>会员活动</b>
+            <br>
+            <span>MEMBERS ACTIVITY</span>
+        </p>
+    </div>
+    <div class="wrapper">
+        <div class="left" id="div_calendar_content"></div>
+        <div class="right_calendar">
+            <div class="cal_title">
+                <label class="nav_left a_month" id="label_pre_month">＜6月</label><label class="nav_year" id="label_curr_year">2017</label>
+                <input type="hidden" id="hid_curr_month" value="7"><label class="nav_right a_month" id="label_next_month">8月＞</label>
+            </div>
+            <table class="calendar">
+                <tbody><tr>
+                    <th>日</th>
+                    <th>一</th>
+                    <th>二</th>
+                    <th>三</th>
+                    <th>四</th>
+                    <th>五</th>
+                    <th>六</th>
+                </tr>
+                </tbody><tbody id="tbody_calendar">
+                    <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>1</td></tr><tr><td>2</td><td>3</td>
+                        <td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><td>9</td><td>10</td><td>11</td><td>12</td>
+                        <td>13</td><td>14</td><td>15</td></tr><tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
+                        <td>22</td></tr><tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row home_news">
+    <div class="wrapper">
+        <p class="title_com">
+            <b>官方新闻</b>
+            <br>
+            <span>OFFICIAL NEWS</span>
+        </p>
+    </div>
+    <div class="wrapper mt30">
+                <div class="newsmodel  ">
+                    <a href="http://www.kylinclub.org/home/news/911c38ac-60bb-4590-9477-1e0c5a3bf74e" target="_blank">
+                        <p class="nmtitle">2016 地表最强科技创新 尽在 GITC 全球互联网技术大会</p>
+                        <p class="nmpic">
+
+                                <img src="/static/web/pic/055052892141.jpg">
+                        </p>
+                        <p class="nmcontent">最炫酷技术盛宴 11 月震撼开启
+2016 地表最强科技创新
+尽在 GITC 全球互联网技术大会</p>
+                    </a>
+                </div>
+                <div class="newsmodel  ">
+                    <a href="http://www.kylinclub.org/home/news/02b49a4d-88e3-4d05-a54f-b06ccea2b54c" target="_blank">
+                        <p class="nmtitle">GITC究竟有怎样的魅力？</p>
+                        <p class="nmpic">
+
+                                <img src="/static/web/pic/050955943664.jpg">
+                        </p>
+                        <p class="nmcontent">一场20000+互联网技术人士与400+行业领袖共同围观的大会——GITC究竟有怎样的魅力？</p>
+                    </a>
+                </div>
+                <div class="newsmodel  nomr">
+                    <a href="http://www.kylinclub.org/home/news/9133b19c-c570-433e-ae51-2c6b2b5bc8f5" target="_blank">
+                        <p class="nmtitle">GITC2016上海站在沪圆满落幕，互联网大咖畅谈行业前景</p>
+                        <p class="nmpic">
+
+                                <img src="/static/web/pic/030804292679.jpg">
+                        </p>
+                        <p class="nmcontent">GITC全球互联网技术大会上海站圆满落幕，期待11月24日至11月25日与大家相聚GITC北京站！</p>
+                    </a>
+                </div>
+    </div>
+</div>
+<div class="row home_action">
+    <div class="wrapper">
+        <p class="title_com">
+            <b>活动系列</b>
+            <br>
+            <span>ACTIVITY SERIES</span>
+        </p>
+    </div>
+    <div class="wrapper">
+            <div class="tab_active">
+                <ul class="actiontab">
+                    <li class="activity_type firstli active" data-id="gitc" data-value="GITC全球互联网技术大会由麒麟会主办，iTech Club（互联网技术精英俱乐部）协办。以汇聚行业精英、促进技术交流、加深商务合作、推动行业发展为大会宗旨，致力于打造全球领先的互联网技术交流与商务合作平台。自2013年以来，GITC全球互联网技术大会一直走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。">关于GITC</li>
+                        <li class="activity_type" data-id="1bc0f9f5-0728-4349-8d2d-3c07cf06966f" data-value="麒麟会精英面对面活动邀请特定领域技术精英举办专题讲座或圆桌论坛，麒麟会内部会员及外部观众均可报名参加，促进行业间的技术交流，建立互通互享的互联网精英面对面的平台。">精英面对面</li>
+                        <li class="activity_type" data-id="dfa71d18-3564-4504-8ccb-b190ca76fec5" data-value="技术主题沙龙活动由麒麟会定期主办，定向邀请麒麟会会员及其他互联网技术专业人士作为演讲嘉宾，开放外部观众报名，围绕互联网热点技术主题，以演讲形式展开。">主题沙龙</li>
+                        <li class="activity_type" data-id="92b1ccda-1b22-4ad1-9720-d6f3b6f944db" data-value="麒麟会特别活动于每年12月举行，话题围绕双11，双12等电商大促活动中的运维保障及安全等技术实战展开，全天中型会议或论坛。活动分享互联网最新前沿技术，邀请内部嘉宾，同时在麒麟会官方微博及微信平台开放会议门票。">特别活动</li>
+                        <li class="activity_type" data-id="1656e004-40c8-41c0-9d9e-549c50fe0edd" data-value="走进企业系列活动是麒麟会针对长期合作的国内外大型互联网公司，以及向互联网转型的传统企业所举办的学习、展示及交流活动。活动邀请麒麟会会员，在专业技术、高新产品、管理经验、企业文化等方面，进行企业与企业、企业与个人之间的全面学习与交流。">走进企业</li>
+                </ul>
+            </div>
+            <div id="div_activity_type_resource">
+
+                <div class="ullistimg"><div class="prev"></div>
+                    <ul id="ulimg" class="roundabout-holder" style="padding: 0px; position: relative;">
+                        <li class="roundabout-moveable-item roundabout-in-focus" style="position: absolute; left: 66px; top: 33px; width: 532px; height: 350px; opacity: 1; z-index: 280; font-size: 14px;">
+                            <a href="http://www.kylinclub.org/activity/aboutgitc">
+                                <img src="/static/web/pic/1.jpg" style="border:1px solid #8f071b">
+                            </a>
+                        </li>
+                        <li class="roundabout-moveable-item" style="position: absolute; left: 427px; top: 99px; width: 332.5px; height: 218.75px; opacity: 0.55; z-index: 145; font-size: 8.8px;">
+                            <a href="http://www.kylinclub.org/activity/aboutgitc">
+                                <img src="/static/web/pic/2.jpg" style="border:1px solid #8f071b">
+                            </a>
+                        </li>
+                        <li class="roundabout-moveable-item" style="position: absolute; left: -96px; top: 99px; width: 332.5px; height: 218.75px; opacity: 0.55; z-index: 145; font-size: 8.8px;">
+                            <a href="http://www.kylinclub.org/activity/aboutgitc">
+                                <img src="/static/web/pic/3.jpg" style="border:1px solid #8f071b">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="next"></div>
+                </div>
+
+            </div>
+            <div id="div_activity_type_remark">
+                <p class="home_ac_title">GITC全球互联网技术大会</p>
+                <p class="home_ac_content">GITC全球互联网技术大会由麒麟会主办，iTech Club（互联网技术精英俱乐部）协办。以汇聚行业精英、促进技术交流、加深商务合作、推动行业发展为大会宗旨，致力于打造全球领先的互联网技术交流与商务合作平台。自2013年以来，GITC全球互联网技术大会一直走在互联网技术交流分享的最前端，是目前国内规模最大、资源最成熟的技术峰会，同时也是中国互联网一年一度的行业盛事。</p>
+            </div>
+    </div>
+</div>
+<div class="row home_friend">
+    <div class="wrapper">
+        <p class="title_com">
+            <b>合作企业</b>
+            <br>
+            <span>COOPERATIVE ENTERPRISES</span>
+        </p>
+
+        <img src="/static/web/pic/cplist.jpg">
+    </div>
+
+</div>
+
+<script src="/static/web/js/jquery.fs.tipper.js"></script>
+<script src="/static/web/js/jquery.SuperSlide.2.1.1.js"></script>
+<script src="/static/web/js/jquery.roundabout2.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $(".banner_box").slide({
+            titCell: ".hd ul",
+            mainCell: ".bd ul",
+            effect: "fold",
+            interTime: 5000,
+            delayTime: 500,
+            autoPlay: true,
+            autoPage: true,
+            trigger: "click"
+        });
+        $(".tipped").tipper();
+        $.ajaxSetup({
+            async: false
+        });
+        jQuery(".a_month").click(function () {
+            var month = 0;
+            if (jQuery(this).attr("id") == "label_pre_month") {
+                month = -1;
+            }
+            if (jQuery(this).attr("id") == "label_next_month") {
+                month = 1;
+            }
+            jQuery.post("/home/Calendar", { year: jQuery("#label_curr_year").text(), month: jQuery("#hid_curr_month").val(), addMonth: month }, function (data) {
+                jQuery("#div_calendar_content").html(data[1]);
+                jQuery("#tbody_calendar").html(data[0]);
+                jQuery("#label_pre_month").text("＜" + data[2].split(',')[0] + "月");
+                jQuery("#label_curr_year").text(data[2].split(',')[1]);
+                jQuery("#hid_curr_month").val(data[2].split(',')[2]);
+                jQuery("#label_next_month").text(data[2].split(',')[3] + "月＞");
+                jQuery("#tbody_calendar .activity").click(function () {
+                    jQuery.post("/home/CalendarContent", { id: jQuery(this).attr("data-id") }, function (data) {
+                        if (data.code == 0) {
+                            jQuery("#div_calendar_content").html(data.msg);
+                        }
+                    })
+                });
+            })
+            $(".tipped").tipper();
+        })
+
+
+        jQuery("#tbody_calendar .activity").click(function () {
+            jQuery.post("/home/CalendarContent", { id: jQuery(this).attr("data-id") }, function (data) {
+                if (data.code == 0) {
+                    jQuery("#div_calendar_content").html(data.msg);
+
+                }
+            })
+        });
+        if ($("#ulimg").length > 0)
+            $("#ulimg").roundabout();
+        jQuery(".activity_type").click(function () {
+            jQuery(".activity_type").removeClass("active");
+            jQuery(this).addClass("active");
+            var _id = jQuery(this).attr("data-id");
+            var _name = jQuery(this).text();
+            var _remark = jQuery(this).attr("data-value");
+            jQuery.post("/home/resource", { id: _id }, function (data) {
+                jQuery("#div_activity_type_resource").html(data);
+                if ($("#ulimg").length > 0)
+                    $("#ulimg").roundabout();
+            })
+            jQuery("#div_activity_type_remark p:eq(0)").html(_name);
+            jQuery("#div_activity_type_remark p:eq(1)").html(_remark);
+        })
+    });
+</script>
+
+    </div>
+
+
+{% endblock %}
+
+

@@ -5,7 +5,7 @@ var AllowClear = require('select2/selection/allowClear');
 
 var SingleSelection = require('select2/selection/single');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 var Options = require('select2/options');
 var Utils = require('select2/utils');
 

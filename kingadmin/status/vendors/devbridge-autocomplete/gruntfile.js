@@ -19,8 +19,8 @@ module.exports = function(grunt) {
         banner: banner
       },
       build: {
-        src: 'src/jquery.autocomplete.js',
-        dest: 'dist/jquery.autocomplete.min.js'
+        src: 'src/jquery.js.autocomplete.js',
+        dest: 'dist/jquery.js.autocomplete.min.js'
       }
     }
   });
@@ -33,8 +33,8 @@ module.exports = function(grunt) {
 
   grunt.task.registerTask('build', 'Create release', function() {
     var version = pkg.version,
-        src = grunt.file.read('src/jquery.autocomplete.js').replace('%version%', version),
-        filePath = 'dist/jquery.autocomplete.js';
+        src = grunt.file.read('src/jquery.js.autocomplete.js').replace('%version%', version),
+        filePath = 'dist/jquery.js.autocomplete.js';
 
     // Update not minimized release version:
     console.log('Updating: ' + filePath);

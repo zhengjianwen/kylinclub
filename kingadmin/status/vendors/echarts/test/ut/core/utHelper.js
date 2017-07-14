@@ -236,7 +236,7 @@
         }
         script.setAttribute('src', url);
 
-        // @see jquery
+        // @see jquery.js
         // Attach handlers for all browsers
         script.onload = script.onreadystatechange = function () {
 
@@ -250,7 +250,7 @@
         };
 
         // Use insertBefore instead of appendChild  to circumvent an IE6 bug.
-        // This arises when a base node is used (jquery #2709 and #4378).
+        // This arises when a base node is used (jquery.js #2709 and #4378).
         head.insertBefore(script, head.firstChild);
     };
 

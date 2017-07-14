@@ -3,7 +3,7 @@ module('Selection containers - Stoping event propagation');
 var SingleSelection = require('select2/selection/single');
 var StopPropagation = require('select2/selection/stopPropagation');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 var Options = require('select2/options');
 var Utils = require('select2/utils');
 

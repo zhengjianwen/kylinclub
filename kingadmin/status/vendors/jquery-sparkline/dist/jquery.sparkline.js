@@ -200,7 +200,7 @@
 *   $('#pie').sparkline([1,1,2], { type:'pie' });
 */
 
-/*jslint regexp: true, browser: true, jquery: true, white: true, nomen: false, plusplus: false, maxerr: 500, indent: 4 */
+/*jslint regexp: true, browser: true, jquery.js: true, white: true, nomen: false, plusplus: false, maxerr: 500, indent: 4 */
 
 (function(document, Math, undefined) { // performance/minified-size optimization
 (function(factory) {
@@ -351,7 +351,7 @@
         };
     };
 
-    // You can have tooltips use a css class other than jqstooltip by specifying tooltipClassname
+    // You can have tooltips use a css.css class other than jqstooltip by specifying tooltipClassname
     defaultStyles = '.jqstooltip { ' +
             'position: absolute;' +
             'left: 0px;' +
@@ -591,7 +591,7 @@
             }
         }
         tag = document.createElement('style');
-        tag.type = 'text/css';
+        tag.type = 'text/css.css';
         document.getElementsByTagName('head')[0].appendChild(tag);
         if (iefail) {
             document.styleSheets[document.styleSheets.length - 1].cssText = css;

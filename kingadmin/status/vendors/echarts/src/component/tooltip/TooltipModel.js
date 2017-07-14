@@ -55,7 +55,7 @@ define(function (require) {
             // 接受数组分别设定上右下左边距，同css
             padding: 5,
 
-            // Extra css text
+            // Extra css.css text
             extraCssText: '',
 
             // 坐标轴指示器，坐标轴触发有效

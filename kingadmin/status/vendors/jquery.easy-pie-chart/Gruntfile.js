@@ -35,9 +35,9 @@ module.exports = function(grunt) {
 				src: [
 					'<%= dirs.src %>/renderer/canvas.js',
 					'<%= dirs.src %>/<%= cfg.filename %>.js',
-					'<%= dirs.src %>/jquery.plugin.js'
+					'<%= dirs.src %>/jquery.js.plugin.js'
 				],
-				dest: '<%= dirs.tmp %>/jquery.<%= cfg.filename %>.js'
+				dest: '<%= dirs.tmp %>/jquery.js.<%= cfg.filename %>.js'
 			},
 			angular: {
 				src: [
@@ -64,7 +64,7 @@ module.exports = function(grunt) {
 			files: {
 				src: [
 					'<%= dirs.dest %>/<%= cfg.filename %>.js',
-					'<%= dirs.dest %>/jquery.<%= cfg.filename %>.js',
+					'<%= dirs.dest %>/jquery.js.<%= cfg.filename %>.js',
 					'<%= dirs.dest %>/angular.<%= cfg.filename %>.js'
 				]
 			}
@@ -78,7 +78,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'dist/<%= cfg.filename %>.min.js': ['dist/<%= cfg.filename %>.js'],
-					'dist/jquery.<%= cfg.filename %>.min.js': ['dist/jquery.<%= cfg.filename %>.js'],
+					'dist/jquery.<%= cfg.filename %>.min.js': ['dist/jquery.js.<%= cfg.filename %>.js'],
 					'dist/angular.<%= cfg.filename %>.min.js': ['dist/angular.<%= cfg.filename %>.js']
 				}
 			}
@@ -146,8 +146,8 @@ module.exports = function(grunt) {
 				globalAlias: '<%= cfg.vanillaExportName %>'
 			},
 			jquery: {
-				src: '<%= dirs.tmp %>/jquery.<%= cfg.filename %>.js',
-				dest: '<%= dirs.dest %>/jquery.<%= cfg.filename %>.js',
+				src: '<%= dirs.tmp %>/jquery.js.<%= cfg.filename %>.js',
+				dest: '<%= dirs.dest %>/jquery.js.<%= cfg.filename %>.js',
 				deps: {
 					'default': ['$'],
 					amd: ['jquery'],

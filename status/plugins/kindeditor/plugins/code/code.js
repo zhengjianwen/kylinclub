@@ -19,7 +19,7 @@ KindEditor.plugin('code', function(K) {
 				'<select class="ke-code-type">',
 				'<option value="js">JavaScript</option>',
 				'<option value="html">HTML</option>',
-				'<option value="css">CSS</option>',
+				'<option value="css.css">CSS</option>',
 				'<option value="php">PHP</option>',
 				'<option value="pl">Perl</option>',
 				'<option value="py">Python</option>',

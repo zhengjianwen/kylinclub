@@ -42,12 +42,12 @@
                   </div>
                   <div class="x_content">
                     <br>
-                    <form id="demo-form2" class="form-horizontal form-label-left" method="POST">
+                    <form id="demo-form2" class="form-horizontal form-label-left" method="POST" enctype="multipart/form-data">
                         {% csrf_token %}
                       <div class="form-group">
                         <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">所属菜单<span class="required">*</span>
                         </label>
-                        <div class="col-md-8 col-sm-8 col-xs-12">
+                        <div class="col-md-8 col-sm-8 col-xs-12" id="menu" cid="{{ a_obj.menu.id }}">
                           {{ obj.menu_id }}
                             <p style="color: red">{{ obj.errors.menu_id.0 }}</p>
                         </div>
@@ -56,12 +56,20 @@
                         <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">URL别名<span class="required">*</span>
                         </label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
-                          {{ obj.alias }}
-                            <p style="color: red">{{ obj.errors.alias.0 }}</p>
+                          {{ obj.url }}
+                            <p style="color: red">{{ obj.errors.url.0 }}</p>
                         </div>
 
                       </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-1 col-sm-1 col-xs-12" for="first-name">图片<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.img }}
+                            <p style="color: red">{{ obj.errors.img.0 }}</p>
+                        </div>
 
+                      </div>
                       <div class="form-group">
                         <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">活动名称</label>
                         <div class="col-md-8 col-sm-8 col-xs-12">
@@ -69,7 +77,13 @@
                             <p style="color: red">{{ obj.errors.name.0 }}</p>
                         </div>
                       </div>
-
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-1 col-sm-1 col-xs-12">活动名称</label>
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                          {{ obj.niccname }}
+                            <p style="color: red">{{ obj.errors.niccname.0 }}</p>
+                        </div>
+                      </div>
                       <div class="form-group">
                             <label class="control-label col-md-1 col-sm-1 col-xs-12" for="last-name">活动介绍 <span class="required">*</span>
                             </label>
@@ -93,7 +107,6 @@
             </div>
           </div>
 </div>
-
 {% endblock %}
 
 {% block js %}
@@ -103,7 +116,18 @@
         $(function () {
            kindinit0();
            addcss();
+           menuchiose()
         });
+        function menuchiose() {
+            var cid = $('#menu').attr('cid');
+            console.log(cid)
+            $('#id_menu_id').find('option').each(function () {
+                var tmp = $(this).val();
+                if (tmp == cid){
+                    $(this).attr('selected',true)
+                }
+            })
+        }
         function kindinit0() {
             kind = KindEditor.create('#mycontent', {
                     width: '100%',       // 文本框宽度(可以百分比或像素)

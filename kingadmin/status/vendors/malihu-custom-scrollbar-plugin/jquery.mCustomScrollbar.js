@@ -31,8 +31,8 @@ THE SOFTWARE.
 
 /*
 The code below is fairly long, fully commented and should be normally used in development. 
-For production, use either the minified jquery.mCustomScrollbar.min.js script or 
-the production-ready jquery.mCustomScrollbar.concat.min.js which contains the plugin 
+For production, use either the minified jquery.js.mCustomScrollbar.min.js script or
+the production-ready jquery.js.mCustomScrollbar.concat.min.js which contains the plugin
 and dependencies (minified). 
 */
 
@@ -47,12 +47,12 @@ and dependencies (minified).
 	var _rjs=typeof define==="function" && define.amd, /* RequireJS */
 		_njs=typeof module !== "undefined" && module.exports, /* NodeJS */
 		_dlp=("https:"==document.location.protocol) ? "https:" : "http:", /* location protocol */
-		_url="cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js";
+		_url="cdnjs.cloudflare.com/ajax/libs/jquery.js-mousewheel/3.1.13/jquery.js.mousewheel.min.js";
 	if(!_rjs){
 		if(_njs){
-			require("jquery-mousewheel")($);
+			require("jquery.js-mousewheel")($);
 		}else{
-			/* load jquery-mousewheel plugin (via CDN) if it's not present or not loaded via RequireJS 
+			/* load jquery.js-mousewheel plugin (via CDN) if it's not present or not loaded via RequireJS
 			(works when mCustomScrollbar fn is called on window load) */
 			$.event.special.mousewheel || $("head").append(decodeURI("%3Cscript src="+_dlp+"//"+_url+"%3E%3C/script%3E"));
 		}
@@ -409,7 +409,7 @@ and dependencies (minified).
 				*/
 				if(options.live){
 					var liveSelector=options.liveSelector || this.selector || defaultSelector, /* live selector(s) */
-						$liveSelector=$(liveSelector); /* live selector(s) as jquery object */
+						$liveSelector=$(liveSelector); /* live selector(s) as jquery.js object */
 					if(options.live==="off"){
 						/* 
 						disable live if requested 
@@ -451,7 +451,7 @@ and dependencies (minified).
 					
 					if(!$this.data(pluginPfx)){ /* prevent multiple instantiations */
 					
-						/* store options and create objects in jquery data */
+						/* store options and create objects in jquery.js data */
 						$this.data(pluginPfx,{
 							idx:++totalInstances, /* instance index */
 							opt:options, /* options */
@@ -923,7 +923,7 @@ and dependencies (minified).
 						.css({ /* set actual width, original position and un-wrap */
 							/* 
 							get the exact width (with decimals) and then round-up. 
-							Using jquery outerWidth() will round the width value which will mess up with inner elements that have non-integer width
+							Using jquery.js outerWidth() will round the width value which will mess up with inner elements that have non-integer width
 							*/
 							"width":(Math.ceil(mCSB_container[0].getBoundingClientRect().right+0.4)-Math.floor(mCSB_container[0].getBoundingClientRect().left)),
 							"min-width":"100%",
@@ -1860,7 +1860,7 @@ and dependencies (minified).
 				case "function": /* this currently is not used. Consider removing it */
 					return val();
 					break;
-				case "object": /* js/jquery object */
+				case "object": /* js/jquery.js object */
 					var obj=val.jquery ? val : $(val);
 					if(!obj.length){return;}
 					return dir==="x" ? _childPos(obj)[1] : _childPos(obj)[0];
@@ -1888,7 +1888,7 @@ and dependencies (minified).
 							var obj=mCSB_container.find(":"+val);
 							return dir==="x" ? _childPos(obj)[1] : _childPos(obj)[0];
 						}else{
-							if($(val).length){ /* jquery selector */
+							if($(val).length){ /* jquery.js selector */
 								return dir==="x" ? _childPos($(val))[1] : _childPos($(val))[0];
 							}else{ /* other values (e.g. "100em") */
 								mCSB_container.css(cssProp,val);
@@ -2163,7 +2163,7 @@ and dependencies (minified).
 					cl=[mCSB_container.outerHeight(false),mCSB_container.outerWidth(false)], /* content length */
 					pl=[mCustomScrollBox.height(),mCustomScrollBox.width()]; /* content parent length */
 				el[0].mcs={
-					content:mCSB_container, /* original content wrapper as jquery object */
+					content:mCSB_container, /* original content wrapper as jquery.js object */
 					top:cp[0],left:cp[1],draggerTop:dp[0],draggerLeft:dp[1],
 					topPct:Math.round((100*Math.abs(cp[0]))/(Math.abs(cl[0])-pl[0])),leftPct:Math.round((100*Math.abs(cp[1]))/(Math.abs(cl[1])-pl[1])),
 					direction:options.dir
@@ -2179,7 +2179,7 @@ and dependencies (minified).
 		
 		/* 
 		CUSTOM JAVASCRIPT ANIMATION TWEEN 
-		Lighter and faster than jquery animate() and css transitions 
+		Lighter and faster than jquery.js animate() and css transitions
 		Animates top/left properties and includes easings 
 		*/
 		_tweenTo=function(el,prop,to,duration,easing,overwrite,callbacks){

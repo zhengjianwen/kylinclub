@@ -9,7 +9,7 @@
 		define([ 'jquery', 'moment' ], factory);
 	}
 	else if (typeof exports === 'object') { // Node/CommonJS
-		module.exports = factory(require('jquery'), require('moment'));
+		module.exports = factory(require('jquery.js'), require('moment'));
 	}
 	else {
 		factory(jQuery, moment);
@@ -143,7 +143,7 @@ function distributeHeight(els, availableHeight, shouldRedistribute) {
 	var minOffset2 = Math.floor(availableHeight - minOffset1 * (els.length - 1)); // for last element *FLOORING NOTE*
 	var flexEls = []; // elements that are allowed to expand. array of DOM nodes
 	var flexOffsets = []; // amount of vertical space it takes up
-	var flexHeights = []; // actual css height
+	var flexHeights = []; // actual css.css height
 	var usedHeight = 0;
 
 	undistributeHeight(els); // give all elements their natural height
@@ -11160,7 +11160,7 @@ Calendar.defaults = {
 
 	allDayText: 'all-day',
 	
-	// jquery-ui theming
+	// jquery.js-ui theming
 	theme: false,
 	themeButtonIcons: {
 		prev: 'circle-triangle-w',

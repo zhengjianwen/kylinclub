@@ -17,6 +17,7 @@ class User(models.Model):
 class UserInfo(models.Model):
     status_choice = ((0, '未激活'), (1, '正常'), (2, '锁定'))
     user = models.OneToOneField('User', related_name='账户信息')
+    urole = models.ManyToManyField(to='Role',through='Role2User',through_fields=('user','role'))
     name = models.CharField('姓名', max_length=32, null=True)
     email = models.EmailField('邮箱', unique=True)
     phone = models.CharField('手机', max_length=11, unique=True)
@@ -174,8 +175,10 @@ class Menu(models.Model):
 # 活动类型
 class ActivityClass(models.Model):
     menu = models.ForeignKey('Menu', verbose_name='所属菜单')
-    alias = models.CharField('URL别名', max_length=32, unique=True)
+    url = models.CharField('URL别名', max_length=32, unique=True)
     name = models.CharField('活动名称', max_length=64)
+    niccname = models.CharField('活动别名', max_length=64)
+    img = models.ImageField('图片', upload_to='activity', null=True)
     content = models.TextField('活动介绍', null=True, default='正在整理中')
 
     class Meta:

@@ -129,7 +129,7 @@
         };
     };
 
-    // You can have tooltips use a css class other than jqstooltip by specifying tooltipClassname
+    // You can have tooltips use a css.css class other than jqstooltip by specifying tooltipClassname
     defaultStyles = '.jqstooltip { ' +
             'position: absolute;' +
             'left: 0px;' +

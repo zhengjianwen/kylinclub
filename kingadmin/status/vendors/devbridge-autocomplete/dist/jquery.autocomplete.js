@@ -17,7 +17,7 @@
         define(['jquery'], factory);
     } else if (typeof exports === 'object' && typeof require === 'function') {
         // Browserify
-        factory(require('jquery'));
+        factory(require('jquery.js'));
     } else {
         // Browser globals
         factory(jQuery);

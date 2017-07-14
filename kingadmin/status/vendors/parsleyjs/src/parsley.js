@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery.js';
 import Parsley from './parsley/main';
 import './parsley/pubsub';
 import './parsley/remote';

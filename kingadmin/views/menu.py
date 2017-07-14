@@ -62,8 +62,11 @@ class Activitytypeadd(BaseView):
         return render(request, 'kingadmin/atype/activitypeedit.html', locals())
 
     def post(self, request):
-        obj = ActivityClassForm(request.POST)
+        obj = ActivityClassForm(request.POST,request.FILES)
         if obj.is_valid():
+            if obj.cleaned_data.get('img'):
+                path = self.save_img(obj.cleaned_data.get('img'), 'activity')
+                obj.cleaned_data['img'] = path
             ActivityClass.objects.create(**obj.cleaned_data)
             return redirect('/kingadmin/activitytype/')
         return render(request, 'kingadmin/atype/activitypeedit.html', locals())
@@ -75,7 +78,9 @@ class Activitytypeedit(BaseView):
         a_obj = ActivityClass.objects.filter(id=cid).first()
         in_form = {
             'menu': a_obj.menu,
-            'alias': a_obj.alias,
+            'url': a_obj.url,
+            'img': a_obj.img,
+            'niccname': a_obj.niccname,
             'name': a_obj.name,
             'content': a_obj.content
         }
@@ -83,8 +88,13 @@ class Activitytypeedit(BaseView):
         return render(request, 'kingadmin/atype/activitypeedit.html', locals())
 
     def post(self, request, cid):
-        obj = ActivityClassForm(request.POST)
+        obj = ActivityClassForm(request.POST,request.FILES)
         if obj.is_valid():
+            if not obj.cleaned_data.get('img'):
+                del obj.cleaned_data['img']
+            else:
+                path = self.save_img(obj.cleaned_data['img'], 'activity')
+                obj.cleaned_data['img'] = path
             ActivityClass.objects.filter(id=cid).update(**obj.cleaned_data)
             return redirect('kingadmin/activitytype/')
         return render(request, 'kingadmin/atype/activitypeedit.html', locals())
@@ -104,11 +114,10 @@ class Activityadd(BaseView):
             # obj.cleaned_data['activityclass'] = ActivityClass.objects.filter(id=cid).first()
             Activity.objects.create(**obj.cleaned_data)
             if obj.cleaned_data.get('img',False):
-                self.save_img(obj.cleaned_data['img'], 'activity')
+                obj.cleaned_data['img'] = self.save_img(obj.cleaned_data['img'], 'activity')
             else:
                 del obj.cleaned_data['img']
             return redirect('/kingadmin/activity.html')
-        print('===>添加活动错误', obj.errors)
         return render(request, 'kingadmin/activity/activtyedit.html', locals())
 
 
@@ -135,12 +144,11 @@ class Activityedit(BaseView):
         obj = ActivityForm(request.POST, request.FILES)
         if obj.is_valid():
             if obj.cleaned_data.get('img',False):
-                self.save_img(obj.cleaned_data['img'], 'activity')
+                obj.cleaned_data['img'] = self.save_img(obj.cleaned_data['img'], 'activity')
             else:
                 del obj.cleaned_data['img']
             Activity.objects.filter(id=cid).update(**obj.cleaned_data)
             return redirect('/kingadmin/activity.html')
-        print('===>编辑活动错误',obj.errors)
         return render(request, 'kingadmin/activity/activtyedit.html', locals())
 
 

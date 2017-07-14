@@ -2,7 +2,7 @@ define( [
 	"../../core",
 	"../../selector"
 
-	// css is assumed
+	// css.css is assumed
 ], function( jQuery ) {
 
 	return function( elem, el ) {

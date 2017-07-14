@@ -27,7 +27,7 @@ define(function (require) {
     }
 
     /**
-     * Normalize css liked array configuration
+     * Normalize css.css liked array configuration
      * e.g.
      *  3 => [3, 3, 3, 3]
      *  [4, 2] => [4, 2, 4, 2]

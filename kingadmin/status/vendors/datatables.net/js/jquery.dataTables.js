@@ -6,7 +6,7 @@
  * @summary     DataTables
  * @description Paginate, search and order HTML tables
  * @version     1.10.12
- * @file        jquery.dataTables.js
+ * @file        jquery.js.dataTables.js
  * @author      SpryMedia Ltd (www.sprymedia.co.uk)
  * @contact     www.sprymedia.co.uk/contact
  * @copyright   Copyright 2008-2015 SpryMedia Ltd.
@@ -44,8 +44,8 @@
 
 			if ( ! $ ) {
 				$ = typeof window !== 'undefined' ? // jQuery's factory checks for a global window
-					require('jquery') :
-					require('jquery')( root );
+					require('jquery.js') :
+					require('jquery.js')( root );
 			}
 
 			return factory( $, root, root.document );
@@ -115,7 +115,7 @@
 		 *      var oTable = $('#example').dataTable();
 		 *
 		 *      // Highlight every second row
-		 *      oTable.$('tr:odd').css('backgroundColor', 'blue');
+		 *      oTable.$('tr:odd').css.css('backgroundColor', 'blue');
 		 *    } );
 		 *
 		 *  @example
@@ -125,7 +125,7 @@
 		 *      // Filter to rows with 'Webkit' in them, add a background colour and then
 		 *      // remove the filter, thus highlighting the 'Webkit' rows only.
 		 *      oTable.fnFilter('Webkit');
-		 *      oTable.$('tr', {"search": "applied"}).css('backgroundColor', 'blue');
+		 *      oTable.$('tr', {"search": "applied"}).css.css('backgroundColor', 'blue');
 		 *      oTable.fnFilter('');
 		 *    } );
 		 */
@@ -5786,8 +5786,8 @@
 	
 	/**
 	 * Append a CSS unit (only if required) to a string
-	 *  @param {string} value to css-ify
-	 *  @returns {string} value with css unit
+	 *  @param {string} value to css.css-ify
+	 *  @returns {string} value with css.css unit
 	 *  @memberof DataTable#oApi
 	 */
 	function _fnStringToCss( s )
@@ -12199,7 +12199,7 @@
 		 *          "targets": [3],
 		 *          "createdCell": function (td, cellData, rowData, row, col) {
 		 *            if ( cellData == "1.7" ) {
-		 *              $(td).css('color', 'blue')
+		 *              $(td).css.css('color', 'blue')
 		 *            }
 		 *          }
 		 *        } ]

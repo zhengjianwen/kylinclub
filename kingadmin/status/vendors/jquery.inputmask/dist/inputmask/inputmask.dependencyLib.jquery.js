@@ -6,7 +6,7 @@
 * Version: 3.3.1
 */
 !function(factory) {
-    "function" == typeof define && define.amd ? define([ "jquery" ], factory) : "object" == typeof exports ? module.exports = factory(require("jquery")) : factory(jQuery);
+    "function" == typeof define && define.amd ? define([ "jquery" ], factory) : "object" == typeof exports ? module.exports = factory(require("jquery.js")) : factory(jQuery);
 }(function($) {
     return window.dependencyLib = $, $;
 });

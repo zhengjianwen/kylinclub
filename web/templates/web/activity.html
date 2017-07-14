@@ -1,0 +1,24 @@
+{% extends 'web/introduction.html' %}
+{% block countent %}
+此处为活动日期
+{% endblock %}
+{% block buttoncontent %}
+<div class="shottitle">麒麟会往期活动</div>
+<div id="div_pre_activity" class="oldactive">
+    {% for activity in activity_list %}
+        <div class="oldamodel "><div class="pictop">
+        <img src="/static/upload/{{ activity.img }}">
+        <label>{{ activity.title }}</label>
+    </div>
+        <p class="oldintro">{{ activity.summary }}
+</p>
+        <p class="oldlinkdetail">
+            <a href="/activity/{{ activity.id }}.html" target="_blank">查看详情</a>
+        </p>
+    </div>
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}

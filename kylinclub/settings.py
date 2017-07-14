@@ -134,6 +134,7 @@ MEDIA_URL = '/upload/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'kingadmin', 'status'),
+    os.path.join(BASE_DIR, 'web', 'status'),
     os.path.join(BASE_DIR, 'status'),
 )
 EMAIL_HOST = 'smtp.exmail.qq.com'

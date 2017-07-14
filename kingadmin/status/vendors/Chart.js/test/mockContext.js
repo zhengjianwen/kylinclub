@@ -212,7 +212,7 @@
 		// http://stackoverflow.com/q/3922139
 		var head = document.getElementsByTagName('head')[0];
 		var style = document.createElement('style');
-		style.setAttribute('type', 'text/css');
+		style.setAttribute('type', 'text/css.css');
 		if (style.styleSheet) {   // IE
 			style.styleSheet.cssText = css;
 		} else {

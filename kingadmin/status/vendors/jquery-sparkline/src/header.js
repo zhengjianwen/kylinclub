@@ -200,7 +200,7 @@
 *   $('#pie').sparkline([1,1,2], { type:'pie' });
 */
 
-/*jslint regexp: true, browser: true, jquery: true, white: true, nomen: false, plusplus: false, maxerr: 500, indent: 4 */
+/*jslint regexp: true, browser: true, jquery.js: true, white: true, nomen: false, plusplus: false, maxerr: 500, indent: 4 */
 
 (function(document, Math, undefined) { // performance/minified-size optimization
 (function(factory) {

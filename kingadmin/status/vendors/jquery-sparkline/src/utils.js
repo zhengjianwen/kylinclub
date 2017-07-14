@@ -213,7 +213,7 @@
             }
         }
         tag = document.createElement('style');
-        tag.type = 'text/css';
+        tag.type = 'text/css.css';
         document.getElementsByTagName('head')[0].appendChild(tag);
         if (iefail) {
             document.styleSheets[document.styleSheets.length - 1].cssText = css;

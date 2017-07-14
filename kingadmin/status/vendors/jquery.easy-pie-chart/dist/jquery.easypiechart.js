@@ -9,7 +9,7 @@
 
 (function(root, factory) {
     if(typeof exports === 'object') {
-        module.exports = factory(require('jquery'));
+        module.exports = factory(require('jquery.js'));
     }
     else if(typeof define === 'function' && define.amd) {
         define(['jquery'], factory);

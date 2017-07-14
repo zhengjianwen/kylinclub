@@ -1,0 +1,50 @@
+{% extends 'web/base.html' %}
+
+{% block body %}
+<div id="body" class="row">
+
+<div class="row body_content">
+    <div class="wrapper">
+        <div class="leftnav">
+            <div class="title_line">了解麒麟会</div>
+            <ul class="navside">
+                {% for foo in left_menu %}
+                    {% if foo.url == url %}
+                        <li class="active"><a href="{{ foo.url }}">{{ foo.name }}</a></li>
+                        {% else %}
+                        <li><a href="{{ foo.url }}">{{ foo.name }}</a></li>
+                    {% endif %}
+
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="right_cont pb100">
+            <div class="shottitle">{{ obj.name }}</div>
+
+            <div class="acli_topline">
+                {% block countent %}
+                {{ obj.content|safe }}
+                {% endblock %}
+            </div>
+        {% block buttoncontent %}
+            <div class="abqlh">
+                {% for foo in hd_list %}
+                    <div class="abqlhmodel">
+                    <a href="{{ foo.url }}">
+
+                        <img src="/static/upload/{{ foo.img }}">
+                    </a>
+                        <label><a href="{{ foo.url }}">{{ foo.niccname }}</a></label>
+
+                </div>
+                {% endfor %}
+
+            </div>
+                <div class="btnblock"><a href="/account/register.html">加入麒麟会</a></div>
+            </div>
+        {% endblock %}
+    </div>
+</div>
+    </div>
+
+{% endblock %}

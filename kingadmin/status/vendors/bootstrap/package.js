@@ -26,7 +26,7 @@ Package.onUse(function (api) {
     api.addFiles(assets, 'client', { isAsset: true });
   }
   api.addFiles([
-    'dist/css/bootstrap.css',
+    'dist/css.css/bootstrap.css',
     'dist/js/bootstrap.js'
   ], 'client');
 });

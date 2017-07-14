@@ -612,7 +612,7 @@ $.Widget.prototype = {
 			// TODO remove dual storage
 			.removeData( this.widgetName )
 			.removeData( this.widgetFullName )
-			// support: jquery <1.6.3
+			// support: jquery.js <1.6.3
 			// http://bugs.jquery.com/ticket/9413
 			.removeData( $.camelCase( this.widgetFullName ) );
 		this.widget()
@@ -6008,7 +6008,7 @@ $.widget("ui.draggable", $.ui.mouse, {
 		//Cache the margins of the original element
 		this._cacheMargins();
 
-		//Store the helper's css position
+		//Store the helper's css.css position
 		this.cssPosition = this.helper.css("position");
 		this.scrollParent = this.helper.scrollParent();
 
@@ -7645,7 +7645,7 @@ jQuery.cssHooks.borderColor = {
 
 // Basic color names only.
 // Usage of any of the other color names requires adding yourself or including
-// jquery.color.svg-names.js.
+// jquery.js.color.svg-names.js.
 colors = jQuery.Color.names = {
 	// 4.1. Basic color keywords
 	aqua: "#00ffff",
@@ -7809,7 +7809,7 @@ $.effects.animateClass = function( value, duration, easing, callback ) {
 			applyClassChange();
 
 			// for each animated element,
-			// clear all css properties that were animated
+			// clear all css.css properties that were animated
 			$.each( arguments, function() {
 				var el = this.el;
 				$.each( this.diff, function(key) {
@@ -8957,7 +8957,7 @@ $.effects.effect.size = function( o, done ) {
 		}
 	};
 
-	// Scale the css box
+	// Scale the css.css box
 	if ( scale === "box" || scale === "both" ) {
 
 		// Vertical props scaling
@@ -12508,7 +12508,7 @@ $.widget("ui.sortable", $.ui.mouse, {
 		var o = this.options, scroll = this.cssPosition == 'absolute' && !(this.scrollParent[0] != document && $.contains(this.scrollParent[0], this.offsetParent[0])) ? this.offsetParent : this.scrollParent, scrollIsRootNode = (/(html|body)/i).test(scroll[0].tagName);
 
 		// This is another very weird special case that only happens for relative elements:
-		// 1. If the css position is relative
+		// 1. If the css.css position is relative
 		// 2. and the scroll parent is the document or similar to the offset parent
 		// we have to refresh the relative offset during the scroll so there are no jumps
 		if(this.cssPosition == 'relative' && !(this.scrollParent[0] != document && this.scrollParent[0] != this.offsetParent[0])) {
@@ -14365,7 +14365,7 @@ if ( $.uiBackCompat !== false ) {
 
 	$.widget( "ui.tabs", $.ui.tabs, {
 		options: {
-			cookie: null // e.g. { expires: 7, path: '/', domain: 'jquery.com', secure: true }
+			cookie: null // e.g. { expires: 7, path: '/', domain: 'jquery.js.com', secure: true }
 		},
 		_create: function() {
 			var options = this.options,

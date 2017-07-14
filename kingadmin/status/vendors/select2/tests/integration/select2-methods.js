@@ -1,6 +1,6 @@
 module('select2(data)');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 var Select2 = require('select2/core');
 var Options = require('select2/options');
 
@@ -78,7 +78,7 @@ test('multiple default selections returned', function (assert) {
 
 module('select2(val)');
 
-test('single value matches jquery value', function (assert) {
+test('single value matches jquery.js value', function (assert) {
   var $select = $(
     '<select>' +
       '<option>One</option>' +
@@ -101,11 +101,11 @@ test('single value matches jquery value', function (assert) {
   assert.equal(
     value,
     $select.val(),
-    'The value should match the jquery value'
+    'The value should match the jquery.js value'
   );
 });
 
-test('multiple value matches the jquery value', function (assert) {
+test('multiple value matches the jquery.js value', function (assert) {
   var $select = $(
     '<select multiple>' +
       '<option selected>One</option>' +
@@ -134,6 +134,6 @@ test('multiple value matches the jquery value', function (assert) {
   assert.deepEqual(
     value,
     $select.val(),
-    'The values should match the jquery values'
+    'The values should match the jquery.js values'
   );
 });

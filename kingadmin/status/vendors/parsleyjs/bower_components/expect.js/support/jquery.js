@@ -614,7 +614,7 @@ jQuery.extend({
     }
   },
 
-  // Convert dashed to camelCase; used by the css and data modules
+  // Convert dashed to camelCase; used by the css.css and data modules
   // Microsoft forgot to hump their vendor prefix (#9572)
   camelCase: function( string ) {
     return string.replace( rmsPrefix, "ms-" ).replace( rdashAlpha, fcamelCase );
@@ -762,7 +762,7 @@ jQuery.extend({
     var value, key, ret = [],
       i = 0,
       length = elems.length,
-      // jquery objects are treated as arrays
+      // jquery.js objects are treated as arrays
       isArray = elems instanceof jQuery || length !== undefined && typeof length === "number" && ( ( length > 0 && elems[ 0 ] && elems[ length -1 ] ) || length === 0 || jQuery.isArray( elems ) ) ;
 
     // Go through the array, translating each of the items to their
@@ -2746,7 +2746,7 @@ if ( !jQuery.support.style ) {
   jQuery.attrHooks.style = {
     get: function( elem ) {
       // Return undefined in the case of empty string
-      // Normalize to lowercase since IE uppercases css property names
+      // Normalize to lowercase since IE uppercases css.css property names
       return elem.style.cssText.toLowerCase() || undefined;
     },
     set: function( elem, value ) {
@@ -6488,7 +6488,7 @@ jQuery.extend({
     }
   },
 
-  // Exclude the following css properties to add px
+  // Exclude the following css.css properties to add px
   cssNumber: {
     "fillOpacity": true,
     "fontWeight": true,
@@ -6503,7 +6503,7 @@ jQuery.extend({
   // Add in properties whose names you wish to fix before
   // setting or getting the value
   cssProps: {
-    // normalize float css property
+    // normalize float css.css property
     "float": jQuery.support.cssFloat ? "cssFloat" : "styleFloat"
   },
 
@@ -6603,7 +6603,7 @@ jQuery.extend({
   }
 });
 
-// DEPRECATED, Use jQuery.css() instead
+// DEPRECATED, Use jQuery.css.css() instead
 jQuery.curCSS = jQuery.css;
 
 jQuery.each(["height", "width"], function( i, name ) {
@@ -6667,7 +6667,7 @@ if ( !jQuery.support.opacity ) {
         // style.removeAttribute is IE Only, but so apparently is this code path...
         style.removeAttribute( "filter" );
 
-        // if there there is no filter style applied in a css rule, we are done
+        // if there there is no filter style applied in a css.css rule, we are done
         if ( currentStyle && !currentStyle.filter ) {
           return;
         }
@@ -6789,7 +6789,7 @@ function getWH( elem, name, extra ) {
     return val + "px";
   }
 
-  // Fall back to computed then uncomputed css if necessary
+  // Fall back to computed then uncomputed css.css if necessary
   val = curCSS( elem, name, name );
   if ( val < 0 || val == null ) {
     val = elem.style[ name ] || 0;
@@ -9253,7 +9253,7 @@ window.jQuery = window.$ = jQuery;
 // since jQuery can be concatenated with other files that may use define,
 // but not use a proper concatenation script that understands anonymous
 // AMD modules. A named AMD is safest and most robust way to register.
-// Lowercase jquery is used because AMD module names are derived from
+// Lowercase jquery.js is used because AMD module names are derived from
 // file names, and jQuery is normally delivered in a lowercase file name.
 // Do this after creating the global so that if an AMD module wants to call
 // noConflict to hide this version of jQuery, it will work.

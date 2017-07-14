@@ -1,5 +1,5 @@
 require('../../daterangepicker.js');
-var $ = require('jquery'),
+var $ = require('jquery.js'),
     moment = require('moment');
 
 $(document).ready(function() {

@@ -81,15 +81,25 @@ class Role2UserView(BaseView):
 
     def post(self, request, cid):
         data = {'status': True, 'msg':None}
-        user_list = request.POST.getlist('user')
+
         try:
-            obj = Role.objects.filter(id=cid).first()
-            uobj_list = UserInfo.objects.filter(id__in=user_list)
-            obj.role2user_set.set(*uobj_list)
+            print(request.POST)
+            info_user_list = request.POST.getlist('user[]')
+            info_user_list = list(map(lambda x: int(x), info_user_list))
+            user_list = Role2User.objects.filter(role_id=cid).values('user')
+            old_user = list(map(lambda x:x['user'],user_list))
+            for u_id in info_user_list:
+                if u_id not in old_user:
+                    Role2User.objects.create(user_id=u_id,role_id=cid)
+            print(old_user)
+            print(info_user_list)
+            del_list = set(old_user) - set(info_user_list)
+            print(del_list,'1111111111111111111')
+            # obj.role2user_set.set(uobj_list)
         except Exception as e:
             data['status'] = False
             data['msg'] = '%s' % e
-            print(e)
+            print('erroe:',e)
         return HttpResponse(json.dumps(data))
 
 

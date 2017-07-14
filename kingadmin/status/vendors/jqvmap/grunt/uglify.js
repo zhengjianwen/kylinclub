@@ -12,7 +12,7 @@ module.exports = {
 	dist: {
 		files: {
 			'dist/jquery.vmap.min.js': [
-				"dist/jquery.vmap.js"
+				"dist/jquery.js.vmap.js"
 			]
 		}
 	}

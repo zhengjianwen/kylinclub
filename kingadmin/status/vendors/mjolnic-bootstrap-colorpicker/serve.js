@@ -6,7 +6,7 @@
 
 var http = require('http'), fs = require('fs'), mimeTypes = {
   'html': 'text/html',
-  'css': 'text/css',
+  'css': 'text/css.css',
   'js': 'text/javascript',
   'json': 'application/json',
   'png': 'image/png',

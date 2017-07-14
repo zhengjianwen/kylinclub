@@ -51,15 +51,16 @@
                         <div  class="dataTables_filter">
 
                         </div>
-                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline text-center" role="grid" aria-describedby="datatable-buttons_info" style="width: 1300px;">
+                        <table id="datatable-buttons" class="table table-striped table-bordered dataTable no-footer dtr-inline text-center"
+                               role="grid" aria-describedby="datatable-buttons_info" style="width: 100%">
                             <thead>
                                 <tr role="row" class="text-center">
                                     <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">选择</th>
                                     <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;">ID</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">活动类型</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">菜单别名</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">所属菜单</th>
-                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 200px;">活动介绍</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">活动类型</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">url链接</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 80px;">所属菜单</th>
+                                    <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;">活动介绍</th>
                                     <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;">操作</th>
                                 </tr>
                             </thead>
@@ -71,8 +72,8 @@
                                           </td>
                                           <td tabindex="0" class="sorting_1">{{ hd.id }}</td>
                                           <td>{{ hd.name }}</td>
-                                          <td>{{ hd.alias }}</td>
-                                          <td><a href="/activity/{{ hd.id }}.html">{{ hd.menu }}</a></td>
+                                          <td><a href="{{ hd.url }}">点击查看</a></td>
+                                          <td>{{ hd.menu }}</td>
                                           <td style="tab-size: 12px;">{{ hd.content|truncatewords:"3"|safe }}</td>
                                           <td>
                                               <a type="button" class="btn btn btn-primary" href="/kingadmin/activitytype/edit/{{ hd.id }}">编辑</a>

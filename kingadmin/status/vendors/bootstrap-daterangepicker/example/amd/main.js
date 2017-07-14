@@ -1,6 +1,6 @@
 requirejs.config({
     "paths": {
-      "jquery": "https://code.jquery.com/jquery-1.11.3.min",
+      "jquery": "https://code.jquery.com/jquery.js-1.11.3.min",
       "moment": "../../moment",
       "daterangepicker": "../../daterangepicker"
     }

@@ -1,6 +1,6 @@
 module('Options - Translations');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 var Options = require('select2/options');
 
 test('partial dictionaries can be passed', function (assert) {

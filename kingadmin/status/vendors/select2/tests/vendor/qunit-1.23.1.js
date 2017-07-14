@@ -63,7 +63,7 @@ function diff( a, b ) {
 	return result;
 }
 
-// From jquery.js
+// From jquery.js.js
 function inArray( elem, array ) {
 	if ( array.indexOf ) {
 		return array.indexOf( elem );

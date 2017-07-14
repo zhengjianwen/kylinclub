@@ -81,13 +81,20 @@ class ActivityClassForm(Form):
     menu_id = fields.CharField(widget=widgets.Select(
         attrs={'class': "form-control col-md-7 col-xs-12"}
     ))
-    alias = fields.CharField(max_length=32, min_length=1, strip=True, required=True,
+    url = fields.CharField(max_length=32, min_length=1, strip=True, required=True,
                              widget=widgets.TextInput(
-                                 attrs={'placeholder': "菜单别名，必须为英文", 'class': "form-control col-md-7 col-xs-12"}
+                                 attrs={'placeholder': "菜单链接地址，以/开始,", 'class': "form-control col-md-7 col-xs-12"}
                              ))
+    img = fields.ImageField(required=False,
+                            widget=widgets.FileInput(attrs={'class': "form-control col-md-7 col-xs-12"}))
+
     name = fields.CharField(max_length=64, min_length=1, strip=True,
                             widget=widgets.TextInput(
-                                attrs={'placeholder': "菜单名称", 'class': "form-control col-md-7 col-xs-12"}
+                                attrs={'placeholder': "菜单名称-用于菜单显示", 'class': "form-control col-md-7 col-xs-12"}
+                            ))
+    niccname = fields.CharField(max_length=64, min_length=1, strip=True,required=False,
+                            widget=widgets.TextInput(
+                                attrs={'placeholder': "菜单名称-用于栏目内显示", 'class': "form-control col-md-7 col-xs-12"}
                             ))
     content = fields.CharField(widget=widgets.Textarea(
         attrs={'class': 'form-control',

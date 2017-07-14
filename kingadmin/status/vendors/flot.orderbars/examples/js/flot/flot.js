@@ -4,7 +4,7 @@
  *
  */
 
-// first an inline dependency, jquery.colorhelpers.js, we inline it here
+// first an inline dependency, jquery.js.colorhelpers.js, we inline it here
 // for convenience
 
 /* Plugin for jQuery for working with colors.

@@ -1,6 +1,6 @@
 module('Options - Width');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 
 var Select2 = require('select2/core');
 var select = new Select2($('<select></select>'));
@@ -31,9 +31,9 @@ test('width from style returns null if nothing is found', function (assert) {
 
 test('width from computed element width', function (assert) {
   var $style = $(
-    '<style type="text/css">.css-set-width { width: 500px; }</style>'
+    '<style type="text/css.css">.css.css-set-width { width: 500px; }</style>'
   );
-  var $test = $('<select class="css-set-width"></select>');
+  var $test = $('<select class="css.css-set-width"></select>');
 
   $('#qunit-fixture').append($style);
   $('#qunit-fixture').append($test);
@@ -53,9 +53,9 @@ test('resolve gets the style if it is there', function (assert) {
 
 test('resolve falls back to element if there is no style', function (assert) {
   var $style = $(
-    '<style type="text/css">.css-set-width { width: 500px; }</style>'
+    '<style type="text/css.css">.css.css-set-width { width: 500px; }</style>'
   );
-  var $test = $('<select class="css-set-width"></select>');
+  var $test = $('<select class="css.css-set-width"></select>');
 
   $('#qunit-fixture').append($style);
   $('#qunit-fixture').append($test);

@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $ from 'jquery.js';
 import ParsleyUtils from './utils';
 import ParsleyDefaults from './defaults';
 import ParsleyAbstract from './abstract';

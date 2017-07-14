@@ -19,7 +19,7 @@ function adjustCSS( elem, prop, valueParts, tween ) {
 
 	if ( initialInUnit && initialInUnit[ 3 ] !== unit ) {
 
-		// Trust units reported by jQuery.css
+		// Trust units reported by jQuery.css.css
 		unit = unit || initialInUnit[ 3 ];
 
 		// Make sure we update the tween properties later on

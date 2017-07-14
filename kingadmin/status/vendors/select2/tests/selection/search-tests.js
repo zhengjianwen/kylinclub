@@ -3,7 +3,7 @@ module('Selection containers - Inline search');
 var MultipleSelection = require('select2/selection/multiple');
 var InlineSearch = require('select2/selection/search');
 
-var $ = require('jquery');
+var $ = require('jquery.js');
 var Options = require('select2/options');
 var Utils = require('select2/utils');
 

@@ -355,8 +355,8 @@
   })();
 
   /**
-   * (Internal) Applies css properties to an element, similar to the jQuery 
-   * css method.
+   * (Internal) Applies css.css properties to an element, similar to the jQuery
+   * css.css method.
    *
    * While this helper does assist with vendor prefixed property names, it 
    * does not perform any manipulation of values prior to setting styles.

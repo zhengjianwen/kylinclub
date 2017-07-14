@@ -21,7 +21,7 @@
  *
  * To use, include prettify.js and this file in your HTML page.
  * Then put your code in an HTML tag like
- *      <pre class="prettyprint lang-css"></pre>
+ *      <pre class="prettyprint lang-css.css"></pre>
  *
  *
  * http://www.w3.org/TR/CSS21/grammar.html Section G2 defines the lexical
@@ -118,12 +118,12 @@ PR['registerLangHandler'](
           /^\"(?:[^\n\r\f\\\"]|\\(?:\r\n?|\n|\f)|\\[\s\S])*\"/, null],
          [PR['PR_STRING'],
           /^\'(?:[^\n\r\f\\\']|\\(?:\r\n?|\n|\f)|\\[\s\S])*\'/, null],
-         ['lang-css-str', /^url\(([^\)\"\']+)\)/i],
+         ['lang-css.css-str', /^url\(([^\)\"\']+)\)/i],
          [PR['PR_KEYWORD'],
           /^(?:url|rgb|\!important|@import|@page|@media|@charset|inherit)(?=[^\-\w]|$)/i,
           null],
          // A property name -- an identifier followed by a colon.
-         ['lang-css-kw', /^(-?(?:[_a-z]|(?:\\[0-9a-f]+ ?))(?:[_a-z0-9\-]|\\(?:\\[0-9a-f]+ ?))*)\s*:/i],
+         ['lang-css.css-kw', /^(-?(?:[_a-z]|(?:\\[0-9a-f]+ ?))(?:[_a-z0-9\-]|\\(?:\\[0-9a-f]+ ?))*)\s*:/i],
          // A C style block comment.  The <comment> production.
          [PR['PR_COMMENT'], /^\/\*[^*]*\*+(?:[^\/*][^*]*\*+)*\//],
          // Escaping text spans
@@ -147,7 +147,7 @@ PR['registerLangHandler'](
          [PR['PR_KEYWORD'],
           /^-?(?:[_a-z]|(?:\\[\da-f]+ ?))(?:[_a-z\d\-]|\\(?:\\[\da-f]+ ?))*/i]
         ]),
-    ['css-kw']);
+    ['css.css-kw']);
 // The content of an unquoted URL literal like url(http://foo/img.png) should
 // be colored as string content.  This language handler is used above in the
 // URL production to do so.
@@ -156,4 +156,4 @@ PR['registerLangHandler'](
         [
          [PR['PR_STRING'], /^[^\)\"\']+/]
         ]),
-    ['css-str']);
+    ['css.css-str']);

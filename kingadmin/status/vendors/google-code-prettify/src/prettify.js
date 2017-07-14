@@ -34,7 +34,7 @@
  *    {@code class=prettyprint.}
  *    You can also use the (html deprecated) {@code <xmp>} tag, but the pretty
  *    printer needs to do more substantial DOM manipulations to support that, so
- *    some css styles may not be preserved.
+ *    some css.css styles may not be preserved.
  * </ol>
  * That's it.  I wanted to keep the API as simple as possible, so there's no
  * need to specify which language the code is in, but if you wish, you can add
@@ -140,7 +140,7 @@ var prettyPrint;
       PYTHON_KEYWORDS, RUBY_KEYWORDS, SH_KEYWORDS];
   var C_TYPES = /^(DIR|FILE|vector|(de|priority_)?queue|list|stack|(const_)?iterator|(multi)?(set|map)|bitset|u?(int|float)\d*)\b/;
 
-  // token style names.  correspond to css classes
+  // token style names.  correspond to css.css classes
   /**
    * token style for a string literal
    * @const
@@ -1288,7 +1288,7 @@ var prettyPrint;
            // Unescaped content in javascript.  (Or possibly vbscript).
            ['lang-js',      /^<script\b[^>]*>([\s\S]*?)(<\/script\b[^>]*>)/i],
            // Contains unescaped stylesheet content
-           ['lang-css',     /^<style\b[^>]*>([\s\S]*?)(<\/style\b[^>]*>)/i],
+           ['lang-css.css',     /^<style\b[^>]*>([\s\S]*?)(<\/style\b[^>]*>)/i],
            ['lang-in.tag',  /^(<\/?[a-z][^<>]*>)/i]
           ]),
       ['default-markup', 'htm', 'html', 'mxml', 'xhtml', 'xml', 'xsl']);
@@ -1306,9 +1306,9 @@ var prettyPrint;
            ['lang-js',       /^on\w+\s*=\s*\"([^\"]+)\"/i],
            ['lang-js',       /^on\w+\s*=\s*\'([^\']+)\'/i],
            ['lang-js',       /^on\w+\s*=\s*([^\"\'>\s]+)/i],
-           ['lang-css',      /^style\s*=\s*\"([^\"]+)\"/i],
-           ['lang-css',      /^style\s*=\s*\'([^\']+)\'/i],
-           ['lang-css',      /^style\s*=\s*([^\"\'>\s]+)/i]
+           ['lang-css.css',      /^style\s*=\s*\"([^\"]+)\"/i],
+           ['lang-css.css',      /^style\s*=\s*\'([^\']+)\'/i],
+           ['lang-css.css',      /^style\s*=\s*([^\"\'>\s]+)/i]
            ]),
       ['in.tag']);
   registerLangHandler(

@@ -721,7 +721,7 @@ jQuery.extend({
 			ret = [],
 			i = 0,
 			length = elems.length,
-			// jquery objects are treated as arrays
+			// jquery.js objects are treated as arrays
 			isArray = elems instanceof jQuery || length !== undefined && typeof length === "number" && ( ( length > 0 && elems[ 0 ] && elems[ length -1 ] ) || length === 0 || jQuery.isArray( elems ) ) ;
 
 		// Go through the array, translating each of the items to their
@@ -9461,7 +9461,7 @@ window.jQuery = window.$ = jQuery;
 // since jQuery can be concatenated with other files that may use define,
 // but not use a proper concatenation script that understands anonymous
 // AMD modules. A named AMD is safest and most robust way to register.
-// Lowercase jquery is used because AMD module names are derived from
+// Lowercase jquery.js is used because AMD module names are derived from
 // file names, and jQuery is normally delivered in a lowercase file name.
 // Do this after creating the global so that if an AMD module wants to call
 // noConflict to hide this version of jQuery, it will work.
