@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponse
-from repository.models import User, Role, Role2User,UserInfo
+from repository.models import User, Role, Role2User,UserInfo,Role2AdminMenuAction,MainMenu,AdminMenuAction
 from kingadmin.kingform import CompanyMemberForm,MemberFollowForm
 from .baseview import BaseView
 from utils.pages import Pagination
@@ -20,7 +20,7 @@ class UserView(BaseView):
 
 
 class UserOperate(BaseView):
-
+    '''用户验证'''
     def get(self, request,operate, cid,condition, *args , **kwargs):
         old_url = '/kingadmin/user/%s/'%condition
         # old_url = '/kingadmin/user'
@@ -52,11 +52,11 @@ class AdminView(BaseView):
 class RoleView(BaseView):
     def get(self,request):
         role_list = Role.objects.all()
-
         return render(request,'kingadmin/user/rolelist.html',locals())
 
 
 class RoleEdit(BaseView):
+    '''角色编辑'''
     def post(self,request,cid):
         name = request.POST.get('name')
         data = {'status':True,'msg':'更新成功'}
@@ -68,7 +68,7 @@ class RoleEdit(BaseView):
 
 
 class Role2UserView(BaseView):
-
+    '''用户与角色关联函数'''
     def get(self,request,cid):
         sesion = session_key = request.session.session_key
         data = {'status': True, 'roleuser': None, 'user': None}
@@ -81,21 +81,16 @@ class Role2UserView(BaseView):
 
     def post(self, request, cid):
         data = {'status': True, 'msg':None}
-
         try:
-            print(request.POST)
-            info_user_list = request.POST.getlist('user[]')
+            info_user_list = request.POST.getlist('user')
             info_user_list = list(map(lambda x: int(x), info_user_list))
             user_list = Role2User.objects.filter(role_id=cid).values('user')
             old_user = list(map(lambda x:x['user'],user_list))
             for u_id in info_user_list:
                 if u_id not in old_user:
                     Role2User.objects.create(user_id=u_id,role_id=cid)
-            print(old_user)
-            print(info_user_list)
             del_list = set(old_user) - set(info_user_list)
-            print(del_list,'1111111111111111111')
-            # obj.role2user_set.set(uobj_list)
+            Role2User.objects.filter(user_id__in=del_list).delete()
         except Exception as e:
             data['status'] = False
             data['msg'] = '%s' % e
@@ -103,11 +98,39 @@ class Role2UserView(BaseView):
         return HttpResponse(json.dumps(data))
 
 
+class RoleActionView(BaseView):
+    '''角色与权限设置'''
+    def get(self,request,rid):
+        role_obj = Role.objects.filter(id=rid).first()
+        qx_list = MainMenu.objects.all()
+        role_action = Role2AdminMenuAction.objects.filter(role_id=rid)
+        role_action_ids = list(map(lambda x: x.rama_id, role_action))
+        return render(request,'kingadmin/user/roletofunc.html',locals())
+
+    def post(self,request,rid):
+        role_obj = Role.objects.filter(id=rid).first()
+        role_action = Role2AdminMenuAction.objects.filter(role=role_obj) # 获取角色下的所有权限对象
+        role_action_ids = list(map(lambda x: x.rama_id, role_action))   # 获取所有权限的ids
+        try:
+            info_action = request.POST.getlist('role')
+            info_action = list(map(lambda x: int(x), info_action))  # 新提交的权限id
+            for i in info_action:
+                if i not in role_action_ids:
+                    Role2AdminMenuAction.objects.create(role=role_obj,rama_id=i)
+            del_list = set(role_action_ids) - set(info_action)
+            print('删除',del_list)
+            Role2AdminMenuAction.objects.filter(role=role_obj,rama_id__in=del_list).delete()
+        except Exception as e:
+            print(e)
+        return redirect('/kingadmin/user/roleaction/%s' % rid)
+
 
 class ActionView(BaseView):
+    '''权限管理'''
     def get(self,request):
-        role_list = Role.objects.all()
-        return render(request,'kingadmin/user/rolelist.html',locals())
+        action_list = AdminMenuAction.objects.all()
+        return render(request,'kingadmin/user/actionlist.html',locals())
+
 
 def getuserlist(request):
     '''获取用户与角色关系'''

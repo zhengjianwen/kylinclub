@@ -37,6 +37,7 @@ class UserInfo(models.Model):
 
 class Role(models.Model):
     name = models.CharField('角色名称', max_length=32)
+    action = models.ManyToManyField(to='AdminMenuAction',through='Role2AdminMenuAction',through_fields=('role','rama'))
 
     class Meta:
         verbose_name_plural = '1-3角色表'
@@ -63,36 +64,57 @@ class Action(models.Model):
     code = models.CharField(max_length=32)
 
     class Meta:
-        verbose_name_plural = '2-1权限操作表'
+        verbose_name_plural = '2-1权限编码表'
         unique_together = ('caption', 'code')
 
     def __str__(self):
         return self.caption
 
 
-class AdminMenu(models.Model):
+class MainMenu(models.Model):
     caption = models.CharField(max_length=32)
-    parent = models.ForeignKey('self', related_name='p', null=True, blank=True)
 
     def __str__(self):
         return "%s" % (self.caption,)
 
     class Meta:
-        verbose_name_plural = '2-1菜单表'
-
-        # 系统配置
+        verbose_name_plural = '2-1后台主菜单表'
 
 
-# 轮播图
-class Rotation(models.Model):
-    name = models.CharField('名称', max_length=64)
-
-    class Meta:
-        verbose_name_plural = '8-轮播名称'
+class AdminMenu(models.Model):
+    mainmenu = models.ForeignKey(MainMenu)
+    caption = models.CharField(max_length=32)
+    url = models.CharField(max_length=256,default='/kingadmin/')
 
     def __str__(self):
-        return '%s' % self.name
+        return "%s" % (self.caption,)
 
+    class Meta:
+        verbose_name_plural = '2-2后台菜单链接表'
+
+
+class AdminMenuAction(models.Model):
+    adminmenu = models.ForeignKey(AdminMenu)
+    action = models.ForeignKey(Action)
+
+    def __str__(self):
+        return "%s-%s" % (self.adminmenu,self.action)
+
+    class Meta:
+        verbose_name_plural = '2-3详细权限表'
+        unique_together = ('adminmenu', 'action')
+
+
+class Role2AdminMenuAction(models.Model):
+    role = models.ForeignKey(Role)
+    rama = models.ForeignKey(AdminMenuAction)
+
+    def __str__(self):
+        return '%s-%s' % (self.role,self.rama)
+
+    class Meta:
+        verbose_name_plural = '2-4角色与权限关系表'
+        unique_together = ('role', 'rama')
 
 # 轮播图
 class Carousel(models.Model):

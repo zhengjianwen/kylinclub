@@ -71,38 +71,24 @@
         </p>
     </div>
     <div class="wrapper mt30">
-                <div class="newsmodel  ">
-                    <a href="http://www.kylinclub.org/home/news/911c38ac-60bb-4590-9477-1e0c5a3bf74e" target="_blank">
-                        <p class="nmtitle">2016 地表最强科技创新 尽在 GITC 全球互联网技术大会</p>
+        {% for new in new_list %}
+            {% if forloop.counter == 3 %}
+            <div class="newsmodel  nomr">
+            {% else %}
+            <div class="newsmodel">
+            {% endif %}
+                    <a href="/news/{{ new.creat_at }}-{{ new.id }}.html" target="_blank">
+                        <p class="nmtitle">{{ new.title }}</p>
                         <p class="nmpic">
 
-                                <img src="/static/web/pic/055052892141.jpg">
+                                <img style="max-height: 200px" src="/static/upload/{{ new.img }}">
                         </p>
-                        <p class="nmcontent">最炫酷技术盛宴 11 月震撼开启
-2016 地表最强科技创新
-尽在 GITC 全球互联网技术大会</p>
+                        <p class="nmcontent">{{ new.summary }}</p>
                     </a>
                 </div>
-                <div class="newsmodel  ">
-                    <a href="http://www.kylinclub.org/home/news/02b49a4d-88e3-4d05-a54f-b06ccea2b54c" target="_blank">
-                        <p class="nmtitle">GITC究竟有怎样的魅力？</p>
-                        <p class="nmpic">
+        {% endfor %}
+        
 
-                                <img src="/static/web/pic/050955943664.jpg">
-                        </p>
-                        <p class="nmcontent">一场20000+互联网技术人士与400+行业领袖共同围观的大会——GITC究竟有怎样的魅力？</p>
-                    </a>
-                </div>
-                <div class="newsmodel  nomr">
-                    <a href="http://www.kylinclub.org/home/news/9133b19c-c570-433e-ae51-2c6b2b5bc8f5" target="_blank">
-                        <p class="nmtitle">GITC2016上海站在沪圆满落幕，互联网大咖畅谈行业前景</p>
-                        <p class="nmpic">
-
-                                <img src="/static/web/pic/030804292679.jpg">
-                        </p>
-                        <p class="nmcontent">GITC全球互联网技术大会上海站圆满落幕，期待11月24日至11月25日与大家相聚GITC北京站！</p>
-                    </a>
-                </div>
     </div>
 </div>
 <div class="row home_action">

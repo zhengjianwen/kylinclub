@@ -47,6 +47,7 @@ urlpatterns = [
     url(r'user/(?P<condition>\d+)', user.UserView.as_view()),
     url(r'userlist/(?P<cid>\d+)', user.Role2UserView.as_view()),
     url(r'user/(?P<operate>[a-zA-Z]+)/(?P<cid>\d+)/(?P<condition>\d+)/', user.UserOperate.as_view()),
+    url(r'user/roleaction/(?P<rid>\d+)', user.RoleActionView.as_view()),
 
     url(r'admin$', user.UserView.as_view()),
     url(r'action$', user.ActionView.as_view()),

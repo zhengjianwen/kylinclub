@@ -53,21 +53,21 @@
                                role="grid" aria-describedby="datatable-buttons_info" style="width: 500px;">
                       <thead>
                         <tr role="row" class="text-center">
-                            <th class="sorting_asc" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 20px;text-align: center">ID</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;text-align: center">角色名称</th>
-                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;text-align: center">操作</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 100px;text-align: center">权限名称</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" rowspan="1" colspan="1" style="width: 150px;text-align: center">权限</th>
                         </tr>
                       </thead>
 
                       <tbody>
-                      {% for row in role_list %}
+                      {% for row in action_list %}
                           <tr role="row" class="odd text-center">
-                              <td>{{ row.id }}</td>
-                              <td>{{ row.name }}</td>
+                              {% for foo in row.action.all %}
+
+                              {% endfor %}
+
+                              <td>{{ row }}</td>
                               <td>
-                                  <button type="button" onclick="myedit()" class="btn btn-primary" >编辑</button>
-                                  <button type="button" class="btn btn-info myuser"  data-toggle="modal" data-target="#myModal">设置人员</button>
-                                  <button type="button" class="btn btn-danger myp"  data-toggle="1modal" data-target="#myModal">设置权限</button>
+
                               </td>
                             </tr>
                       {% endfor %}

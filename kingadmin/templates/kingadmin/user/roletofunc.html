@@ -1,0 +1,132 @@
+{% extends 'kingadmin/base.html' %}
+{% block title %}权限设置{% endblock %}
+
+{% block head %}
+
+    <style>
+        td{
+        text-align:center;/** 设置水平方向居中 */
+        vertical-align:middle;/** 设置垂直方向居中 */
+    }
+    .mycheckbox{margin-left: 10px}
+    td span{margin-right: 10px}
+    th span{margin-left: 10px}
+    th span:hover{color: #00A000}
+    </style>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+      <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>权限设置 <small></small></h3>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">搜索</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="clearfix"></div>
+
+              <div class="clearfix"></div>
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>{{ role_obj.name }} <small>设置{{ role_obj.name }}人员的权限</small></h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                <form action="/kingadmin/user/roleaction/{{ rid }}" method="post">
+                  <div class="x_content">
+                    <p class="text-muted font-13 m-b-30">
+
+                    <div id="datatable-buttons_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+                        <div class="dt-buttons btn-group" style="margin-bottom: 15px;">
+                            <input type="reset" class="btn btn-round btn-warning hide" value="重置数据">
+                            <input type="submit"  class="btn btn-round btn-success hide" value="保存数据">
+                            <a type="button" onclick="javascript:history.back(-1);"  class="btn btn-round btn-info">返回上一页</a>
+                        </div>
+
+                        <table id="datatable-buttons" class="table "
+                               role="grid" aria-describedby="datatable-buttons_info" style="width: 800px;">
+                        <thead>
+                        <tr role="row" class="text-center">
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons"  style="width: 100px;text-align: center">主菜单名称</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" style="width: 100px;text-align: center">二级菜单</th>
+                            <th class="sorting" tabindex="0" aria-controls="datatable-buttons" style="width: 220px;text-align: center">
+                                <span class="glyphicon glyphicon-check" id="call"  aria-hidden="true">全选</span>
+                                <span class="glyphicon glyphicon-unchecked" id="fanxuan" aria-hidden="true">反选</span>
+                                <span class="glyphicon glyphicon-plus gongneng" gn="1" aria-hidden="true">增加</span>
+                                <span class="glyphicon glyphicon-remove-circle gongneng" gn="2" aria-hidden="true">删除</span>
+                                <span class="glyphicon glyphicon-pencil gongneng" gn="4" aria-hidden="true">修改</span>
+                                <span class="glyphicon glyphicon-eye-open gongneng" gn="3" aria-hidden="true">查看</span>
+                            </th>
+                        </tr>
+                      </thead>
+
+                      <tbody id="myon">
+                      {% for row in qx_list %}
+                          {% for foo in row.adminmenu_set.all %}
+                                <tr role="row" class="odd text-center" >
+                                {% if forloop.counter == 1 %}
+                                    <td rowspan="{{ row.adminmenu_set.count }}" style="vertical-align:middle;">
+                                           {{ row.caption}}
+                                    </td>
+                                {% endif %}
+                                  <td>{{ foo }}</td>
+                                  <td style="text-align: left;">
+                                      {% for qx in foo.adminmenuaction_set.all %}
+
+                                          {% if qx.id in role_action_ids %}
+
+                                                <input type="checkbox"  name="role" class="mycheckbox" func="{{ qx.action.id }}" value="{{ qx.id }}" checked>
+                                          {% else %}
+
+                                                <input type="checkbox" name="role" class="mycheckbox" value="{{ qx.id }}">
+                                          {% endif %}
+
+                                           <span>{{ qx.action }}</span>
+                                      {% endfor %}
+
+                                  </td>
+                                </tr>
+                          {% endfor %}
+
+
+                      {% endfor %}
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+    <script src="/static/build/js/rolefunc.js"></script>
+{% endblock %}

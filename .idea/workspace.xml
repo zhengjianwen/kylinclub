@@ -1,210 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/repository/models.py" line="146" mnemonic="9" />
+    <bookmark url="file://$PROJECT_DIR$/repository/models.py" line="168" mnemonic="9" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc8f5fce-dcc7-4f2d-b1cb-269f82098d59" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/cecb06f1-5a5e-4fdc-8018-ab970dbd1165.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/cecb06f1-5a5e-4fdc-8018-ab970dbd1165.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/kingform.py" afterPath="$PROJECT_DIR$/kingadmin/kingform.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/js/jquery-3.1.1.js" afterPath="$PROJECT_DIR$/kingadmin/status/js/jquery-3.1.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/Chart.js/test/mockContext.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/Chart.js/test/mockContext.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/DateJS/reports/lcov-report/prettify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/DateJS/reports/lcov-report/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/Flot/jquery.flot.navigate.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/Flot/jquery.flot.navigate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/Flot/jquery.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/Flot/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/animate.css/animate.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/animate.css/animate.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/animate.css/animate.min.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/animate.css/animate.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/daterangepicker.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/daterangepicker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/example/amd/main.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/example/amd/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/example/browserify/main.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/example/browserify/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/package.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap-daterangepicker/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/dist/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/dist/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/package.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/bootstrap/package.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/cropper/dist/cropper.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/cropper/dist/cropper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/datatables.net/js/jquery.dataTables.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/datatables.net/js/jquery.dataTables.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/dist/jquery.autocomplete.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/dist/jquery.autocomplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/gruntfile.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/src/jquery.autocomplete.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/devbridge-autocomplete/src/jquery.autocomplete.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/src/component/tooltip/TooltipModel.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/src/component/tooltip/TooltipModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/src/util/format.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/src/util/format.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/test/lib/dat.gui.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/test/lib/dat.gui.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/test/ut/core/utHelper.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/echarts/test/ut/core/utHelper.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/flot.orderbars/examples/js/flot/flot.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/flot.orderbars/examples/js/flot/flot.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/fullcalendar.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/fullcalendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/fullcalendar.print.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/fullcalendar.print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/gcal.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/gcal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang-all.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang-all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-ma.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-ma.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-sa.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-sa.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-tn.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar-tn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/bg.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/bg.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ca.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/cs.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/cs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/da.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/da.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/de-at.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/de-at.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/de.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/de.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/el.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/el.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-au.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-au.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-ca.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-ca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-gb.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-gb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-ie.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-ie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-nz.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/en-nz.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/es.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/es.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fa.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fa.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fi.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr-ca.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr-ca.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr-ch.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr-ch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/fr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/he.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/he.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hi.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hr.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hu.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/hu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/id.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/id.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/is.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/is.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/it.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/it.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ja.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ja.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ko.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ko.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/lt.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/lt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/lv.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/lv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/nb.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/nb.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/nl.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/nl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pl.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pt-br.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pt-br.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pt.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/pt.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ro.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ru.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/ru.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sk.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sl.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sr-cyrl.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sr-cyrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sr.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sv.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/sv.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/th.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/th.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/tr.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/tr.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/uk.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/uk.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/vi.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/vi.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/zh-cn.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/zh-cn.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/zh-tw.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/fullcalendar/dist/lang/zh-tw.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/gauge.js/assets/prettify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/gauge.js/assets/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/bin/prettify.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/bin/prettify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/bin/run_prettify.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/bin/run_prettify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/lang-css.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/lang-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/prettify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/run_prettify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/google-code-prettify/src/run_prettify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/iCheck/skins/all.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/iCheck/skins/all.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-knob/js/jquery.knob.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-knob/js/jquery.knob.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/dist/jquery.sparkline.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/dist/jquery.sparkline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/dist/jquery.sparkline.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/dist/jquery.sparkline.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/defaults.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/defaults.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/header.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/header.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/utils.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery-sparkline/src/utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/Gruntfile.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/dist/jquery.easypiechart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/karma.conf.coffee" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.easy-pie-chart/karma.conf.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/inputmask.dependencyLib.jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/inputmask.phone.extensions.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/inputmask.phone.extensions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/jquery.inputmask.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/inputmask/jquery.inputmask.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.date.extensions.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.date.extensions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.dependencyLib.jquery.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.dependencyLib.jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.extensions.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.extensions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.numeric.extensions.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.numeric.extensions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.phone.extensions.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.phone.extensions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/inputmask.regex.extensions.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/jquery.inputmask.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/dist/min/inputmask/jquery.inputmask.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/extra/bindings/inputmask.binding.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.inputmask/extra/bindings/inputmask.binding.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.tagsinput/grunt-tasks/options/cssmin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery.tagsinput/grunt-tasks/options/uglify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/core.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/adjustCSS.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/adjustCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/css/var/isHidden.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/exports/amd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/intro.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/intro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/offset.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/jqvmap/grunt/uglify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/jqvmap/grunt/uglify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/serve.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/mjolnic-bootstrap-colorpicker/serve.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/nprogress/nprogress.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/nprogress/nprogress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/expect.js/support/jquery.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/expect.js/support/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/dist/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/dist/jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/core.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css/curCSS.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/css/var/isHidden.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/effects.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/effects.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/effects/Tween.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/intro.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/intro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/offset.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/bower_components/jquery/src/offset.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/dist/parsley.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/dist/parsley.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/dist/parsley.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/dist/parsley.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/extra/plugin/bind.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/extra/plugin/bind.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley/main.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley/validator.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/parsleyjs/src/parsley/validator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.animate.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.animate.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.buttons.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.buttons.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.callbacks.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.callbacks.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.confirm.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.confirm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.desktop.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.desktop.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.history.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.history.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.mobile.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.mobile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.nonblock.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.nonblock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.reference.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.reference.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.tooltip.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/pnotify/dist/pnotify.tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.full.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.full.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.full.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.full.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/dist/js/select2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/docs/vendor/js/placeholders.jquery.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/docs/vendor/js/placeholders.jquery.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/docs/vendor/js/prettify.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/docs/vendor/js/prettify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/src/js/jquery.select2.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/src/js/jquery.select2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/src/js/wrapper.start.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/src/js/wrapper.start.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/dropdown/dropdownCss-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/dropdown/dropdownCss-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/dropdown/selectOnClose-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/dropdown/selectOnClose-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/integration/select2-methods.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/integration/select2-methods.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/options/translation-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/options/translation-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/options/width-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/options/width-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/allowClear-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/allowClear-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/search-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/search-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/stopPropagation-tests.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/selection/stopPropagation-tests.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/vendor/jquery-1.7.2.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/vendor/jquery-1.7.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/vendor/qunit-1.23.1.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/tests/vendor/qunit-1.23.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/vendors/select2/vendor/jquery-2.1.0.js" afterPath="$PROJECT_DIR$/kingadmin/status/vendors/select2/vendor/jquery-2.1.0.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitypeedit.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitypeedit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/build/js/custom.js" afterPath="$PROJECT_DIR$/kingadmin/status/build/js/custom.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/status/build/js/custom.min.js" afterPath="$PROJECT_DIR$/kingadmin/status/build/js/custom.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/index.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" afterPath="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/baseview.py" afterPath="$PROJECT_DIR$/kingadmin/views/baseview.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/menu.py" afterPath="$PROJECT_DIR$/kingadmin/views/menu.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/urls.py" afterPath="$PROJECT_DIR$/kingadmin/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/index.py" afterPath="$PROJECT_DIR$/kingadmin/views/index.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kingadmin/views/user.py" afterPath="$PROJECT_DIR$/kingadmin/views/user.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kylinclub/settings.py" afterPath="$PROJECT_DIR$/kylinclub/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/admin.py" afterPath="$PROJECT_DIR$/repository/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/repository/models.py" afterPath="$PROJECT_DIR$/repository/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/js/jquery-3.1.1.js" afterPath="$PROJECT_DIR$/status/js/jquery-3.1.1.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap-theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap-theme.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/status/plugins/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/examples/jquery-ui/js/jquery-ui-1.9.2.custom.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/examples/jquery-ui/js/jquery-ui-1.9.2.custom.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/examples/jquery.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/examples/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/kindeditor-all-min.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/kindeditor-all-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/kindeditor-all.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/kindeditor-all.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/plugins/code/code.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/plugins/code/code.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/status/plugins/kindeditor/plugins/code/prettify.js" afterPath="$PROJECT_DIR$/status/plugins/kindeditor/plugins/code/prettify.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/templates/web/index.html" afterPath="$PROJECT_DIR$/web/templates/web/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/urls.py" afterPath="$PROJECT_DIR$/web/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/views/index.py" afterPath="$PROJECT_DIR$/web/views/index.py" />
     </list>
     <ignored path="kylinclub.iws" />
@@ -266,135 +81,94 @@
     <favorites_list name="kylinclub" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/templates/web/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-              <folding>
-                <element signature="n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#p#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#!!top" expanded="false" />
-                <element signature="n#script#3;n#div#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/index.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/views/about.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/repository/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="194" column="11" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="11" />
+            <state relative-caret-position="287">
+              <caret line="97" column="10" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="10" />
               <folding>
                 <element signature="e#68#352#0" expanded="false" />
                 <element signature="e#389#1262#0" expanded="false" />
-                <element signature="e#1295#1446#0" expanded="false" />
-                <element signature="e#1484#1734#0" expanded="false" />
-                <element signature="e#1771#2011#0" expanded="false" />
-                <element signature="e#2049#2304#0" expanded="false" />
-                <element signature="e#2347#2506#0" expanded="false" />
-                <element signature="e#2546#3023#0" expanded="false" />
-                <element signature="e#3061#3548#0" expanded="false" />
-                <element signature="e#3590#4045#0" expanded="false" />
-                <element signature="e#4082#4486#0" expanded="false" />
-                <element signature="e#4523#4874#0" expanded="false" />
-                <element signature="e#6776#7388#0" expanded="false" />
-                <element signature="e#7429#7876#0" expanded="false" />
+                <element signature="e#1295#1566#0" expanded="false" />
+                <element signature="e#1604#1854#0" expanded="false" />
+                <element signature="e#1891#2131#0" expanded="false" />
+                <element signature="e#2168#2330#0" expanded="false" />
+                <element signature="e#2368#2639#0" expanded="false" />
+                <element signature="e#2550#2579#0" expanded="false" />
+                <element signature="e#3290#3767#0" expanded="false" />
+                <element signature="e#3805#4292#0" expanded="false" />
+                <element signature="e#4334#4789#0" expanded="false" />
+                <element signature="e#4826#5230#0" expanded="false" />
+                <element signature="e#5267#5618#0" expanded="false" />
+                <element signature="e#5664#6133#0" expanded="false" />
+                <element signature="e#6170#6834#0" expanded="false" />
+                <element signature="e#6871#7474#0" expanded="false" />
+                <element signature="e#7520#8132#0" expanded="false" />
+                <element signature="e#8173#8620#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/templates/web/activity.html">
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/repository/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+            <state relative-caret-position="270">
+              <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kingadmin/views/menu.py">
+      <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kingadmin/views/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="147" column="17" lean-forward="true" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+            <state relative-caret-position="175">
+              <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
               <folding>
-                <element signature="e#286#458#0" expanded="false" />
-                <element signature="e#490#898#0" expanded="false" />
-                <element signature="e#670#898#0" expanded="false" />
-                <element signature="e#931#1621#0" expanded="false" />
-                <element signature="e#988#1323#0" expanded="false" />
-                <element signature="e#1367#1621#0" expanded="false" />
-                <element signature="e#1850#2489#0" expanded="false" />
-                <element signature="e#2530#3564#0" expanded="false" />
-                <element signature="e#2659#2871#0" expanded="false" />
-                <element signature="e#3790#4414#0" expanded="false" />
-                <element signature="e#5589#5740#0" expanded="false" />
+                <element signature="e#0#59#0" expanded="true" />
+                <element signature="e#343#779#0" expanded="false" />
+                <element signature="e#384#779#0" expanded="false" />
+                <element signature="e#815#1405#0" expanded="false" />
+                <element signature="e#1193#1197#0" expanded="false" />
+                <element signature="e#1233#1237#0" expanded="false" />
+                <element signature="e#1272#1320#0" expanded="false" />
+                <element signature="e#1357#1405#0" expanded="false" />
+                <element signature="e#1439#1565#0" expanded="false" />
+                <element signature="e#1598#1730#0" expanded="false" />
+                <element signature="e#1763#2083#0" expanded="false" />
+                <element signature="e#2121#3530#0" expanded="false" />
+                <element signature="e#2176#2711#0" expanded="false" />
+                <element signature="e#2755#3530#0" expanded="false" />
+                <element signature="e#3397#3484#0" expanded="false" />
+                <element signature="e#3965#4795#0" expanded="false" />
+                <element signature="e#4830#4992#0" expanded="false" />
+                <element signature="e#5025#5576#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activitytype.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html">
+      <file leaf-file-name="roletofunc.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/roletofunc.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="601">
+              <caret line="128" column="14" lean-forward="true" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
               <folding>
-                <element signature="e#2183#2202#0#HTML" expanded="true" />
-                <element signature="e#2755#2775#0#HTML" expanded="true" />
-                <element signature="e#2913#2933#0#HTML" expanded="true" />
-                <element signature="e#3072#3092#0#HTML" expanded="true" />
-                <element signature="e#3230#3251#0#HTML" expanded="true" />
-                <element signature="e#3389#3410#0#HTML" expanded="true" />
+                <element signature="e#4314#4344#0#HTML" expanded="true" />
+                <element signature="e#4583#4608#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/urls.py">
+        <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <element signature="e#643#683#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="756">
+              <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -407,6 +181,7 @@
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -417,9 +192,12 @@
       <find>img</find>
       <find>css</find>
       <find>background:url</find>
+      <find>cons</find>
+      <find>console.log</find>
     </findStrings>
     <replaceStrings>
       <replace>fields</replace>
+      <replace>//console.log</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -428,15 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activitypeedit.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/menus/menus.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html" />
-        <option value="$PROJECT_DIR$/kingadmin/views/message .py" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/emaillog.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/email.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/email.html" />
-        <option value="$PROJECT_DIR$/utils/sendmail.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/moban/mailedit.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/message.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/editemail.html" />
@@ -456,21 +225,13 @@
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/company/company.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/system.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/user.html" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/company.py" />
-        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
-        <option value="$PROJECT_DIR$/kingadmin/views/user.py" />
-        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
         <option value="$PROJECT_DIR$/kylinclub/settings.py" />
         <option value="$PROJECT_DIR$/web/templates/web/foor.html" />
         <option value="$PROJECT_DIR$/web/templates/web/head.html" />
-        <option value="$PROJECT_DIR$/web/views/index.py" />
         <option value="$PROJECT_DIR$/web/status/web/css/css.css" />
-        <option value="$PROJECT_DIR$/web/templates/web/index.html" />
         <option value="$PROJECT_DIR$/kingadmin/kingform.py" />
         <option value="$PROJECT_DIR$/kingadmin/views/baseview.py" />
-        <option value="$PROJECT_DIR$/repository/models.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitypeedit.html" />
         <option value="$PROJECT_DIR$/web/templates/web/base.html" />
         <option value="$PROJECT_DIR$/web/urls.py" />
@@ -479,6 +240,23 @@
         <option value="$PROJECT_DIR$/web/templates/web/activity.html" />
         <option value="$PROJECT_DIR$/kingadmin/views/menu.py" />
         <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html" />
+        <option value="$PROJECT_DIR$/kingadmin/views/index.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/index.html" />
+        <option value="$PROJECT_DIR$/web/templates/web/edict.html" />
+        <option value="$PROJECT_DIR$/web/views/index.py" />
+        <option value="$PROJECT_DIR$/web/templates/web/index.html" />
+        <option value="$PROJECT_DIR$/kingadmin/status/build/js/myjs.js" />
+        <option value="$PROJECT_DIR$/kingadmin/urls.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html" />
+        <option value="$PROJECT_DIR$/repository/admin.py" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html" />
+        <option value="$PROJECT_DIR$/repository/models.py" />
+        <option value="$PROJECT_DIR$/kingadmin/views/user.py" />
+        <option value="$PROJECT_DIR$/kingadmin/status/build/js/custom.js" />
+        <option value="$PROJECT_DIR$/kingadmin/status/build/js/custom.min.js" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html" />
+        <option value="$PROJECT_DIR$/kingadmin/status/build/js/rolefunc.js" />
+        <option value="$PROJECT_DIR$/kingadmin/templates/kingadmin/user/roletofunc.html" />
       </list>
     </option>
   </component>
@@ -534,6 +312,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="kingadmin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -582,7 +388,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="atype" />
+              <option name="myItemId" value="user" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -600,7 +406,17 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -608,7 +424,67 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kingadmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="custom.js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NestingTreeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webserver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="kingadmin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="status" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -628,19 +504,19 @@
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\code\kylinclub\webserver\web\templates\web" />
+      <recent name="E:\code\kylinclub\webserver\web\status\web\introduction" />
+      <recent name="E:\code\kylinclub\webserver\web\status\web\pic" />
+      <recent name="E:\code\kylinclub\webserver\web\status\web\js" />
+      <recent name="E:\code\kylinclub\webserver\web\status\web\css" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\user" />
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\company" />
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\lunbo" />
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\mail" />
       <recent name="E:\code\kylinclub\webserver\kingadmin\templates\kingadmin\moban" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\code\kylinclub\webserver\web\status\web\introduction" />
-      <recent name="E:\code\kylinclub\webserver\web\status\web\pic" />
-      <recent name="E:\code\kylinclub\webserver\web\status\web\js" />
-      <recent name="E:\code\kylinclub\webserver\web\status\web\css" />
-      <recent name="E:\code\kylinclub\webserver\web\templates\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1034,15 +910,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2833698" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16251354" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40953413" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1108742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27193934" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30985916" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1673774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1881663" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713348" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3261105" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1094,79 +970,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/kingadmin/views/user.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="26" />
+          <line>21</line>
+          <option name="timeStamp" value="41" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="28" />
+      <option name="time" value="42" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c125fb09-25c3-4226-9481-9ed40358eaae/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views/carousel.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/news.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="73" column="95" lean-forward="false" selection-start-line="73" selection-start-column="95" selection-end-line="73" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/lunbo/carouseledit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="742">
-          <caret line="91" column="32" lean-forward="false" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/mail/maillist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="34" column="37" lean-forward="true" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/pages.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/news/newsadd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="145" column="28" lean-forward="false" selection-start-line="145" selection-start-column="28" selection-end-line="145" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python3/Lib/smtplib.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="1006" column="49" lean-forward="false" selection-start-line="1006" selection-start-column="42" selection-end-line="1006" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/sendmail.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/112" />
     <entry file="file://$PROJECT_DIR$/kingadmin/views/sendmail.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1189,26 +1001,26 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.repository_carousel">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.repository_memberfollow">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1248,22 +1060,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="115" column="8" lean-forward="false" selection-start-line="115" selection-start-column="8" selection-end-line="115" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.django_session">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1281,29 +1086,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="132" column="23" lean-forward="false" selection-start-line="132" selection-start-column="23" selection-end-line="132" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.repository_role2user">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="275" column="14" lean-forward="true" selection-start-line="275" selection-start-column="14" selection-end-line="275" selection-end-column="14" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1315,26 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/views/user.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#297#733#0" expanded="false" />
-            <element signature="e#338#733#0" expanded="false" />
-            <element signature="e#770#1345#0" expanded="false" />
-            <element signature="e#843#1095#0" expanded="false" />
-            <element signature="e#1133#1137#0" expanded="false" />
-            <element signature="e#1173#1177#0" expanded="false" />
-            <element signature="e#1212#1260#0" expanded="false" />
-            <element signature="e#1297#1345#0" expanded="false" />
-            <element signature="e#1704#2009#0" expanded="false" />
-            <element signature="e#2083#2618#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activtyedit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-459">
@@ -1343,19 +1114,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="20" column="31" lean-forward="false" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/templates/web/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1130,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="895">
           <caret line="0" column="15694" lean-forward="false" selection-start-line="0" selection-start-column="15694" selection-end-line="0" selection-end-column="15694" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1383,15 +1144,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.repository_activityclass">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1407,13 +1167,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="42" />
-          <folding>
-            <element signature="e#4806#6959#0" expanded="false" />
-            <element signature="e#6988#8895#0" expanded="false" />
-            <element signature="e#8931#9889#0" expanded="false" />
-            <element signature="e#9922#11817#0" expanded="false" />
-            <element signature="e#11855#13223#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1422,7 +1175,7 @@
         <state relative-caret-position="280">
           <caret line="44" column="124" lean-forward="false" selection-start-line="44" selection-start-column="124" selection-end-line="44" selection-end-column="124" />
           <folding>
-            <element signature="e#3793#3811#0#HTML" expanded="true" />
+            <element signature="e#3793#3811#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1431,46 +1184,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="783">
           <caret line="29" column="59" lean-forward="false" selection-start-line="29" selection-start-column="59" selection-end-line="29" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding>
-            <element signature="e#643#683#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/index.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/web/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="245" column="0" lean-forward="false" selection-start-line="245" selection-start-column="0" selection-end-line="245" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#p#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#script#3;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#643#683#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1479,59 +1201,36 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="24" column="16" lean-forward="true" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="36" />
-          <folding>
-            <element signature="e#142#628#0#HTML" expanded="false" />
-            <element signature="n#for#0;n#!!top" expanded="false" />
-            <element signature="e#936#1336#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/views/about.py">
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/repository/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="194" column="11" lean-forward="false" selection-start-line="194" selection-start-column="4" selection-end-line="194" selection-end-column="11" />
-          <folding>
-            <element signature="e#68#352#0" expanded="false" />
-            <element signature="e#389#1262#0" expanded="false" />
-            <element signature="e#1295#1446#0" expanded="false" />
-            <element signature="e#1484#1734#0" expanded="false" />
-            <element signature="e#1771#2011#0" expanded="false" />
-            <element signature="e#2049#2304#0" expanded="false" />
-            <element signature="e#2347#2506#0" expanded="false" />
-            <element signature="e#2546#3023#0" expanded="false" />
-            <element signature="e#3061#3548#0" expanded="false" />
-            <element signature="e#3590#4045#0" expanded="false" />
-            <element signature="e#4082#4486#0" expanded="false" />
-            <element signature="e#4523#4874#0" expanded="false" />
-            <element signature="e#6776#7388#0" expanded="false" />
-            <element signature="e#7429#7876#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/templates/web/activity.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        <state relative-caret-position="-324">
+          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#2183#2202#0#HTML" expanded="false" />
+            <element signature="e#2755#2775#0#HTML" expanded="false" />
+            <element signature="e#2913#2933#0#HTML" expanded="false" />
+            <element signature="e#3072#3092#0#HTML" expanded="false" />
+            <element signature="e#3230#3251#0#HTML" expanded="false" />
+            <element signature="e#3389#3410#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/kingadmin/views/menu.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
-          <caret line="147" column="17" lean-forward="true" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
+          <caret line="147" column="17" lean-forward="false" selection-start-line="147" selection-start-column="17" selection-end-line="147" selection-end-column="17" />
           <folding>
             <element signature="e#286#458#0" expanded="false" />
             <element signature="e#490#898#0" expanded="false" />
@@ -1548,25 +1247,243 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/activity/activitylist.html">
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-324">
-          <caret line="36" column="28" lean-forward="false" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="28" />
+        <state relative-caret-position="405">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#90#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/web/edict.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="479" column="25" lean-forward="true" selection-start-line="479" selection-start-column="25" selection-end-line="479" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/atype/activitytype.html">
+    <entry file="file://$PROJECT_DIR$/web/templates/web/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="310">
+          <caret line="79" column="63" lean-forward="false" selection-start-line="79" selection-start-column="63" selection-end-line="79" selection-end-column="63" />
           <folding>
-            <element signature="e#2183#2202#0#HTML" expanded="true" />
-            <element signature="e#2755#2775#0#HTML" expanded="true" />
-            <element signature="e#2913#2933#0#HTML" expanded="true" />
-            <element signature="e#3072#3092#0#HTML" expanded="true" />
-            <element signature="e#3230#3251#0#HTML" expanded="true" />
-            <element signature="e#3389#3410#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#p#1;n#a#0;n#div#0;n#div#0;n#div#1;n#div#2;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/index.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="65" lean-forward="false" selection-start-line="8" selection-start-column="65" selection-end-line="8" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/views/about.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/templates/web/activity.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/status/build/js/myjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="136" column="1" lean-forward="true" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+            <element signature="e#80#629#0" expanded="false" />
+            <element signature="e#664#915#0" expanded="false" />
+            <element signature="e#950#1613#0" expanded="false" />
+            <element signature="e#1648#2649#0" expanded="false" />
+            <element signature="e#1867#2644#0" expanded="false" />
+            <element signature="e#2015#2628#0" expanded="false" />
+            <element signature="e#2190#2361#0" expanded="false" />
+            <element signature="e#2449#2612#0" expanded="false" />
+            <element signature="e#2685#2782#0" expanded="false" />
+            <element signature="e#2818#2915#0" expanded="false" />
+            <element signature="e#2954#3670#0" expanded="false" />
+            <element signature="n#!!block;n#moveItem#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/2351e0c/cecb06f1-5a5e-4fdc-8018-ab970dbd1165/main.repository_role2adminmenuaction">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="11" column="29" lean-forward="false" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/actionlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+          <folding>
+            <element signature="n#for#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/rolelist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="64" column="43" lean-forward="false" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/status/build/js/custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="0" column="16589" lean-forward="true" selection-start-line="0" selection-start-column="16589" selection-end-line="0" selection-end-column="16589" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4647">
+          <caret line="628" column="41" lean-forward="false" selection-start-line="628" selection-start-column="41" selection-end-line="628" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/status/build/js/custom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70767">
+          <caret line="2657" column="4" lean-forward="true" selection-start-line="2657" selection-start-column="4" selection-end-line="2657" selection-end-column="4" />
+          <folding>
+            <marker date="1500371578523" expanded="true" signature="27884:27916" ph="..." />
+            <marker date="1500371578523" expanded="true" signature="29382:29389" ph="×" />
+            <marker date="1500371578523" expanded="true" signature="47171:47183" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="52" column="30" lean-forward="true" selection-start-line="52" selection-start-column="30" selection-end-line="52" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/views/user.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="107" column="55" lean-forward="false" selection-start-line="107" selection-start-column="55" selection-end-line="107" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+            <element signature="e#343#779#0" expanded="false" />
+            <element signature="e#384#779#0" expanded="false" />
+            <element signature="e#815#1405#0" expanded="false" />
+            <element signature="e#1193#1197#0" expanded="false" />
+            <element signature="e#1233#1237#0" expanded="false" />
+            <element signature="e#1272#1320#0" expanded="false" />
+            <element signature="e#1357#1405#0" expanded="false" />
+            <element signature="e#1439#1565#0" expanded="false" />
+            <element signature="e#1598#1730#0" expanded="false" />
+            <element signature="e#1763#2083#0" expanded="false" />
+            <element signature="e#2121#3530#0" expanded="false" />
+            <element signature="e#2176#2711#0" expanded="false" />
+            <element signature="e#2755#3530#0" expanded="false" />
+            <element signature="e#3397#3484#0" expanded="false" />
+            <element signature="e#3965#4795#0" expanded="false" />
+            <element signature="e#4830#4992#0" expanded="false" />
+            <element signature="e#5025#5576#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/repository/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="97" column="10" lean-forward="false" selection-start-line="97" selection-start-column="4" selection-end-line="97" selection-end-column="10" />
+          <folding>
+            <element signature="e#68#352#0" expanded="false" />
+            <element signature="e#389#1262#0" expanded="false" />
+            <element signature="e#1295#1566#0" expanded="false" />
+            <element signature="e#1604#1854#0" expanded="false" />
+            <element signature="e#1891#2131#0" expanded="false" />
+            <element signature="e#2168#2330#0" expanded="false" />
+            <element signature="e#2368#2639#0" expanded="false" />
+            <element signature="e#2550#2579#0" expanded="false" />
+            <element signature="e#3290#3767#0" expanded="false" />
+            <element signature="e#3805#4292#0" expanded="false" />
+            <element signature="e#4334#4789#0" expanded="false" />
+            <element signature="e#4826#5230#0" expanded="false" />
+            <element signature="e#5267#5618#0" expanded="false" />
+            <element signature="e#5664#6133#0" expanded="false" />
+            <element signature="e#6170#6834#0" expanded="false" />
+            <element signature="e#6871#7474#0" expanded="false" />
+            <element signature="e#7520#8132#0" expanded="false" />
+            <element signature="e#8173#8620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/status/build/js/rolefunc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="42" column="11" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#48#0" expanded="false" />
+            <element signature="e#95#223#0" expanded="false" />
+            <element signature="e#277#382#0" expanded="false" />
+            <element signature="e#422#678#0" expanded="false" />
+            <element signature="e#721#1150#0" expanded="false" />
+            <element signature="e#1194#1668#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kingadmin/templates/kingadmin/user/roletofunc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="128" column="14" lean-forward="true" selection-start-line="128" selection-start-column="14" selection-end-line="128" selection-end-column="14" />
+          <folding>
+            <element signature="e#4314#4344#0#HTML" expanded="true" />
+            <element signature="e#4583#4608#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

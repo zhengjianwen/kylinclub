@@ -6,6 +6,7 @@ class Index(View):
 
     def get(self,request):
         menu_list = Menu.objects.all()
+        new_list = News.objects.filter().order_by('-creat_at')[:3]
         return render(request,'web/index.html',locals())
 
 class Contactus(View):
